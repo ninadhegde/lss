@@ -1,0 +1,951 @@
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-rwxrwxrwx 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ln -s buffer10.txt buffer8.txt
+ln: failed to create symbolic link 'buffer8.txt': File exists
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ln -s buffer10.txt buffer7.txt
+ln: failed to create symbolic link 'buffer7.txt': File exists
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-rwxrwxrwx 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ln -s buffer7.txt buffer10.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-rwxrwxrwx 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 500 buffer10.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-r-x------ 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 500 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-r-x------ 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 500 buffer4.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-r-x------ 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 500 buffer5.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-r-x------ 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-r-x------ 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 507 buffer5.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-r-x---rwx 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-r-x------ 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt; ls -l
+total 12
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 28 17:11 buffer10.txt -> buffer7.txt
+-rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+-r-x---rwx 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+-rwxrwxrwx 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ mkdir Company
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cd Company
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ mkdir ceo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ mkdir cto
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ mkdir cfo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ cd ceo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ mkdir Vice president
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ cd 
+president/ Vice/      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ cd V
+bash: cd: V: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ mkdir Vice_president
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ cd Vice_president/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ mkdir manager
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ cd manager
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president/manager$ mkdir software_developer
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president/manager$ chmod 400 software_developer/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president/manager$ cd -l
+bash: cd: -l: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president/manager$ cd -L
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd -L
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd D
+Desktop/   Documents/ Downloads/ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd Downloads/buffer_stuff/Company/c
+ceo/ cfo/ cto/ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd Downloads/buffer_stuff/Company/ceo/Vice_president/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ chmod 640
+chmod: missing operand after ‘640’
+Try 'chmod --help' for more information.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ chmod 640 manager/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ chmod 540 manager/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ man cd
+No manual entry for cd
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo/Vice_president$ cd -
+/home/ninadhegde
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd -P
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd Downloads/buffer_stuff/Company/ceo/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ chmod 650 
+president/      Vice/           Vice_president/ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ chmod 650 Vice_president/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ rmdir Vice
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ ls
+president  Vice_president
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ ls -L
+president  Vice_president
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ ls -l
+total 8
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:41 president
+drw-r-x--- 3 ninadhegde ninadhegde 4096 Feb 28 17:41 Vice_president
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company/ceo$ cd -L
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd Downloads/buffer_stuff/Company/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ chmod 660 ceo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ ls -l
+total 12
+drw-rw---- 4 ninadhegde ninadhegde 4096 Feb 28 17:49 ceo
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:38 cfo
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:33 cto
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ chmod 650 cto
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ ls -Rt
+.:
+ceo  cfo  cto
+
+./ceo:
+ls: cannot access './ceo/president': Permission denied
+ls: cannot access './ceo/Vice_president': Permission denied
+president  Vice_president
+ls: cannot open directory './ceo/president': Permission denied
+ls: cannot open directory './ceo/Vice_president': Permission denied
+
+./cfo:
+
+./cto:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -Rt
+[sudo] password for ninadhegde: 
+.:
+ceo  cfo  cto
+
+./ceo:
+Vice_president	president
+
+./ceo/Vice_president:
+manager
+
+./ceo/Vice_president/manager:
+software_developer
+
+./ceo/Vice_president/manager/software_developer:
+
+./ceo/president:
+
+./cfo:
+
+./cto:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -RtL
+.:
+ceo  cfo  cto
+
+./ceo:
+Vice_president	president
+
+./ceo/Vice_president:
+manager
+
+./ceo/Vice_president/manager:
+software_developer
+
+./ceo/Vice_president/manager/software_developer:
+
+./ceo/president:
+
+./cfo:
+
+./cto:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -Rt -L
+.:
+ceo  cfo  cto
+
+./ceo:
+Vice_president	president
+
+./ceo/Vice_president:
+manager
+
+./ceo/Vice_president/manager:
+software_developer
+
+./ceo/Vice_president/manager/software_developer:
+
+./ceo/president:
+
+./cfo:
+
+./cto:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -Rt -l
+.:
+total 12
+drw-rw---- 4 ninadhegde ninadhegde 4096 Feb 28 17:49 ceo
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:38 cfo
+drw-r-x--- 2 ninadhegde ninadhegde 4096 Feb 28 17:33 cto
+
+./ceo:
+total 8
+drw-r-x--- 3 ninadhegde ninadhegde 4096 Feb 28 17:41 Vice_president
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:41 president
+
+./ceo/Vice_president:
+total 4
+dr-xr----- 3 ninadhegde ninadhegde 4096 Feb 28 17:42 manager
+
+./ceo/Vice_president/manager:
+total 4
+dr-------- 2 ninadhegde ninadhegde 4096 Feb 28 17:42 software_developer
+
+./ceo/Vice_president/manager/software_developer:
+total 0
+
+./ceo/president:
+total 0
+
+./cfo:
+total 0
+
+./cto:
+total 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ groupadd test_group
+groupadd: Permission denied.
+groupadd: cannot lock /etc/group; try again later.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo groupadd test_group
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ groupadd test_group
+groupadd: group 'test_group' already exists
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ 
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -RtL
+.:
+ceo  cfo  cto
+
+./ceo:
+Vice_president	president
+
+./ceo/Vice_president:
+manager
+
+./ceo/Vice_president/manager:
+software_developer
+
+./ceo/Vice_president/manager/software_developer:
+
+./ceo/president:
+
+./cfo:
+
+./cto:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -Rt -L
+.:
+ceo  cfo  cto
+
+./ceo:
+Vice_president	president
+
+./ceo/Vice_president:
+manager
+
+./ceo/Vice_president/manager:
+software_developer
+
+./ceo/Vice_president/manager/software_developer:
+
+./ceo/president:
+
+./cfo:
+
+./cto:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -Rt -l
+.:
+total 12
+drw-rw---- 4 ninadhegde ninadhegde 4096 Feb 28 17:49 ceo
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:38 cfo
+drw-r-x--- 2 ninadhegde ninadhegde 4096 Feb 28 17:33 cto
+
+./ceo:
+total 8
+drw-r-x--- 3 ninadhegde ninadhegde 4096 Feb 28 17:41 Vice_president
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:41 president
+
+./ceo/Vice_president:
+total 4
+dr-xr----- 3 ninadhegde ninadhegde 4096 Feb 28 17:42 manager
+
+./ceo/Vice_president/manager:
+total 4
+dr-------- 2 ninadhegde ninadhegde 4096 Feb 28 17:42 software_developer
+
+./ceo/Vice_president/manager/software_developer:
+total 0
+
+./ceo/president:
+total 0
+
+./cfo:
+total 0
+
+./cto:
+total 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ groupadd test_group
+groupadd: Permission denied.
+groupadd: cannot lock /etc/group; try again later.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo groupadd test_group
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ groupadd test_group
+groupadd: group 'test_group' already exists
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo ls -Rt -l
+.:
+total 12
+drw-rw---- 4 ninadhegde ninadhegde 4096 Feb 28 17:49 ceo
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:38 cfo
+drw-r-x--- 2 ninadhegde ninadhegde 4096 Feb 28 17:33 cto
+
+./ceo:
+total 8
+drw-r-x--- 3 ninadhegde ninadhegde 4096 Feb 28 17:41 Vice_president
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Feb 28 17:41 president
+
+./ceo/Vice_president:
+total 4
+dr-xr----- 3 ninadhegde ninadhegde 4096 Feb 28 17:42 manager
+
+./ceo/Vice_president/manager:
+total 4
+dr-------- 2 ninadhegde ninadhegde 4096 Feb 28 17:42 software_developer
+
+./ceo/Vice_president/manager/software_developer:
+total 0
+
+./ceo/president:
+total 0
+
+./cfo:
+total 0
+
+./cto:
+total 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo useradd guest_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo useradd guest_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo useradd guest_3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo usermod -a -G test_group g
+games                gdm                  geoclue              gnats                gnome-initial-setup  guest_1              guest_2              guest_3              
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo usermod -a -G test_group guest_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ who
+ninadhegde tty2         2023-02-28 17:01 (tty2)
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ user
+Command 'user' not found, did you mean:
+  command 'iuser' from deb ipmiutil (3.1.8-1)
+  command 'users' from deb coreutils (8.32-4.1ubuntu1)
+  command 'userv' from deb userv (1.2.1~beta4)
+  command 'fuser' from deb psmisc (23.4-2build3)
+Try: sudo apt install <deb name>
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ sudo usermod -a -G test_group guest_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ cd -l
+bash: cd: -l: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/Company$ cd -L
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ git --version 
+git version 2.34.1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get update git
+E: The update command takes no arguments
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt update git
+E: The update command takes no arguments
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                              
+Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease                                                        
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                                       
+Hit:4 https://ppa.launchpadcontent.net/touchegg/stable/ubuntu jammy InRelease                                              
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [258 kB]                                         
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease [107 kB]            
+Hit:7 https://brave-browser-apt-release.s3.brave.com stable InRelease                                                                  
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [646 kB]                                                    
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [442 kB]      
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [41.6 kB]                                                                                                 
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [8,500 B]                                                                                                  
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [685 kB]                                                                                                     
+Get:13 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [899 kB]                                                                                                        
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [501 kB]                                                                                                      
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [108 kB]                                                                                                     
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [16.1 kB]                                                                                             
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/universe DEP-11 48x48 Icons [13.9 kB]                                                                                                
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe DEP-11 64x64 Icons [23.0 kB]                                                                                                
+Get:19 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [13.2 kB]                                                                                              
+Get:20 http://in.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [197 kB]                                                                                                        
+Get:21 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [101 kB]                                                                                                 
+Get:22 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [13.5 kB]                                                                                                 
+Get:23 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [587 kB]                                                                                                     
+Get:24 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [862 kB]                                                                                                    
+Get:25 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [167 kB]                                                                                                    
+Get:26 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [268 kB]                                                                                             
+Get:27 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe DEP-11 48x48 Icons [171 kB]                                                                                                
+Get:28 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe DEP-11 64x64 Icons [259 kB]                                                                                                
+Get:29 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [17.4 kB]                                                                                             
+Get:30 http://in.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]                                                                                            
+Get:31 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [7,996 B]                                                                                              
+Get:32 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [19.5 kB]                                                                                                 
+Get:33 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [10.7 kB]                                                                                                  
+Get:34 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [14.0 kB]                                                                                                 
+Get:35 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [12.5 kB]                                                                                          
+Get:36 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [392 B]                                                                                             
+Fetched 6,699 kB in 43s (155 kB/s)                                                                                                                                                           
+Reading package lists... Done
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.34.1-1ubuntu1.8).
+0 upgraded, 0 newly installed, 0 to remove and 190 not upgraded.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ git --version 
+git version 2.34.1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ git --version 
+git version 2.34.1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.34.1-1ubuntu1.8).
+0 upgraded, 0 newly installed, 0 to remove and 190 not upgraded.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ mkdir git
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd git
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ls -al
+total 8
+drwxrwxr-x  2 ninadhegde ninadhegde 4096 Feb 28 18:17 .
+drwxr-x--- 28 ninadhegde ninadhegde 4096 Feb 28 18:17 ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ls
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo hello > file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ls
+file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cat file1.txt 
+hello
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo hello again > file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo ollo > file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cat file1.txt 
+ollo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo hello again >> file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cat file1.txt 
+ollo
+hello again
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo ollo again >> file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cat file1.txt 
+ollo
+hello again
+ollo again
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git status
+fatal: not a git repository (or any of the parent directories): .git
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ^[[200~git config --global user.name "your_username"
+git: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ~git config --global user.name "ninadhegde"
+Command '~git' not found, did you mean:
+  command 'qgit' from deb qgit (2.10-2)
+  command 'jgit' from deb jgit-cli (4.11.9-1)
+  command 'git' from deb git (1:2.34.1-1ubuntu1.8)
+  command 'dgit' from deb dgit (9.15)
+Try: sudo apt install <deb name>
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/ninadhegde/git/.git/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ~git config --global user.name "ninadhegde"
+Command '~git' not found, did you mean:
+  command 'qgit' from deb qgit (2.10-2)
+  command 'git' from deb git (1:2.34.1-1ubuntu1.8)
+  command 'jgit' from deb jgit-cli (4.11.9-1)
+  command 'dgit' from deb dgit (9.15)
+Try: sudo apt install <deb name>
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git config --global user.name "ninadhegde"
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo hello again >> file2.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file1.txt
+	file2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git add file1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file2.txt
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git add file2.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit
+Aborting commit due to empty commit message.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit -m
+error: switch `m' requires a value
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit -m "My commit 0"
+[master (root-commit) a00d179] My commit 0
+ 2 files changed, 4 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git log
+commit a00d179e9145645bc7b9a9c5463b82ad0845dfff (HEAD -> master)
+Author: ninadhegde <ninadhegde@gmail.com>
+Date:   Tue Feb 28 18:31:00 2023 +0530
+
+    My commit 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ 
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------
+root
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo -i
+[sudo] password for ninadhegde: 
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# pwd
+/root
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ls
+snap
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ssh 
+::1                                 ff02::1                             ip6-allrouters                      ip6-loopback                        ninadhegde-ROG-Strix-G731GU-G731GU
+fe00::0                             ff02::2                             ip6-localhost                       ip6-mcastprefix                     
+ff00::0                             ip6-allnodes                        ip6-localnet                        localhost                           
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ssh
+ssh          ssh-add      ssh-agent    ssh-argv0    ssh-copy-id  ssh-keygen   ssh-keyscan  
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# mkdir git-demo
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ls
+git-demo  snap
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:tpIrAvQ9jbRUHnHo5c7y5KOMpad9xiPCMTGpeIrIm5M root@ninadhegde-ROG-Strix-G731GU-G731GU
+The key's randomart image is:
++---[RSA 3072]----+
+|       .o.       |
+|       +..       |
+|      = +        |
+| .   * o .       |
+|. o = * S        |
+|.. + B = =       |
+|+.+ . *.B        |
+|oEo .o*= O       |
+| oo. ==+= o      |
++----[SHA256]-----+
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# 
+
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ls
+git-demo  snap
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# ls -ail
+total 40
+5636097 drwx------  8 root root 4096 Feb 28 18:55 .
+      2 drwxr-xr-x 20 root root 4096 Feb 10 09:15 ..
+5636099 -rw-r--r--  1 root root 3106 Oct 15  2021 .bashrc
+5636098 drwx------  2 root root 4096 Aug  9  2022 .cache
+5636127 drwxr-xr-x  2 root root 4096 Feb 28 18:52 git-demo
+5636113 drwx------  3 root root 4096 Feb 23 20:07 .launchpadlib
+5636115 drwxr-xr-x  3 root root 4096 Feb 14 18:45 .local
+5636100 -rw-r--r--  1 root root  161 Jul  9  2019 .profile
+5636101 drwx------  5 root root 4096 Feb 10 14:55 snap
+5636128 drwx------  2 root root 4096 Feb 28 18:56 .ssh
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# cd .ssh
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~/.ssh# cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCW5QsfBTM6kgCqRoDWdvu+0xjpOqVanMBR23SQATSfZmHC1d6T6VDddhKquYpGvYDx4fOBzXYA+TzDd+3AEnqJ5Uk2vmcGFaf4558Wk2Vnfh8s+27JbmIel6AMdk1IH1djYogDZHLmglzPe/iadxh/LKO8FLcI36Wx7MTkdO+nseik6JngDxQE4qlZmpo43HYlM1ih0bpO+wLY8+7sBUgTDz4cFMaDTy0vzdprxs5KCbqNfRmolaA9RQloOv/ftySkeHa5JxdS+RCCuhC50Sh82Xjglp4ZMN4iUYus9fPj7JETQHnxzpuwWrH0efh0j2k/yULTPMESH70Sig7aNVTJpx5nukYKU3sHr0ybvfTNYxxB1a5RlzPmkr++zYO2d3hPIw1xUX2varkma2rLC5wL2SyEMikqdFK2T3NQc9zyzJ9H8TaggbVnZI7SXK/mw8WWGC2e6yXv8byEe/W5gqBPHzFl5lxBIrMRsAaJqAMiOMAJ4C5WPBVIrdTREjBsHeE= root@ninadhegde-ROG-Strix-G731GU-G731GU
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~/.ssh# cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+VQECAw==
+-----END OPENSSH PRIVATE KEY-----
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~/.ssh# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++=================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit -m "My commit0.3"
+On branch master
+nothing to commit, working tree clean
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git log
+commit 952ad7233201680a38d1df37dbf98132a12d7c9d (HEAD -> master)
+Author: ninadhegde <noobhegde@gmail.com>
+Date:   Tue Feb 28 18:39:32 2023 +0530
+
+    My commit0.2
+
+commit a00d179e9145645bc7b9a9c5463b82ad0845dfff
+Author: ninadhegde <ninadhegde@gmail.com>
+Date:   Tue Feb 28 18:31:00 2023 +0530
+
+    My commit 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git clone git@github.com:ninadhegde/lss.git
+Cloning into 'lss'...
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git init
+Reinitialized existing Git repository in /home/ninadhegde/git/.git/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit -m "First commit"
+On branch master
+nothing to commit, working tree clean
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ echo Ollo > first.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit -m "First commit"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git commit -m "First commit"
+[master f18a486] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ gh repo clone ninadhegde/lss
+Command 'gh' not found, but can be installed with:
+sudo snap install gh       # version 2.6.0-15-g1a10fd5a, or
+sudo apt  install gh       # version 2.4.0+dfsg1-2
+sudo apt  install gitsome  # version 0.8.0+ds-6ubuntu1
+See 'snap info gh' for additional versions.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ sudo snap install gh
+[sudo] password for ninadhegde: 
+gh 2.6.0-15-g1a10fd5a from Casper (casper-dcl) installed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ gh repo clone ninadhegde/lss
+Welcome to GitHub CLI!
+
+To authenticate, please run `gh auth login`.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git log
+commit f18a48685ef7cece81668395d5be1ce923d4c1ea (HEAD -> master)
+Author: ninadhegde <ninadhegde@gmail.com>
+Date:   Tue Feb 28 19:11:58 2023 +0530
+
+    First commit
+
+commit 952ad7233201680a38d1df37dbf98132a12d7c9d
+Author: ninadhegde <noobhegde@gmail.com>
+Date:   Tue Feb 28 18:39:32 2023 +0530
+
+    My commit0.2
+
+commit a00d179e9145645bc7b9a9c5463b82ad0845dfff
+Author: ninadhegde <ninadhegde@gmail.com>
+Date:   Tue Feb 28 18:31:00 2023 +0530
+
+    My commit 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ gh config --global user.name "ninadhegde"
+unknown flag: --global
+
+Usage:  gh config <command> [flags]
+
+Available commands:
+  get
+  list
+  set
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git config --global user.name "ninadhegde"
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git config --global user.email "ninadhegde@gmail.com"
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git clone git@github.com:ninadhegde/lss.git
+Cloning into 'lss'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ninadhegde/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ninadhegde/.ssh/id_rsa
+Your public key has been saved in /home/ninadhegde/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Ra/VFKBX/kSmKR9bF0Lr6FWwEc/Wrl825AYblfGDV6c ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU
+The key's randomart image is:
++---[RSA 3072]----+
+|          . oB=+=|
+|         . o =X*O|
+|          o =+EX*|
+|         . +oo=Bo|
+|        S .. =o.o|
+|          . . *. |
+|           . ..+o|
+|              .oo|
+|                .|
++----[SHA256]-----+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cat id_rsa.pub
+cat: id_rsa.pub: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cat /.ssh/id_rsa.pub
+cat: /.ssh/id_rsa.pub: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ git clone git@github.com:ninadhegde/lss.git
+Cloning into 'lss'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ 
+
+

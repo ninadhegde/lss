@@ -1,0 +1,131 @@
+
+21/02
+
+gnu
+free 
+
+
+file permissions 
+file attributes
+
+
+
+
+
+
+................................................
+UNIX ARCHITECTURE
+layered architecture
+
+kernel
+role of kernel
+kernel subsystems
+
+properties of unix / unix-likes os
+
+
+
+shell
+shell is a command interpretor
+
+
+bash-born again shell
+
+
+command-name  options arguments
+ex: ls -l -t note1
+
+
+
+compgen -a -c -k 
+
+
+................................................
+
+22/02
+
+file name 255char
+file without extension is allowed
+can begin & end with . also
+
+
+absolute path / relative path
+
+
+
+cat concatinates file and outputs to stdout
+
+file attributes with commands
+ls [attributes]
+how to create softlink / hard linkS
+
+
+ln -s    softlink
+
+ln -s [first file] [second file]
+-s indicates softlink
+
+ln
+
+
+
+
+how file permissions are handled 
+chmod
+
+
+
+terminology
+-repository>
+-working directory
+-staging area
+-snapshot
+-workflow
+-
+
+
+
+
+
+GIT
+- distributed version control system
+-
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,227 @@
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ifconfig
+eno2: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 04:d4:c4:e1:dd:42  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1293  bytes 140039 (140.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1293  bytes 140039 (140.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.13.91  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::4bbe:117f:7bf7:4ebc  prefixlen 64  scopeid 0x20<link>
+        ether 50:e0:85:30:3a:bd  txqueuelen 1000  (Ethernet)
+        RX packets 238109  bytes 240589977 (240.5 MB)
+        RX errors 0  dropped 2  overruns 0  frame 0
+        TX packets 54300  bytes 28615183 (28.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ /etc/passwd
+bash: /etc/passwd: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:112:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:115::/run/uuidd:/usr/sbin/nologin
+systemd-oom:x:108:116:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+tcpdump:x:109:117::/nonexistent:/usr/sbin/nologin
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+avahi:x:114:121:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+cups-pk-helper:x:115:122:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+rtkit:x:116:123:RealtimeKit,,,:/proc:/usr/sbin/nologin
+whoopsie:x:117:124::/nonexistent:/bin/false
+sssd:x:118:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+speech-dispatcher:x:119:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+nm-openvpn:x:120:126:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+saned:x:121:128::/var/lib/saned:/usr/sbin/nologin
+colord:x:122:129:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:123:130::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:124:131:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:125:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:126:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:127:133:Gnome Display Manager:/var/lib/gdm3:/bin/false
+ninadhegde:x:1000:1000:ninadhegde,,,:/home/ninadhegde:/bin/bash
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -l
+total 36
+drwxr-xr-x 3 ninadhegde ninadhegde 4096 Feb 14 17:27 Desktop
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 10 14:55 Documents
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 15 10:01 Downloads
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 10 14:55 Music
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 10 14:55 Pictures
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 10 14:55 Public
+drwx------ 6 ninadhegde ninadhegde 4096 Feb  9 23:00 snap
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 10 14:55 Templates
+drwxr-xr-x 2 ninadhegde ninadhegde 4096 Feb 10 14:55 Videos
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -i
+18481200 Desktop  18481204 Documents  18481201 Downloads  18481205 Music  18481206 Pictures  18481203 Public  18481158 snap  18481202 Templates  18481207 Videos
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+tmpfs            3272204    2404   3269800   1% /run
+/dev/sda7      298151424 8608544 274324604   4% /
+tmpfs           16361016  179368  16181648   2% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+/dev/sda1         661504   45384    616120   7% /boot/efi
+tmpfs            3272200    4736   3267464   1% /run/user/1000
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get install snap
+[sudo] password for ninadhegde: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  snap
+0 upgraded, 1 newly installed, 0 to remove and 288 not upgraded.
+Need to get 377 kB of archives.
+After this operation, 2,756 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 snap amd64 2013-11-29-11 [377 kB]
+Fetched 377 kB in 3s (135 kB/s)
+Selecting previously unselected package snap.
+(Reading database ... 161728 files and directories currently installed.)
+Preparing to unpack .../snap_2013-11-29-11_amd64.deb ...
+Unpacking snap (2013-11-29-11) ...
+Setting up snap (2013-11-29-11) ...
+Processing triggers for man-db (2.10.2-1) ...
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+tmpfs            3272204    2408   3269796   1% /run
+/dev/sda7      298151424 8611016 274322132   4% /
+tmpfs           16361016  128364  16232652   1% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+/dev/sda1         661504   45384    616120   7% /boot/efi
+tmpfs            3272200    4736   3267464   1% /run/user/1000
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ df -Yh
+df: invalid option -- 'Y'
+Try 'df --help' for more information.
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ df -Th
+Filesystem     Type   Size  Used Avail Use% Mounted on
+tmpfs          tmpfs  3.2G  2.4M  3.2G   1% /run
+/dev/sda7      ext4   285G  8.3G  262G   4% /
+tmpfs          tmpfs   16G  126M   16G   1% /dev/shm
+tmpfs          tmpfs  5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda1      vfat   646M   45M  602M   7% /boot/efi
+tmpfs          tmpfs  3.2G  4.7M  3.2G   1% /run/user/1000
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man df
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ df -i
+Filesystem       Inodes  IUsed    IFree IUse% Mounted on
+tmpfs           4090254   1447  4088807    1% /run
+/dev/sda7      19005440 188977 18816463    1% /
+tmpfs           4090254    263  4089991    1% /dev/shm
+tmpfs           4090254      4  4090250    1% /run/lock
+/dev/sda1             0      0        0     - /boot/efi
+tmpfs            818050    169   817881    1% /run/user/1000
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ top
+
+top - 10:38:41 up  1:29,  1 user,  load average: 0.47, 0.36, 0.47
+Tasks: 339 total,   1 running, 338 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.1 us,  0.1 sy,  0.0 ni, 99.7 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  31955.1 total,  26005.4 free,   2659.4 used,   3290.3 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.  28134.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                             
+    510 root     -51   0       0      0      0 S   0.3   0.0   0:06.37 irq/131-iwlwifi                                                                                                                     
+    969 avahi     20   0    7844   4168   3648 S   0.3   0.0   0:02.89 avahi-daemon                                                                                                                        
+    977 root      20   0  269828  19252  15872 S   0.3   0.1   0:11.61 NetworkManager                                                                                                                      
+   1944 ninadhe+  20   0 6232344 296324 146368 S   0.3   0.9   5:08.62 gnome-shell                                                                                                                         
+   3277 ninadhe+  20   0   32.8g 390264 177756 S   0.3   1.2   3:58.56 brave                                                                                                                               
+   3400 ninadhe+  20   0   32.5g  56896  40504 S   0.3   0.2   0:01.79 brave                                                                                                                               
+   3776 ninadhe+  20   0 1133.1g 192848 112112 S   0.3   0.6   0:15.47 brave                                                                                                                               
+   4121 ninadhe+  20   0 1133.1g 185820 109484 S   0.3   0.6   0:07.06 brave                                                                                                                               
+   5042 ninadhe+  20   0 1130.1g 172136 110776 S   0.3   0.5   0:17.85 brave                                                                                                                               
+   5526 ninadhe+  20   0  569612  59216  45848 S   0.3   0.2   0:07.93 gnome-terminal-                                                                                                                     
+   7843 root      20   0       0      0      0 I   0.3   0.0   0:00.09 kworker/0:1-events                                                                                                                  
+   8554 ninadhe+  20   0   22004   4232   3384 R   0.3   0.0   0:00.18 top                                                                                                                                 
+      1 root      20   0  168268  13372   8152 S   0.0   0.0   0:03.76 systemd                                                                                                                             
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd                                                                                                                            
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                                                                                              
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                                                                                                          
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                                                                                               
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                                                                         
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                                                                                                        
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                                                                                                     
+     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                                                                                                     
+     13 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/0                                                                                                                         
+     14 root      20   0       0      0      0 I   0.0   0.0   0:07.74 rcu_sched                                                                                                                           
+     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.02 migration/0                                                                                                                         
+     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                                                                       
+     17 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                                             
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                                                             
+     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                                                                       
+     20 root      rt   0       0      0      0 S   0.0   0.0   0:00.24 migration/1                                                                                                                         
+     21 root      20   0       0      0      0 S   0.0   0.0   0:00.04 ksoftirqd/1                                                                                                                         
+     23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-kblockd                                                                                                                
+     24 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2                                                                                                                             
+     25 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/2                                                                                                                       
+     26 root      rt   0       0      0      0 S   0.0   0.0   0:00.24 migration/2                                                                                                                         
+     27 root      20   0       0      0      0 S   0.0   0.0   0:00.06 ksoftirqd/2                                                                                                                         
+     29 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/2:0H-events_highpri                                                                                                         
+     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3                                                                                                                             
+     31 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/3                                                                                                                       
+     32 root      rt   0       0      0      0 S   0.0   0.0   0:00.24 migration/3                                                                                                                         
+     33 root      20   0       0      0      0 S   0.0   0.0   0:14.94 ksoftirqd/3                                                                                                                         
+     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0H-kblockd                                                                                                                
+     36 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/4                                                                                                                             
+     37 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/4                                                                                                                       
+     38 root      rt   0       0      0      0 S   0.0   0.0   0:00.25 migration/4                                                                                                                         
+     39 root      20   0       0      0      0 S   0.0   0.0   0:00.04 ksoftirqd/4                                                                                                                         
+     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/4:0H-kblockd                                                                                                                
+     42 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/5                                                                                                                             
+     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/5                                                                                                                       
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ top -h
+  procps-ng 3.3.17
+Usage:
+  top -hv | -bcEeHiOSs1 -d secs -n max -u|U user -p pid(s) -o field -w [cols]
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /var/
+backups/ cache/   crash/   lib/     local/   lock/    log/     mail/    metrics/ opt/     run/     snap/    spool/   tmp/     
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /var/log/
+alternatives.log  apt         boot.log    boot.log.3     cups          dmesg.0     dmesg.3.gz  faillog         gpu-manager.log  journal     lastlog  speech-dispatcher  ubuntu-advantage.log        wtmp
+apport.log        auth.log    boot.log.1  bootstrap.log  dist-upgrade  dmesg.1.gz  dmesg.4.gz  fontconfig.log  hp               kern.log    openvpn  syslog             ubuntu-advantage-timer.log
+apport.log.1      auth.log.1  boot.log.2  btmp           dmesg         dmesg.2.gz  dpkg.log    gdm3            installer        kern.log.1  private  syslog.1           unattended-upgrades
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$
+ello
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ hi
+Command 'hi' not found, but can be installed with:
+sudo snap install hi
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat hi
+hello
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /dev/null
+
+

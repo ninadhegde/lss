@@ -1,0 +1,171 @@
+
+
+
+
+
+
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ libreoffice
+Warning: failed to launch javaldx - java may not function correctly
+
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ libreoffice&
+[1] 8417
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ Warning: failed to launch javaldx - java may not function correctly
+&
+bash: syntax error near unexpected token `&'
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ps
+    PID TTY          TIME CMD
+   8321 pts/0    00:00:00 bash
+   8417 pts/0    00:00:00 oosplash
+   8432 pts/0    00:00:03 soffice.bin
+   8500 pts/0    00:00:00 ps
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ gnome-
+gnome-calculator              gnome-extensions              gnome-language-selector       gnome-session                 gnome-shell-extension-tool    gnome-terminal.wrapper
+gnome-calendar                gnome-font-viewer             gnome-logs                    gnome-session-custom-session  gnome-shell-perf-tool         gnome-text-editor
+gnome-characters              gnome-help                    gnome-mahjongg                gnome-session-inhibit         gnome-sudoku                  gnome-thumbnail-font
+gnome-control-center          gnome-keyring                 gnome-menus-blacklist         gnome-session-properties      gnome-system-monitor          gnome-todo
+gnome-disk-image-mounter      gnome-keyring-3               gnome-mines                   gnome-session-quit            gnome-terminal                
+gnome-disks                   gnome-keyring-daemon          gnome-power-statistics        gnome-shell                   gnome-terminal.real           
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ gnome-todo
+
+(gnome-todo:8824): GLib-GObject-WARNING **: 17:32:35.681: invalid cast from 'GtdTaskListEds' to 'GListModel'
+
+(gnome-todo:8824): GLib-GIO-CRITICAL **: 17:32:35.681: g_list_model_get_n_items: assertion 'G_IS_LIST_MODEL (list)' failed
+
+(gnome-todo:8824): GLib-GObject-WARNING **: 17:32:37.916: invalid cast from 'GtdTaskListEds' to 'GListModel'
+
+(gnome-todo:8824): GLib-GIO-CRITICAL **: 17:32:37.916: g_list_model_get_n_items: assertion 'G_IS_LIST_MODEL (list)' failed
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ gnome-te
+gnome-te: command not found
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ gnome-todo
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ gnome-terminal
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ gnome-calculator
+
+** (gnome-calculator:8984): WARNING **: 17:36:46.458: currency-provider.vala:161: Couldn't download IMF currency rate file: Unacceptable TLS certificate
+
+** (gnome-calculator:8984): WARNING **: 17:36:46.598: currency-provider.vala:386: Cannot use ECB rates as don't have EUR rate
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ firefox
+Gtk-Message: 17:41:40.864: Failed to load module "canberra-gtk-module"
+Gtk-Message: 17:41:40.865: Failed to load module "canberra-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+^CExiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ping www.google.in
+PING www.google.in (142.250.66.3) 56(84) bytes of data.
+^C
+--- www.google.in ping statistics ---
+8 packets transmitted, 0 received, 100% packet loss, time 7173ms
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ping http://172.16.2.133
+ping: http://172.16.2.133: Name or service not known
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ping 172.16.2.133
+PING 172.16.2.133 (172.16.2.133) 56(84) bytes of data.
+^C
+--- 172.16.2.133 ping statistics ---
+12 packets transmitted, 0 received, 100% packet loss, time 11248ms
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get install sl
+
+
+
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt-get install sl
+
+
+inadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ dpkg -l
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                       Version                                 Architecture Description
++++-==========================================-=======================================-============-================================================================================
+ii  accountsservice                            22.07.5-2ubuntu1.3                      amd64        query and manipulate user account information
+ii  acl                                        2.3.1-1                                 amd64        access control list - utilities
+ii  acpi-support                               0.144                                   amd64        scripts for handling many ACPI events
+ii  acpid                                      1:2.0.33-1ubuntu1                       amd64        Advanced Configuration and Power Interface event daemon
+ii  adduser                                    3.118ubuntu5                            all          add and remove users and groups
+ii  adwaita-icon-theme                         41.0-1ubuntu1                           all          default icon theme of GNOME (small subset)
+ii  aisleriot                                  1:3.22.22-1                             amd64        GNOME solitaire card game collection
+ii  alsa-base                                  1.0.25+dfsg-0ubuntu7                    all          ALSA driver configuration files
+ii  alsa-topology-conf                         1.2.5.1-2                               all          ALSA topology configuration files
+ii  alsa-ucm-conf                              1.2.6.3-1ubuntu1                        all          ALSA Use Case Manager configuration files
+ii  alsa-utils                                 1.2.6-1ubuntu1                          amd64        Utilities for configuring and using ALSA
+ii  amd64-microcode                            3.20191218.1ubuntu2                     amd64        Processor microcode firmware for AMD CPUs
+
+
+
+
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ dpkg -l bolt
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-=============================================
+ii  bolt           0.9.2-1      amd64        system daemon to manage thunderbolt 3 devices
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ dpkg -l amd64
+dpkg-query: no packages found matching amd64
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ dpkg -l all
+dpkg-query: no packages found matching all
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ dpkg -l
+Desired=Unknown/Install/Remove/Purge/Hold
+
+
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt install wajig
+
+
+
+
+
+
+
+
+
+
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo nano /etc/apt/
+apt.conf.d/     auth.conf.d/    keyrings/       preferences.d/  sources.list    sources.list.d/ trusted.gpg.d/  
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo nano /etc/apt/sources.list
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo nano /etc/apt/sources.list
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /boot/vmlinuz
+vmlinuz                    vmlinuz-5.15.0-43-generic  
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /boot/vmlinuz
+vmlinuz                    vmlinuz-5.15.0-43-generic  
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls 
+.bash_history              .cache/                    Documents/                 .gnupg/                    Music/                     Public/                    .sudo_as_admin_successful
+.bash_logout               .config/                   Downloads/                 .lesshst                   Pictures/                  snap/                      Templates/
+.bashrc                    Desktop/                   .fontconfig/               .local/                    .profile                   .ssh/                      Videos/
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /
+bin/        cdrom/      etc/        lib/        lib64/      lost+found/ mnt/        proc/       run/        snap/       sys/        usr/        
+boot/       dev/        home/       lib32/      libx32/     media/      opt/        root/       sbin/       srv/        tmp/        var/        
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /etc/
+Display all 226 possibilities? (y or n)
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /boot/
+config-5.15.0-43-generic      grub/                         initrd.img-5.15.0-43-generic  memtest86+.bin                memtest86+_multiboot.bin      vmlinuz
+efi/                          initrd.img                    initrd.img.old                memtest86+.elf                System.map-5.15.0-43-generic  vmlinuz-5.15.0-43-generic
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /boot/grub/
+fonts/            gfxblacklist.txt  grub.cfg          grubenv           locale/           unicode.pf2       x86_64-efi/       
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cpuinfo
+Command 'cpuinfo' not found, did you mean:
+  command 'cpu-info' from deb cpuinfo (0.0~git20220131.85e931e-1)
+Try: sudo apt install <deb name>
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /proc/cpuinfo 

@@ -1,0 +1,769 @@
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ssh mca007@172.16.34.89
+The authenticity of host '172.16.34.89 (172.16.34.89)' can't be established.
+ED25519 key fingerprint is SHA256:Dyfy2gjCt3RVH/LtInZq0JQu/5OU879xHJft494/u1E.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added '172.16.34.89' (ED25519) to the list of known hosts.
+mca007@172.16.34.89's password: 
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-188-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+566 packages can be updated.
+264 updates are security updates.
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Your Hardware Enablement Stack (HWE) is supported until April 2023.
+Last login: Mon Feb 20 15:40:02 2023 from 172.16.34.143
+mca007@114MCSEVER1:~$ exit
+logout
+Connection to 172.16.34.89 closed.
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man
+What manual page do you want?
+For example, try 'man man'.
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man man
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man man
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ whatis man
+man (7)              - macros to format man pages
+man (1)              - an interface to the system reference manuals
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ whatis ls
+ls (1)               - list directory contents
+LS (6)               - display animations aimed to correct users who accidentally enter LS instead of ls .
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ whatis cat
+cat (1)              - concatenate files and print on the standard output
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ whatis sudo
+sudo (8)             - execute a command as another user
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ whatis whatis
+whatis (1)           - display one-line manual page descriptions
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ type ls
+ls is aliased to `ls --color=auto'
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ type echo
+echo is a shell builtin
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ type sudo
+sudo is /usr/bin/sudo
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ type exit
+exit is a shell builtin
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -il class*
+ls: cannot access 'class*': No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -il 
+.bash_history              .config/                   .fontconfig/               .local/                    .profile                   .sudo_as_admin_successful  
+.bash_logout               Desktop/                   .gnupg/                    Music/                     Public/                    Templates/                 
+.bashrc                    Documents/                 hi                         oops/                      snap/                      Videos/                    
+.cache/                    Downloads/                 .lesshst                   Pictures/                  .ssh/                      wap/                       
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -il oops
+total 8
+18614936 -rw-rw-r-- 1 ninadhegde ninadhegde 2566 Feb 17 00:37 practice.py
+18612342 -rw-rw-r-- 1 ninadhegde ninadhegde    1 Feb 16 18:35 practicr.py
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -L
+Desktop  Documents  Downloads  hi  Music  oops  Pictures  Public  snap  Templates  Videos  wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -a
+.   .bash_history  .bashrc  .config  Documents  .fontconfig  hi        .local  oops      .profile  snap  .sudo_as_admin_successful  Videos
+..  .bash_logout   .cache   Desktop  Downloads  .gnupg       .lesshst  Music   Pictures  Public    .ssh  Templates                  wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -all
+total 100
+drwxr-x--- 19 ninadhegde ninadhegde 4096 Feb 21 12:16 .
+drwxr-xr-x  3 root       root       4096 Feb 10 09:16 ..
+-rw-------  1 ninadhegde ninadhegde 3614 Feb 21 11:39 .bash_history
+-rw-r--r--  1 ninadhegde ninadhegde  220 Feb 10 09:16 .bash_logout
+-rw-r--r--  1 ninadhegde ninadhegde 3771 Feb 10 09:16 .bashrc
+drwx------ 15 ninadhegde ninadhegde 4096 Feb 14 17:36 .cache
+drwx------ 17 ninadhegde ninadhegde 4096 Feb 15 10:37 .config
+drwxr-xr-x  3 ninadhegde ninadhegde 4096 Feb 14 17:27 Desktop
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 10 14:55 Documents
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 21 12:07 Downloads
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 14 17:19 .fontconfig
+drwx------  2 ninadhegde ninadhegde 4096 Feb 21 11:26 .gnupg
+-rw-rw-r--  1 ninadhegde ninadhegde    6 Feb 15 10:47 hi
+-rw-------  1 ninadhegde ninadhegde   20 Feb 21 12:16 .lesshst
+drwx------  3 ninadhegde ninadhegde 4096 Feb 10 14:55 .local
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 10 14:55 Music
+drwxrwxr-x  2 ninadhegde ninadhegde 4096 Feb 17 00:37 oops
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 10 14:55 Pictures
+-rw-r--r--  1 ninadhegde ninadhegde  807 Feb 10 09:16 .profile
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 10 14:55 Public
+drwx------  6 ninadhegde ninadhegde 4096 Feb  9 23:00 snap
+drwx------  2 ninadhegde ninadhegde 4096 Feb 21 11:33 .ssh
+-rw-r--r--  1 ninadhegde ninadhegde    0 Feb  9 22:39 .sudo_as_admin_successful
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 10 14:55 Templates
+drwxr-xr-x  2 ninadhegde ninadhegde 4096 Feb 10 14:55 Videos
+drwxrwxr-x  2 ninadhegde ninadhegde 4096 Feb 20 07:14 wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -a -L
+.   .bash_history  .bashrc  .config  Documents  .fontconfig  hi        .local  oops      .profile  snap  .sudo_as_admin_successful  Videos
+..  .bash_logout   .cache   Desktop  Downloads  .gnupg       .lesshst  Music   Pictures  Public    .ssh  Templates                  wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -il -L oops
+total 8
+18614936 -rw-rw-r-- 1 ninadhegde ninadhegde 2566 Feb 17 00:37 practice.py
+18612342 -rw-rw-r-- 1 ninadhegde ninadhegde    1 Feb 16 18:35 practicr.py
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -il -all oops
+total 16
+18612339 drwxrwxr-x  2 ninadhegde ninadhegde 4096 Feb 17 00:37 .
+18481154 drwxr-x--- 19 ninadhegde ninadhegde 4096 Feb 21 12:16 ..
+18614936 -rw-rw-r--  1 ninadhegde ninadhegde 2566 Feb 17 00:37 practice.py
+18612342 -rw-rw-r--  1 ninadhegde ninadhegde    1 Feb 16 18:35 practicr.py
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ compgen
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ compgen -b
+.
+:
+[
+alias
+bg
+bind
+break
+builtin
+caller
+cd
+command
+compgen
+complete
+compopt
+continue
+declare
+dirs
+disown
+echo
+enable
+eval
+exec
+exit
+export
+false
+fc
+fg
+getopts
+hash
+help
+history
+jobs
+kill
+let
+local
+logout
+mapfile
+popd
+printf
+pushd
+pwd
+read
+readarray
+readonly
+return
+set
+shift
+shopt
+source
+suspend
+test
+times
+trap
+true
+type
+typeset
+ulimit
+umask
+unalias
+unset
+wait
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ tty
+/dev/pts/1
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /dev/pts/1 
+.bash_history              .config/                   .fontconfig/               .local/                    .profile                   .sudo_as_admin_successful  
+.bash_logout               Desktop/                   .gnupg/                    Music/                     Public/                    Templates/                 
+.bashrc                    Documents/                 hi                         oops/                      snap/                      Videos/                    
+.cache/                    Downloads/                 .lesshst                   Pictures/                  .ssh/                      wap/                       
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /dev/pts/1 
+.bash_history              .config/                   .fontconfig/               .local/                    .profile                   .sudo_as_admin_successful  
+.bash_logout               Desktop/                   .gnupg/                    Music/                     Public/                    Templates/                 
+.bashrc                    Documents/                 hi                         oops/                      snap/                      Videos/                    
+.cache/                    Downloads/                 .lesshst                   Pictures/                  .ssh/                      wap/                       
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /dev/null 
+.bash_history              .config/                   .fontconfig/               .local/                    .profile                   .sudo_as_admin_successful  
+.bash_logout               Desktop/                   .gnupg/                    Music/                     Public/                    Templates/                 
+.bashrc                    Documents/                 hi                         oops/                      snap/                      Videos/                    
+.cache/                    Downloads/                 .lesshst                   Pictures/                  .ssh/                      wap/                       
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /dev/tty
+tty        tty13      tty19      tty24      tty3       tty35      tty40      tty46      tty51      tty57      tty62      ttyS0      ttyS14     ttyS2      ttyS25     ttyS30     ttyS8      
+tty0       tty14      tty2       tty25      tty30      tty36      tty41      tty47      tty52      tty58      tty63      ttyS1      ttyS15     ttyS20     ttyS26     ttyS31     ttyS9      
+tty1       tty15      tty20      tty26      tty31      tty37      tty42      tty48      tty53      tty59      tty7       ttyS10     ttyS16     ttyS21     ttyS27     ttyS4      
+tty10      tty16      tty21      tty27      tty32      tty38      tty43      tty49      tty54      tty6       tty8       ttyS11     ttyS17     ttyS22     ttyS28     ttyS5      
+tty11      tty17      tty22      tty28      tty33      tty39      tty44      tty5       tty55      tty60      tty9       ttyS12     ttyS18     ttyS23     ttyS29     ttyS6      
+tty12      tty18      tty23      tty29      tty34      tty4       tty45      tty50      tty56      tty61      ttyprintk  ttyS13     ttyS19     ttyS24     ttyS3      ttyS7      
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /dev/tty1
+tty1   tty10  tty11  tty12  tty13  tty14  tty15  tty16  tty17  tty18  tty19  
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man tty
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man stty
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ history
+    1  sudo apt install curl
+    2  sudo apt update
+    3  sudo apt install brave_browser
+    4  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    5  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+    6  sudo apt install brave_browser
+    7  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    8  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+    9  sudo apt install brave_browser
+   10  sudo apt install brave-browser
+   11  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+   12  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+   13  sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+   14  sudo apt install curl
+   15  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+   16  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+   17  sudo apt install brave-browser
+   18  sudo ifconfig
+   19  sudo apt-get install ifconfig
+   20  ifconfig
+   21  sudo apt install net-tools
+   22  ifconfig
+   23  ls
+   24  who
+   25  whatis ls
+   26  whatis cd
+   27  whereis  ls
+   28  tree
+   29  sudo apt install tree
+   30  tree
+   31  ls /dev/sd
+   32  ls /dev/sd/
+   33  ls /dev
+   34  ls /dev/sda
+   35  ls /dev/sda1
+   36  ls /dev/sdb
+   37  ls /dev/sdb1
+   38  ls /dev/sdb2
+   39  clear
+   40  tree
+   41  sudo apt-get install neofetch
+   42  neofetch
+   43  firefox
+   44  gedit
+   45  clear
+   46  gedit&
+   47  nano feb 14.txt
+   48  nano 14feblss.txt
+   49  nano 14_02_lss.txt
+   50  libreoffice
+   51  libreoffice&
+   52  &
+   53  ps
+   54  gnome-todo
+   55  gnome-todo
+   56  gnome-terminal
+   57  gnome-calculator
+   58  firefox
+   59  ping www.google.in
+   60  ping http://172.16.2.133
+   61  ping 172.16.2.133
+   62  sudo apt-get install sl
+   63  sudo apt-get update
+   64  sl
+   65  man dpkg
+   66  sudo apt-get
+   67  dpkg -l
+   68  dpkg -l bolt
+   69  dpkg -l amd64
+   70  dpkg -l all
+   71  dpkg -l
+   72  dpkg -l gcc
+   73  dpkg -l gamemode
+   74  dpkg -l
+   75  sudo apt install wajig
+   76  ls
+   77  sudo nano /etc/apt/sources.list
+   78  cpuinfo
+   79  cat /proc/cpuinfo 
+   80  pwd
+   81  nano 15_02_lss
+   82  nano 15_02_lss.txt
+   83  ifconfig
+   84  /etc/passwd
+   85  cat /etc/passwd
+   86  ls -l
+   87  ls -i
+   88  df
+   89  sudo apt-get install snap
+   90  df
+   91  df -Yh
+   92  df -Th
+   93  man df
+   94  df -i
+   95  top
+   96  htop
+   97  h top
+   98  man top
+   99  top -h
+  100  ls /var/log/
+  101  cat > hi
+  102  hi
+  103  cat hi
+  104  cat /dev/null
+  105  pwd
+  106  mkdir oops
+  107  cd oops
+  108  nano practicr.py
+  109  nano practice.py
+  110  python3 practice.py
+  111  nano practice.py
+  112  python3 practice.py
+  113  nano practice.py
+  114  python3 practice.py
+  115  nano practice.py
+  116  python3 practice.py
+  117  nano practice.py
+  118  python3 practice.py
+  119  nano practice.py
+  120  python3 practice.py
+  121  3
+  122  python3 practice.py
+  123  nano practice.py
+  124  python3 practice.py
+  125  nano practice.py
+  126  python3 practice.py
+  127  nano practice.py
+  128  python3 practice.py
+  129  nano practice.py
+  130  python3 practice.py
+  131  nano practice.py
+  132  python3 practice.py
+  133  nano practice.py
+  134  python3 practice.py
+  135  nano practice.py
+  136  python3 practice.py
+  137  nano practice.py
+  138  python3 practice.py
+  139  nano practice.py
+  140  python3 practice.py
+  141  nano practice.py
+  142  python3 practice.py
+  143  nano practice.py
+  144  python3 practice.py
+  145  nano practice.py
+  146  python3 practice.py
+  147  nano practice.py
+  148  python3 practice.py
+  149  nano practice.py
+  150  python3 practice.py
+  151  shutdown
+  152  shutdown -c
+  153  mkdir wap
+  154  cd wap
+  155  nano inv.html
+  156  ssh mca007@172.16.34.89
+  157  man
+  158  man man
+  159  whatis man
+  160  whatis ls
+  161  whatis cat
+  162  whatis sudo
+  163  whatis whatis
+  164  type ls
+  165  type echo
+  166  type sudo
+  167  type exit
+  168  ls -il class*
+  169  ls -il oops
+  170  ls -L
+  171  ls -a
+  172  ls -all
+  173  ls -a -L
+  174  ls -il -L oops
+  175  ls -il -all oops
+  176  compgen
+  177  compgen -b
+  178  tty
+  179  man tty
+  180  man stty
+  181  history
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ script
+Script started, output log file is 'typescript'.
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ neofetch
+            .-/+oossssoo+/-.               ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU 
+        `:+ssssssssssssssssss+:`           --------------------------------------------- 
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 22.04.1 LTS x86_64 
+    .ossssssssssssssssssdMMMNysssso.       Host: ROG Strix G731GU_G731GU 1.0 
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.15.0-43-generic 
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 1 hour, 16 mins 
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 1675 (dpkg), 11 (snap) 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.1.16 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1920x1080 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 42.2 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Yaru-olive-dark [GTK2/3] 
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: Yaru-olive [GTK2/3] 
+  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: script 
+   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: Intel i7-9750H (12) @ 4.500GHz 
+    .ossssssssssssssssssdMMMNysssso.       GPU: Intel CoffeeLake-H GT2 [UHD Graphics 630] 
+      -+sssssssssssssssssyyyssss+-         GPU: NVIDIA GeForce GTX 1660 Ti Mobile 
+        `:+ssssssssssssssssss+:`           Memory: 2835MiB / 31955MiB 
+            .-/+oossssoo+/-.
+                                                                   
+                                                                   
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /etc/osrelase
+cat: /etc/osrelase: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /etc/
+Display all 226 possibilities? (y or n)
+acpi/                   cron.hourly/            gdm3/                   ipp-usb/                mailcap                 pcmcia/                 security/               tmpfiles.d/
+adduser.conf            cron.monthly/           geoclue/                iproute2/               mailcap.order           perl/                   selinux/                ubuntu-advantage/
+alsa/                   crontab                 ghostscript/            issue                   manpath.config          pki/                    sensors3.conf           ucf.conf
+alternatives/           cron.weekly/            glvnd/                  issue.net               mime.types              pm/                     sensors.d/              udev/
+anacrontab              cups/                   gnome/                  kernel/                 mke2fs.conf             pnm2ppa.conf            services                udisks2/
+apg.conf                cupshelpers/            groff/                  kernel-img.conf         ModemManager/           polkit-1/               sgml/                   ufw/
+apm/                    dbus-1/                 group                   kerneloops.conf         modprobe.d/             ppp/                    shadow                  update-manager/
+apparmor/               dconf/                  group-                  ldap/                   modules                 profile                 shadow-                 update-motd.d/
+apparmor.d/             debconf.conf            grub.d/                 ld.so.cache             modules-load.d/         profile.d/              shells                  update-notifier/
+apport/                 debian_version          gshadow                 ld.so.conf              mtab                    protocols               skel/                   UPower/
+appstream.conf          default/                gshadow-                ld.so.conf.d/           nanorc                  pulse/                  snmp/                   usb_modeswitch.conf
+apt/                    deluser.conf            gss/                    legal                   netconfig               .pwd.lock               speech-dispatcher/      usb_modeswitch.d/
+avahi/                  depmod.d/               gtk-2.0/                libao.conf              netplan/                python3/                ssh/                    vim/
+bash.bashrc             dhcp/                   gtk-3.0/                libaudit.conf           network/                python3.10/             ssl/                    vtrgb
+bash_completion         dictionaries-common/    hdparm.conf             libblockdev/            networkd-dispatcher/    rc0.d/                  subgid                  vulkan/
+bash_completion.d/      dpkg/                   host.conf               libnl-3/                NetworkManager/         rc1.d/                  subgid-                 w3m/
+bindresvport.blacklist  e2scrub.conf            hostid                  libpaper.d/             networks                rc2.d/                  subuid                  wgetrc
+binfmt.d/               emacs/                  hostname                libreoffice/            newt/                   rc3.d/                  subuid-                 wpa_supplicant/
+bluetooth/              environment             hosts                   locale.alias            nftables.conf           rc4.d/                  sudo.conf               X11/
+brlapi.key              environment.d/          hosts.allow             locale.gen              nsswitch.conf           rc5.d/                  sudoers                 xattr.conf
+brltty/                 ethertypes              hosts.deny              localtime               openvpn/                rc6.d/                  sudoers.d/              xdg/
+brltty.conf             firefox/                hp/                     logcheck/               opt/                    rcS.d/                  sudo_logsrvd.conf       xml/
+ca-certificates/        fonts/                  ifplugd/                login.defs              os-release              resolv.conf             sysctl.conf             zsh_command_not_found
+ca-certificates.conf    fprintd.conf            ImageMagick-6/          logrotate.conf          PackageKit/             rmt                     sysctl.d/               
+chatscripts/            fstab                   init/                   logrotate.d/            pam.conf                rpc                     systemd/                
+console-setup/          fuse.conf               init.d/                 lsb-release             pam.d/                  rsyslog.conf            terminfo/               
+cracklib/               fwupd/                  initramfs-tools/        machine-id              papersize               rsyslog.d/              thermald/               
+cron.d/                 gai.conf                inputrc                 magic                   passwd                  rygel.conf              thunderbird/            
+cron.daily/             gdb/                    insserv.conf.d/         magic.mime              passwd-                 sane.d/                 timezone                
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 22.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.1 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /boot/
+config-5.15.0-43-generic      grub/                         initrd.img-5.15.0-43-generic  memtest86+.bin                memtest86+_multiboot.bin      vmlinuz                       
+efi/                          initrd.img                    initrd.img.old                memtest86+.elf                System.map-5.15.0-43-generic  vmlinuz-5.15.0-43-generic     
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+
+
+
+
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls /boot/
+config-5.15.0-43-generic      grub/                         initrd.img-5.15.0-43-generic  memtest86+.bin                memtest86+_multiboot.bin      vmlinuz                       
+efi/                          initrd.img                    initrd.img.old                memtest86+.elf                System.map-5.15.0-43-generic  vmlinuz-5.15.0-43-generic     
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man cd
+No manual entry for cd
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man cat
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat -A
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat 
+.bash_history              .config/                   .fontconfig/               .local/                    .profile                   .sudo_as_admin_successful  wap/
+.bash_logout               Desktop/                   .gnupg/                    Music/                     Public/                    Templates/                 
+.bashrc                    Documents/                 hi                         oops/                      snap/                      typescript                 
+.cache/                    Downloads/                 .lesshst                   Pictures/                  .ssh/                      Videos/                    
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat oops/practic
+cat: oops/practic: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /oops/practic
+cat: /oops/practic: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat /oops/practic
+cat: /oops/practic: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man cat
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat -A /oops/practic
+cat: /oops/practic: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cat -A oops/practic
+cat: oops/practic: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man cal
+No manual entry for cal
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt install ncal
+[sudo] password for ninadhegde: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  ncal
+0 upgraded, 1 newly installed, 0 to remove and 288 not upgraded.
+Need to get 20.2 kB of archives.
+After this operation, 69.6 kB of additional disk space will be used.
+Ign:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 ncal amd64 12.1.7+nmu3ubuntu2
+Ign:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 ncal amd64 12.1.7+nmu3ubuntu2
+Ign:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 ncal amd64 12.1.7+nmu3ubuntu2
+Err:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 ncal amd64 12.1.7+nmu3ubuntu2
+  Temporary failure resolving 'in.archive.ubuntu.com'
+E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/pool/universe/b/bsdmainutils/ncal_12.1.7%2bnmu3ubuntu2_amd64.deb  Temporary failure resolving 'in.archive.ubuntu.com'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo apt install ncal
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  ncal
+0 upgraded, 1 newly installed, 0 to remove and 288 not upgraded.
+Need to get 20.2 kB of archives.
+After this operation, 69.6 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 ncal amd64 12.1.7+nmu3ubuntu2 [20.2 kB]
+Fetched 20.2 kB in 1s (28.8 kB/s)
+Selecting previously unselected package ncal.
+(Reading database ... 161808 files and directories currently installed.)
+Preparing to unpack .../ncal_12.1.7+nmu3ubuntu2_amd64.deb ...
+Unpacking ncal (12.1.7+nmu3ubuntu2) ...
+Setting up ncal (12.1.7+nmu3ubuntu2) ...
+Processing triggers for man-db (2.10.2-1) ...
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date
+Tuesday 21 February 2023 12:58:01 PM +0530
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cal
+   February 2023      
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28              
+                      
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man cal
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man date
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date -u
+Tuesday 21 February 2023 07:28:39 AM UTC
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date
+Tuesday 21 February 2023 12:58:48 PM +0530
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man date
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date %H
+date: invalid date ‘%H’
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man date
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date -f
+date: option requires an argument -- 'f'
+Try 'date --help' for more information.
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date --help
+Usage: date [OPTION]... [+FORMAT]
+  or:  date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+Display the current time in the given FORMAT, or set the system date.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -d, --date=STRING          display time described by STRING, not 'now'
+      --debug                annotate the parsed date,
+                              and warn about questionable usage to stderr
+  -f, --file=DATEFILE        like --date; once for each line of DATEFILE
+  -I[FMT], --iso-8601[=FMT]  output date/time in ISO 8601 format.
+                               FMT='date' for date only (the default),
+                               'hours', 'minutes', 'seconds', or 'ns'
+                               for date and time to the indicated precision.
+                               Example: 2006-08-14T02:34:56-06:00
+  -R, --rfc-email            output date and time in RFC 5322 format.
+                               Example: Mon, 14 Aug 2006 02:34:56 -0600
+      --rfc-3339=FMT         output date/time in RFC 3339 format.
+                               FMT='date', 'seconds', or 'ns'
+                               for date and time to the indicated precision.
+                               Example: 2006-08-14 02:34:56-06:00
+  -r, --reference=FILE       display the last modification time of FILE
+  -s, --set=STRING           set time described by STRING
+  -u, --utc, --universal     print or set Coordinated Universal Time (UTC)
+      --help     display this help and exit
+      --version  output version information and exit
+
+FORMAT controls the output.  Interpreted sequences are:
+
+  %%   a literal %
+  %a   locale's abbreviated weekday name (e.g., Sun)
+  %A   locale's full weekday name (e.g., Sunday)
+  %b   locale's abbreviated month name (e.g., Jan)
+  %B   locale's full month name (e.g., January)
+  %c   locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+  %C   century; like %Y, except omit last two digits (e.g., 20)
+  %d   day of month (e.g., 01)
+  %D   date; same as %m/%d/%y
+  %e   day of month, space padded; same as %_d
+  %F   full date; like %+4Y-%m-%d
+  %g   last two digits of year of ISO week number (see %G)
+  %G   year of ISO week number (see %V); normally useful only with %V
+  %h   same as %b
+  %H   hour (00..23)
+  %I   hour (01..12)
+  %j   day of year (001..366)
+  %k   hour, space padded ( 0..23); same as %_H
+  %l   hour, space padded ( 1..12); same as %_I
+  %m   month (01..12)
+  %M   minute (00..59)
+  %n   a newline
+  %N   nanoseconds (000000000..999999999)
+  %p   locale's equivalent of either AM or PM; blank if not known
+  %P   like %p, but lower case
+  %q   quarter of year (1..4)
+  %r   locale's 12-hour clock time (e.g., 11:11:04 PM)
+  %R   24-hour hour and minute; same as %H:%M
+  %s   seconds since 1970-01-01 00:00:00 UTC
+  %S   second (00..60)
+  %t   a tab
+  %T   time; same as %H:%M:%S
+  %u   day of week (1..7); 1 is Monday
+  %U   week number of year, with Sunday as first day of week (00..53)
+  %V   ISO week number, with Monday as first day of week (01..53)
+  %w   day of week (0..6); 0 is Sunday
+  %W   week number of year, with Monday as first day of week (00..53)
+  %x   locale's date representation (e.g., 12/31/99)
+  %X   locale's time representation (e.g., 23:13:48)
+  %y   last two digits of year (00..99)
+  %Y   year
+  %z   +hhmm numeric time zone (e.g., -0400)
+  %:z  +hh:mm numeric time zone (e.g., -04:00)
+  %::z  +hh:mm:ss numeric time zone (e.g., -04:00:00)
+  %:::z  numeric time zone with : to necessary precision (e.g., -04, +05:30)
+  %Z   alphabetic time zone abbreviation (e.g., EDT)
+
+By default, date pads numeric fields with zeroes.
+The following optional flags may follow '%':
+
+  -  (hyphen) do not pad the field
+  _  (underscore) pad with spaces
+  0  (zero) pad with zeros
+  +  pad with zeros, and put '+' before future years with >4 digits
+  ^  use upper case if possible
+  #  use opposite case if possible
+
+After any flags comes an optional field width, as a decimal number;
+then an optional modifier, which is either
+E to use the locale's alternate representations if available, or
+O to use the locale's alternate numeric symbols if available.
+
+Examples:
+Convert seconds since the epoch (1970-01-01 UTC) to a date
+  $ date --date='@2147483647'
+
+Show the time on the west coast of the US (use tzselect(1) to find TZ)
+  $ TZ='America/Los_Angeles' date
+
+Show the local time for 9AM next Friday on the west coast of the US
+  $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/date>
+or available locally via: info '(coreutils) date invocation'
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date %c
+date: invalid date ‘%c’
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date+%c
+date+%c: command not found
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man date
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date %c
+date: invalid date ‘%c’
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date
+Tuesday 21 February 2023 01:01:39 PM +0530
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%c
+Tuesday 21 February 2023 01:02:01 PM
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%H
+13
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%H
+13
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%h
+Feb
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man date
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%M
+02
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%M
+03
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%F
+2023-02-21
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%f
+%f
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%D
+02/21/23
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ date +%Y
+2023
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cal 2022 | more
+                            2022
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5         1  2  3  4  5  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   6  7  8  9 10 11 12  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  13 14 15 16 17 18 19  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  20 21 22 23 24 25 26  
+23 24 25 26 27 28 29  27 28                 27 28 29 30 31        
+30 31                                                             
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2   1  2  3  4  5  6  7            1  2  3  4  
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14   5  6  7  8  9 10 11  
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  12 13 14 15 16 17 18  
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  19 20 21 22 23 24 25  
+24 25 26 27 28 29 30  29 30 31              26 27 28 29 30        
+                                                                  
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2      1  2  3  4  5  6               1  2  3  
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+24 25 26 27 28 29 30  28 29 30 31           25 26 27 28 29 30     
+31                                                                
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5               1  2  3  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31  
+30 31                                                             
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cal 2022
+                            2022
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5         1  2  3  4  5  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   6  7  8  9 10 11 12  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  13 14 15 16 17 18 19  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  20 21 22 23 24 25 26  
+23 24 25 26 27 28 29  27 28                 27 28 29 30 31        
+30 31                                                             
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2   1  2  3  4  5  6  7            1  2  3  4  
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14   5  6  7  8  9 10 11  
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  12 13 14 15 16 17 18  
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  19 20 21 22 23 24 25  
+24 25 26 27 28 29 30  29 30 31              26 27 28 29 30        
+                                                                  
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2      1  2  3  4  5  6               1  2  3  
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+24 25 26 27 28 29 30  28 29 30 31           25 26 27 28 29 30     
+31                                                                
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5               1  2  3  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31  
+30 31                                                             
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cal 2022 | less
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+

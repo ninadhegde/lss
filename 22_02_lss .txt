@@ -1,0 +1,298 @@
+inadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd /home/ninadhegde/Downloads/
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat /home/ninadhegde/Downloads/
+1MCA2020SCHEMESYLLABUSFINAL_compressed.pdf  unix archi 1.png                            unixfilediagram.png                         
+brave-browser-archive-keyring.gpg           unix archi 2.jpeg                           
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat /home/ninadhegde/Downloads/unix archi 1.png
+cat: /home/ninadhegde/Downloads/unix: No such file or directory
+cat: archi: No such file or directory
+cat: 1.png: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat /home/ninadhegde/Downloads/unixfiledigram.png
+cat: /home/ninadhegde/Downloads/unixfiledigram.png: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat /home/ninadhegde/Downloads/unixfilediagram.png
+�PNG
+�
+IHDR�
+    �`QIDATx���y|u�?�wXT�V�j�U,�ZjA�pm��],ȑ���Dхh,�i9D����]��h5/W�TH�ˡB�rH�6Z@ �����d:�I�I2�L�������tf����|���0
+                                                                                                               C�F���PE��@��PE��@�*
+;PE4����{��&�?���P�$��@dcg�0��XD*���(�a�3zy0�j��(�$��TQ~�,�
+f� 2`�cQ�v��TQ~�,�f�@�0�j��(P#���(�a"f�@]0��cQ���TQ~�,D��@�a"Ƣ �0�����Y<�h�����,D:�E��0�����Y<�����`�	Ƣ@	��TQ~�,D%��@ha�Ƣ T���۶m?�ϟǞu�0
+                                                                                                                                              ���0gΜ�mۚL&�?���/X���W^9}�t�f������ŋ�N���j�KU���f{�嗿��ƍ����������6m��������+@@lx뭷>���a:t萖�VVV�믿�9s��z�j�-Ο?��9�F�0����_}��V�Za�@�a]���-[&N�تU�1c��l����;v������.]�̞=��z�!C�\�zuܸq͚5�ڵk���׭[צM�=z|��؍^��l߾�j�Z��F��]�r�Y�f�Ǐ��'���{�o��v
+                                                                                                                                                                  	s��ٿ�F�)--}�g&M���K/��?��裏�
+                                                                                                                                                                                                    ��7�����ߕ+W�����<;;�gϞط�*
+                                    ��be���t�E�	9�
+
+                                                  �����*Ø�x�Kڜ{,��܃�U�������ez~1�g&ў�Z	Ʉ�1%�BDg��cz�AS�є���v��_Deb
+�V��L�K��Ƣ *9�����-Â���Ԫu���v��sR���ID]�$<$���R3�{wU����i5�U�DD��{��U�Z%d�≜�ĺK��
+                                                                                �tf"}Zn���t��X[b(3�{�{-��7h+0��
+>��'Y�s7�Ӗ��j�dZ���4&�� F`,                                                                                    � �is�[�ml�:�����
+"_B��՚�-��q�}��Z�Z�6Ql���z���Gԉ/�ao�.EG	�J��a����(TQ��PE��TQ��PE��@��PE��@�*
+PE��@�*
+U��@������Gt	6IEND�B`�ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ 
+
+inadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cd /boot
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/boot$ cd /grub
+bash: cd: /grub: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/boot$ cd /boot/grub
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/boot/grub$ ls
+fonts  gfxblacklist.txt  grub.cfg  grubenv  locale  unicode.pf2  x86_64-efi
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/boot/grub$ cd ~
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -x
+Desktop  Documents  Downloads  hi  Music  oops  Pictures  Public  snap  Templates  typescript  Videos  wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -Fx 
+Desktop/  Documents/  Downloads/  hi  Music/  oops/  Pictures/  Public/  snap/  Templates/  typescript  Videos/  wap/
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -F
+Desktop/  Documents/  Downloads/  hi  Music/  oops/  Pictures/  Public/  snap/  Templates/  typescript  Videos/  wap/
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -Fx t*
+typescript
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls t*
+typescript
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd ~
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -x t*
+typescript
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls
+Desktop  Documents  Downloads  hi  Music  oops  Pictures  Public  snap  Templates  typescript  Videos  wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd snap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/snap$ ls
+brave  firefox  snapd-desktop-integration  snap-store
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/snap$ ls -x t*
+ls: cannot access 't*': No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/snap$ ls -Fx t*
+ls: cannot access 't*': No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/snap$ ls t*
+ls: cannot access 't*': No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/snap$ cd ~
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -l
+total 272
+drwxr-xr-x 3 ninadhegde ninadhegde   4096 Feb 14 17:27 Desktop
+drwxr-xr-x 2 ninadhegde ninadhegde   4096 Feb 10 14:55 Documents
+drwxr-xr-x 2 ninadhegde ninadhegde   4096 Feb 21 12:07 Downloads
+-rw-rw-r-- 1 ninadhegde ninadhegde      6 Feb 15 10:47 hi
+drwxr-xr-x 2 ninadhegde ninadhegde   4096 Feb 10 14:55 Music
+drwxrwxr-x 2 ninadhegde ninadhegde   4096 Feb 17 00:37 oops
+drwxr-xr-x 3 ninadhegde ninadhegde   4096 Feb 21 20:38 Pictures
+drwxr-xr-x 2 ninadhegde ninadhegde   4096 Feb 10 14:55 Public
+drwx------ 6 ninadhegde ninadhegde   4096 Feb  9 23:00 snap
+drwxr-xr-x 2 ninadhegde ninadhegde   4096 Feb 10 14:55 Templates
+-rw-rw-r-- 1 ninadhegde ninadhegde 225280 Feb 21 13:20 typescript
+drwxr-xr-x 2 ninadhegde ninadhegde   4096 Feb 10 14:55 Videos
+drwxrwxr-x 2 ninadhegde ninadhegde   4096 Feb 20 07:14 wap
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls -ail /
+total 84
+       2 drwxr-xr-x  20 root root  4096 Feb 10 09:15 .
+       2 drwxr-xr-x  20 root root  4096 Feb 10 09:15 ..
+      12 lrwxrwxrwx   1 root root     7 Feb 10 09:12 bin -> usr/bin
+ 9306113 drwxr-xr-x   4 root root  4096 Feb 10 09:20 boot
+11141121 drwxrwxr-x   2 root root  4096 Feb 10 09:15 cdrom
+       1 drwxr-xr-x  20 root root  5120 Feb 22 09:11 dev
+13893633 drwxr-xr-x 131 root root 12288 Feb 21 13:13 etc
+18481153 drwxr-xr-x   3 root root  4096 Feb 10 09:16 home
+      13 lrwxrwxrwx   1 root root     7 Feb 10 09:12 lib -> usr/lib
+      14 lrwxrwxrwx   1 root root     9 Feb 10 09:12 lib32 -> usr/lib32
+      15 lrwxrwxrwx   1 root root     9 Feb 10 09:12 lib64 -> usr/lib64
+      16 lrwxrwxrwx   1 root root    10 Feb 10 09:12 libx32 -> usr/libx32
+      11 drwx------   2 root root 16384 Feb 10 09:11 lost+found
+16646145 drwxr-xr-x   3 root root  4096 Feb  9 22:36 media
+ 7733249 drwxr-xr-x   2 root root  4096 Aug  9  2022 mnt
+14024705 drwxr-xr-x   2 root root  4096 Aug  9  2022 opt
+       1 dr-xr-xr-x 385 root root     0 Feb 22 08:58 proc
+ 5636097 drwx------   5 root root  4096 Feb 14 18:45 root
+       1 drwxr-xr-x  36 root root   940 Feb 22 09:36 run
+      17 lrwxrwxrwx   1 root root     8 Feb 10 09:12 sbin -> usr/sbin
+  786433 drwxr-xr-x  14 root root  4096 Feb 22 09:11 snap
+ 1441793 drwxr-xr-x   2 root root  4096 Aug  9  2022 srv
+       1 dr-xr-xr-x  13 root root     0 Feb 22 08:58 sys
+15859713 drwxrwxrwt  21 root root  4096 Feb 22 09:40 tmp
+ 7340033 drwxr-xr-x  14 root root  4096 Aug  9  2022 usr
+ 9961473 drwxr-xr-x  14 root root  4096 Aug  9  2022 var
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man ls
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd /
+bin/        cdrom/      etc/        lib/        lib64/      lost+found/ mnt/        proc/       run/        snap/       sys/        usr/        
+boot/       dev/        home/       lib32/      libx32/     media/      opt/        root/       sbin/       srv/        tmp/        var/        
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd /home/ninadhegde/Downloads/
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer.txt
+cat: buffer.txt: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$  buffer.txt
+buffer.txt: command not found
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer.txt
+cat: buffer.txt: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat > buffer.txt
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat > buffer2.txt
+hello
+^C
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln buffer.txt buffer2.txt
+ln: failed to create hard link 'buffer2.txt': File exists
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln -s buffer.txt buffer2.txt
+ln: failed to create symbolic link 'buffer2.txt': File exists
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln -s buffer.txt buffer3.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln -s buffer.txt buffer4.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln -s buffer5.txt buffer6.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ echo "Hello this is a line" > buffer5.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer5
+cat: buffer5: No such file or directory
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer5.txt
+Hello this is a line
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer6.txt
+Hello this is a line
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ echo "Hello this is ninad, listening to lss class" > buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer3.txt
+Hello this is ninad, listening to lss class
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer4.txt
+Hello this is ninad, listening to lss class
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ cat buffer2.txt
+hello
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ 
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495442 -rw-rw-r-- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln -s buffer4.txt buffer7.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ln -s buffer7.txt buffer8.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 -rw-rw-r-- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ 
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 -rw-rw-r-- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads$ 
+
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls
+buffer2.txt  buffer3.txt  buffer4.txt  buffer5.txt  buffer6.txt  buffer7.txt  buffer8.txt  buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 -rwxrwxrwx 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 700 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 400 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 -r-------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 400 buffer7.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 -r-------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 000 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 ---------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer.txt
+cat: buffer.txt: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 ---------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 400 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer.txt
+Hello this is ninad, listening to lss class
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 -rwxrwxrwx 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 000 buffer7.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 ---------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer7.txt
+cat: buffer7.txt: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 ---------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer7.txt
+Hello this is ninad, listening to lss class
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 000 buffer7.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer7.txt
+cat: buffer7.txt: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail *txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde  6 Feb 22 09:55 buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde 10 Feb 22 09:56 buffer4.txt -> buffer.txt
+18495447 -rw-rw-r-- 1 ninadhegde ninadhegde 21 Feb 22 09:58 buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 09:57 buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde 11 Feb 22 10:04 buffer8.txt -> buffer7.txt
+18495442 ---------- 1 ninadhegde ninadhegde 44 Feb 22 10:01 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer.txt
+cat: buffer.txt: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer7.txt
+Hello this is ninad, listening to lss class
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 300 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer.txt
+cat: buffer.txt: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer7.txt
+cat: buffer7.txt: Permission denied
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ chmod 777 buffer.txt
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cat buffer7.txt
+Hello this is ninad, listening to lss class
+ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ 
+
+
