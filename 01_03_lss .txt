@@ -1,0 +1,35 @@
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd git/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cd lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ echo print("Hello world") >> hello.py
+bash: syntax error near unexpected token `('
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ echo print("Hello world") > hello.py
+bash: syntax error near unexpected token `('
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ echo "print("Hello world")" > hello.py
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   01_03_lss .txt
+	new file:   hello.py
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git commit -m "py program hello created"
+[main 6862dfa] py program hello created
+ 2 files changed, 1 insertion(+)
+ create mode 100644 01_03_lss .txt
+ create mode 100644 hello.py
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:ninadhegde/lss.git
+   24a4f12..6862dfa  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ 
+
