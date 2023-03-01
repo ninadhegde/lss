@@ -238,6 +238,140 @@ On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/sh
+/bin/dash
+/usr/bin/dash
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   01_03_lss .txt
+	new file:   script0.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   lss (modified content)
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ls
+'01_03_lss .txt'      14_02_lss.txt   21_02_lss.txt    '28_02_lss  .txt'   hello.py   README.md         script01.sh    Topics.txt
+ 14_02_lss_long.txt   15_02_lss.txt  '22_02_lss .txt'   assignment.txt     lss        remote_file.txt   script0..txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ s
+Display all 209 possibilities? (y or n)
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ s
+s: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ls
+'01_03_lss .txt'      14_02_lss.txt   21_02_lss.txt    '28_02_lss  .txt'   hello.py   README.md         script01.sh    Topics.txt
+ 14_02_lss_long.txt   15_02_lss.txt  '22_02_lss .txt'   assignment.txt     lss        remote_file.txt   script0..txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat script01.sh 
+ls
+echo "ollo"
+mkdir script_test
+cd script_test
+echo "I am inside script directory"
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ script01.sh 
+script01.sh: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sh script01.sh 
+'01_03_lss .txt'      14_02_lss.txt   21_02_lss.txt    '28_02_lss  .txt'   hello.py   README.md         script01.sh    Topics.txt
+ 14_02_lss_long.txt   15_02_lss.txt  '22_02_lss .txt'   assignment.txt	   lss	      remote_file.txt   script0..txt
+ollo
+I am inside script directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   01_03_lss .txt
+	new file:   script0..txt
+	new file:   script01.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   lss (modified content)
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   01_03_lss .txt
+	new file:   script0.txt
+	new file:   script01.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   lss (modified content)
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sh script01.sh 
+'01_03_lss .txt'      14_02_lss.txt   21_02_lss.txt    '28_02_lss  .txt'   hello.py   README.md         script01.sh   script_test
+ 14_02_lss_long.txt   15_02_lss.txt  '22_02_lss .txt'   assignment.txt	   lss	      remote_file.txt   script0.txt   Topics.txt
+ollo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat /s
+sbin/ snap/ srv/  sys/  
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   01_03_lss .txt
+	new file:   script0.txt
+	new file:   script01.sh
+	new file:   script_test/message.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   lss (modified content)
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git commit -m "Lss shell script->0 march 1.3"
+[main 4608796] Lss shell script->0 march 1.3
+ 4 files changed, 223 insertions(+), 1 deletion(-)
+ create mode 100644 script0.txt
+ create mode 100755 script01.sh
+ create mode 100644 script_test/message.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 3.18 KiB | 3.18 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:ninadhegde/lss.git
+   7cface8..4608796  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ./script02.sh 
+ this is value of var : 567
+This is test RVCE
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ./script02.sh 
+ this is value of var : 567
+This is test RVCE
+Boolian : False
+host : ninadhegde-ROG-Strix-G731GU-G731GU
 (base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ 
 
 
