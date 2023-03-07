@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 (base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls 
 .anaconda/                 .conda/                    Downloads/                 .ipython/                  Pictures/                  .sudo_as_admin_successful  
 anaconda3/                 .condarc                   .fontconfig/               .jupyter/                  .pki/                      Templates/                 
@@ -373,5 +382,11 @@ This is test RVCE
 Boolian : False
 host : ninadhegde-ROG-Strix-G731GU-G731GU
 (base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ 
+
+
+
+
+
+
 
 

@@ -97,8 +97,50 @@ GIT
 	
 	
 	
-	
-	
+==========================================================
+TOPICS CIE /01/03 
+unix file systems
+unix architecture
+GNU linux
+kernal
+FOSS
+
+
+Directory hirachy
+file perssions
+attributes
+ls --options
+
+general purpose utility commands
+
+
+
+git 
+git installation
+git terminologies
+version
+git config --global u....
+git init
+git add filename
+git status
+git log
+git branch -M main
+git commit -m "message"
+push
+github
+ssh keys
+creating remote repos
+git clone
+make changes to epo locally
+push to remote repo 
+
+Intro to shell srcipting
+-basic script
+-quotations
+-declaring variables
+
+
+
 	
 	
 	

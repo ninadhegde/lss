@@ -1,0 +1,859 @@
+profile.txt
+cp profile to a3
+
+
+move about.txt from a1 to a2
+
+copy list.txt from a1 to b1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+....................................................................................
+.....................................................................................
+......................................................................................
+.......................................................................................
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man rm
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd lss
+bash: cd: lss: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls
+anaconda3  Desktop  Documents  Downloads  git  hi  Music  oops  Pictures  Public  sample  snap  Templates  typescript  Videos  wap
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ mkdir lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ mkdir a_section
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ mkdir b_section
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd a_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ mkdir a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ mkdir a2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ mkdir a3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd ./
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd b_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ mkdir b1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ mkdir b2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ mkdir b3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd a_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ echo "profile details" >> profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls
+profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ echo "about the batches" >> about.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ echo "List of students" >> list.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ man cp
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ pwd
+/home/ninadhegde/lss/a_section/a3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cp profile.txt /home/ninadhegde/lss/a_section/a3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ ls
+profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ man mv
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ ls
+profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ echo "about the batches" > about.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ ls
+about.txt  profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ echo "List of students" > list.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ ls
+about.txt  list.txt  profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ mv about.txt /home/ninadhegde/lss/a_section/a2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ ls
+list.txt  profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a3$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a2$ ls
+about.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a2$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ ls
+a_section  b_section
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd b_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ ls
+b1  b2  b3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ cd b1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ pwd
+/home/ninadhegde/lss/b_section/b1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd a_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cp list.txt /home/ninadhegde/lss/b_section/b1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd b_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ la
+b1  b2  b3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ cd b1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ ls
+list.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ cd ./
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ cd .\
+> ^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ cd ....
+bash: cd: ....: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section/b1$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/b_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/home$ ls
+ninadhegde
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/home$ cd ninadhegde/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo useradd -m test_user_1
+[sudo] password for ninadhegde: 
+Sorry, try again.
+[sudo] password for ninadhegde: 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo groupadd test_group_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo usermod -a -G test_group_1 test_user_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd 
+a_section/ b_section/ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd a_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls
+about.txt  list.txt  profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ sudo useradd -m test_user_2 -p password
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd hpme/
+bash: cd: hpme/: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd home/
+bash: cd: home/: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ pwd
+/home/ninadhegde/lss/a_section/a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd /home/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/home$ ls
+ninadhegde  test_user_1  test_user_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/home$ cd /etc/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ ls
+acpi                    ca-certificates.conf           e2scrub.conf   gshadow          issue.net        machine-id           openvpn       rc0.d          shells             ucf.conf
+adduser.conf            ca-certificates.conf.dpkg-old  emacs          gshadow-         kernel           magic                opt           rc1.d          skel               udev
+alsa                    chatscripts                    environment    gss              kernel-img.conf  magic.mime           os-release    rc2.d          snmp               udisks2
+alternatives            console-setup                  environment.d  gtk-2.0          kerneloops.conf  mailcap              PackageKit    rc3.d          speech-dispatcher  ufw
+anacrontab              cracklib                       ethertypes     gtk-3.0          ldap             mailcap.order        pam.conf      rc4.d          ssh                update-manager
+apg.conf                cron.d                         firefox        hdparm.conf      ld.so.cache      manpath.config       pam.d         rc5.d          ssl                update-motd.d
+apm                     cron.daily                     fonts          host.conf        ld.so.conf       mime.types           papersize     rc6.d          subgid             update-notifier
+apparmor                cron.hourly                    fprintd.conf   hostid           ld.so.conf.d     mke2fs.conf          passwd        rcS.d          subgid-            UPower
+apparmor.d              cron.monthly                   fstab          hostname         legal            ModemManager         passwd-       resolv.conf    subuid             usb_modeswitch.conf
+apport                  crontab                        fuse.conf      hosts            libao.conf       modprobe.d           pcmcia        rmt            subuid-            usb_modeswitch.d
+appstream.conf          cron.weekly                    fwupd          hosts.allow      libaudit.conf    modules              perl          rpc            sudo.conf          vdpau_wrapper.cfg
+apt                     cups                           gai.conf       hosts.deny       libblockdev      modules-load.d       pki           rsyslog.conf   sudoers            vim
+avahi                   cupshelpers                    gamin          hp               libnl-3          mtab                 pm            rsyslog.d      sudoers.d          vtrgb
+bash.bashrc             dbus-1                         gdb            ifplugd          libpaper.d       nanorc               pnm2ppa.conf  rygel.conf     sudo_logsrvd.conf  vulkan
+bash_completion         dconf                          gdm3           ImageMagick-6    libreoffice      netconfig            polkit-1      sane.d         sysctl.conf        w3m
+bash_completion.d       debconf.conf                   geoclue        init             locale.alias     netplan              ppp           security       sysctl.d           wgetrc
+bindresvport.blacklist  debian_version                 ghostscript    init.d           locale.gen       network              profile       selinux        systemd            whoopsie
+binfmt.d                default                        glvnd          initramfs-tools  localtime        networkd-dispatcher  profile.d     sensors3.conf  terminfo           wpa_supplicant
+bluetooth               deluser.conf                   gnome          inputrc          logcheck         NetworkManager       protocols     sensors.d      thermald           X11
+brlapi.key              depmod.d                       groff          insserv.conf.d   login.defs       networks             pulse         services       thunderbird        xattr.conf
+brltty                  dhcp                           group          ipp-usb          logrotate.conf   newt                 python3       sgml           timezone           xdg
+brltty.conf             dictionaries-common            group-         iproute2         logrotate.d      nftables.conf        python3.10    shadow         tmpfiles.d         xml
+ca-certificates         dpkg                           grub.d         issue            lsb-release      nsswitch.conf        python3.11    shadow-        ubuntu-advantage   zsh_command_not_found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cd group
+bash: cd: group: Not a directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cat group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ninadhegde
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ninadhegde
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ninadhegde
+audio:x:29:pulse
+dip:x:30:ninadhegde
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:ninadhegde
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+tss:x:112:
+bluetooth:x:113:
+ssl-cert:x:114:
+uuidd:x:115:
+systemd-oom:x:116:
+tcpdump:x:117:
+_ssh:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:ninadhegde
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+nm-openvpn:x:126:
+scanner:x:127:saned
+saned:x:128:
+colord:x:129:
+geoclue:x:130:
+pulse:x:131:
+pulse-access:x:132:
+gdm:x:133:
+lxd:x:134:ninadhegde
+ninadhegde:x:1000:
+sambashare:x:135:ninadhegde
+_flatpak:x:136:
+test_group:x:1001:guest_1,guest_2
+guest_1:x:1002:
+guest_2:x:1003:
+guest_3:x:1004:
+test_user_1:x:1005:
+test_group_1:x:1006:test_user_1
+test_user_2:x:1007:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ sudo useradd -m test_user_3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ sudo useradd -p password
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+      --badnames                do not check for bad names
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+      --btrfs-subvolume-home    use BTRFS subvolume for home directory
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+      --extrausers              Use the extra users database
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ sudo groupadd test_group_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cat group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ninadhegde
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ninadhegde
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ninadhegde
+audio:x:29:pulse
+dip:x:30:ninadhegde
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:ninadhegde
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+tss:x:112:
+bluetooth:x:113:
+ssl-cert:x:114:
+uuidd:x:115:
+systemd-oom:x:116:
+tcpdump:x:117:
+_ssh:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:ninadhegde
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+nm-openvpn:x:126:
+scanner:x:127:saned
+saned:x:128:
+colord:x:129:
+geoclue:x:130:
+pulse:x:131:
+pulse-access:x:132:
+gdm:x:133:
+lxd:x:134:ninadhegde
+ninadhegde:x:1000:
+sambashare:x:135:ninadhegde
+_flatpak:x:136:
+test_group:x:1001:guest_1,guest_2
+guest_1:x:1002:
+guest_2:x:1003:
+guest_3:x:1004:
+test_user_1:x:1005:
+test_group_1:x:1006:test_user_1
+test_user_2:x:1007:
+test_user_3:x:1008:
+test_group_2:x:1009:
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/$ cd /home/
+ninadhegde/  test_user_1/ test_user_2/ test_user_3/ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/$ cd /home/ninadhegde/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ sudo usermod -a -G test_group_2 test_user_3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd /etc/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cat group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ninadhegde
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ninadhegde
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ninadhegde
+audio:x:29:pulse
+dip:x:30:ninadhegde
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:ninadhegde
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+tss:x:112:
+bluetooth:x:113:
+ssl-cert:x:114:
+uuidd:x:115:
+systemd-oom:x:116:
+tcpdump:x:117:
+_ssh:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:ninadhegde
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+nm-openvpn:x:126:
+scanner:x:127:saned
+saned:x:128:
+colord:x:129:
+geoclue:x:130:
+pulse:x:131:
+pulse-access:x:132:
+gdm:x:133:
+lxd:x:134:ninadhegde
+ninadhegde:x:1000:
+sambashare:x:135:ninadhegde
+_flatpak:x:136:
+test_group:x:1001:guest_1,guest_2
+guest_1:x:1002:
+guest_2:x:1003:
+guest_3:x:1004:
+test_user_1:x:1005:
+test_group_1:x:1006:test_user_1
+test_user_2:x:1007:
+test_user_3:x:1008:
+test_group_2:x:1009:test_user_3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ sudo usermod -a -G test_group_2 test_user_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cat group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ninadhegde
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ninadhegde
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ninadhegde
+audio:x:29:pulse
+dip:x:30:ninadhegde
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:ninadhegde
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+tss:x:112:
+bluetooth:x:113:
+ssl-cert:x:114:
+uuidd:x:115:
+systemd-oom:x:116:
+tcpdump:x:117:
+_ssh:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:ninadhegde
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+nm-openvpn:x:126:
+scanner:x:127:saned
+saned:x:128:
+colord:x:129:
+geoclue:x:130:
+pulse:x:131:
+pulse-access:x:132:
+gdm:x:133:
+lxd:x:134:ninadhegde
+ninadhegde:x:1000:
+sambashare:x:135:ninadhegde
+_flatpak:x:136:
+test_group:x:1001:guest_1,guest_2
+guest_1:x:1002:
+guest_2:x:1003:
+guest_3:x:1004:
+test_user_1:x:1005:
+test_group_1:x:1006:test_user_1
+test_user_2:x:1007:
+test_user_3:x:1008:
+test_group_2:x:1009:test_user_3,test_user_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ su t
+terminfo/    thermald/    thunderbird/ timezone     tmpfiles.d/  
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ su test_user_2
+Password: 
+su: Authentication failure
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ sudo -i
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# sudo passwd test_user_2
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it is based on a dictionary word
+Retype new password: 
+passwd: password updated successfully
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# sudo passwd test_user_2
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+root@ninadhegde-ROG-Strix-G731GU-G731GU:~# exit
+logout
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ su test_user_2
+Password: 
+$ ls
+acpi			ca-certificates.conf	       e2scrub.conf   gshadow	       issue.net	machine-id	     openvpn	   rc0.d	  shells	     ucf.conf
+adduser.conf		ca-certificates.conf.dpkg-old  emacs	      gshadow-	       kernel		magic		     opt	   rc1.d	  skel		     udev
+alsa			chatscripts		       environment    gss	       kernel-img.conf	magic.mime	     os-release    rc2.d	  snmp		     udisks2
+alternatives		console-setup		       environment.d  gtk-2.0	       kerneloops.conf	mailcap		     PackageKit    rc3.d	  speech-dispatcher  ufw
+anacrontab		cracklib		       ethertypes     gtk-3.0	       ldap		mailcap.order	     pam.conf	   rc4.d	  ssh		     update-manager
+apg.conf		cron.d			       firefox	      hdparm.conf      ld.so.cache	manpath.config	     pam.d	   rc5.d	  ssl		     update-motd.d
+apm			cron.daily		       fonts	      host.conf        ld.so.conf	mime.types	     papersize	   rc6.d	  subgid	     update-notifier
+apparmor		cron.hourly		       fprintd.conf   hostid	       ld.so.conf.d	mke2fs.conf	     passwd	   rcS.d	  subgid-	     UPower
+apparmor.d		cron.monthly		       fstab	      hostname	       legal		ModemManager	     passwd-	   resolv.conf	  subuid	     usb_modeswitch.conf
+apport			crontab			       fuse.conf      hosts	       libao.conf	modprobe.d	     pcmcia	   rmt		  subuid-	     usb_modeswitch.d
+appstream.conf		cron.weekly		       fwupd	      hosts.allow      libaudit.conf	modules		     perl	   rpc		  sudo.conf	     vdpau_wrapper.cfg
+apt			cups			       gai.conf       hosts.deny       libblockdev	modules-load.d	     pki	   rsyslog.conf   sudoers	     vim
+avahi			cupshelpers		       gamin	      hp	       libnl-3		mtab		     pm		   rsyslog.d	  sudoers.d	     vtrgb
+bash.bashrc		dbus-1			       gdb	      ifplugd	       libpaper.d	nanorc		     pnm2ppa.conf  rygel.conf	  sudo_logsrvd.conf  vulkan
+bash_completion		dconf			       gdm3	      ImageMagick-6    libreoffice	netconfig	     polkit-1	   sane.d	  sysctl.conf	     w3m
+bash_completion.d	debconf.conf		       geoclue	      init	       locale.alias	netplan		     ppp	   security	  sysctl.d	     wgetrc
+bindresvport.blacklist	debian_version		       ghostscript    init.d	       locale.gen	network		     profile	   selinux	  systemd	     whoopsie
+binfmt.d		default			       glvnd	      initramfs-tools  localtime	networkd-dispatcher  profile.d	   sensors3.conf  terminfo	     wpa_supplicant
+bluetooth		deluser.conf		       gnome	      inputrc	       logcheck		NetworkManager	     protocols	   sensors.d	  thermald	     X11
+brlapi.key		depmod.d		       groff	      insserv.conf.d   login.defs	networks	     pulse	   services	  thunderbird	     xattr.conf
+brltty			dhcp			       group	      ipp-usb	       logrotate.conf	newt		     python3	   sgml		  timezone	     xdg
+brltty.conf		dictionaries-common	       group-	      iproute2	       logrotate.d	nftables.conf	     python3.10    shadow	  tmpfiles.d	     xml
+ca-certificates		dpkg			       grub.d	      issue	       lsb-release	nsswitch.conf	     python3.11    shadow-	  ubuntu-advantage   zsh_command_not_found
+$ cd /home
+$ ls
+ninadhegde  test_user_1  test_user_2  test_user_3
+$ exir
+sh: 4: exir: not found
+$ exit
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:/etc$ cd /home/ninadhegde/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ getent group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ninadhegde
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ninadhegde
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ninadhegde
+audio:x:29:pulse
+dip:x:30:ninadhegde
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:ninadhegde
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+tss:x:112:
+bluetooth:x:113:
+ssl-cert:x:114:
+uuidd:x:115:
+systemd-oom:x:116:
+tcpdump:x:117:
+_ssh:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:ninadhegde
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+nm-openvpn:x:126:
+scanner:x:127:saned
+saned:x:128:
+colord:x:129:
+geoclue:x:130:
+pulse:x:131:
+pulse-access:x:132:
+gdm:x:133:
+lxd:x:134:ninadhegde
+ninadhegde:x:1000:
+sambashare:x:135:ninadhegde
+_flatpak:x:136:
+test_group:x:1001:guest_1,guest_2
+guest_1:x:1002:
+guest_2:x:1003:
+guest_3:x:1004:
+test_user_1:x:1005:
+test_group_1:x:1006:test_user_1
+test_user_2:x:1007:
+test_user_3:x:1008:
+test_group_2:x:1009:test_user_3,test_user_2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ ls
+anaconda3  Desktop  Documents  Downloads  git  hi  lss  Music  oops  Pictures  Public  sample  snap  Templates  typescript  Videos  wap
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd a_section/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 444 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ su test_user_2
+Password: 
+$ cd /home/ 	
+$ ls
+ninadhegde  test_user_1  test_user_2  test_user_3
+$ cd /test_user_2
+sh: 3: cd: can't cd to /test_user_2
+$ cd ninadhegde/    
+sh: 4: cd: can't cd to ninadhegde/
+$ exit
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 700 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwx------ 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 700 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod g+r list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwxr----- 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod g+x list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwxr-x--- 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod g-r list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwx--x--- 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ pwd
+/home/ninadhegde/lss/a_section/a1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ su test_user_2
+Password: 
+$ cat /home/ninadhegde/lss/a_section/a1/list.txt
+cat: /home/ninadhegde/lss/a_section/a1/list.txt: Permission denied
+$ exit
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod g+r list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ su test_user_2
+Password: 
+$ cat /home/ninadhegde/lss/a_section/a1/list.txt
+cat: /home/ninadhegde/lss/a_section/a1/list.txt: Permission denied
+$ exit
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 777 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ su test_user_2
+Password: 
+$ cat /home/ninadhegde/lss/a_section/a1/list.txt
+cat: /home/ninadhegde/lss/a_section/a1/list.txt: Permission denied
+$ sudo cat /home/ninadhegde/lss/a_section/a1/list.txt
+[sudo] password for test_user_2: 
+test_user_2 is not in the sudoers file.  This incident will be reported.
+$ exit
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 733 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwx-wx-wx 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 721 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwx-w---x 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 021 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cat list.txt
+cat: list.txt: Permission denied
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 721 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwx-w---x 1 ninadhegde ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chown test_user_2 list.txt 
+chown: changing ownership of 'list.txt': Operation not permitted
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ sudo chown test_user_2 list.txt 
+[sudo] password for ninadhegde: 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde  ninadhegde 4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde  ninadhegde 4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde  ninadhegde   18 Mar  7 12:15 about.txt
+18619344 -rwx-w---x 1 test_user_2 ninadhegde   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde  ninadhegde   16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ sudo chgrp test_group_2 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ ls -ail
+total 20
+18619308 drwxrwxr-x 2 ninadhegde  ninadhegde   4096 Mar  7 12:15 .
+18619305 drwxrwxr-x 5 ninadhegde  ninadhegde   4096 Mar  7 12:10 ..
+18619321 -rw-rw-r-- 1 ninadhegde  ninadhegde     18 Mar  7 12:15 about.txt
+18619344 -rwx-w---x 1 test_user_2 test_group_2   17 Mar  7 12:15 list.txt
+18619406 -rw-rw-r-- 1 ninadhegde  ninadhegde     16 Mar  7 12:14 profile.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cat list.txt
+cat: list.txt: Permission denied
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 727 list.txt 
+chmod: changing permissions of 'list.txt': Operation not permitted
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ sudo chmod 727 list.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ chmod 727 list.txt 
+chmod: changing permissions of 'list.txt': Operation not permitted
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cat list.txt
+List of students
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section/a1$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss/a_section$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/lss$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd Downloads/buffer_stuff/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ ls -ail
+total 19616
+18495458 drwxrwxr-x 3 ninadhegde ninadhegde     4096 Feb 28 18:15  .
+18481201 drwxr-xr-x 5 ninadhegde ninadhegde     4096 Mar  2 21:02  ..
+18507917 lrwxrwxrwx 1 ninadhegde ninadhegde       11 Feb 28 17:11  buffer10.txt -> buffer7.txt
+18493686 -rw-rw-r-- 1 ninadhegde ninadhegde        6 Feb 22 09:55  buffer2.txt
+18495317 lrwxrwxrwx 1 ninadhegde ninadhegde       10 Feb 22 09:56  buffer3.txt -> buffer.txt
+18495449 lrwxrwxrwx 1 ninadhegde ninadhegde       10 Feb 22 09:56  buffer4.txt -> buffer.txt
+18495447 -r-x---rwx 1 ninadhegde ninadhegde       21 Feb 22 09:58  buffer5.txt
+18495454 lrwxrwxrwx 1 ninadhegde ninadhegde       11 Feb 22 09:57  buffer6.txt -> buffer5.txt
+18495456 lrwxrwxrwx 1 ninadhegde ninadhegde       11 Feb 22 10:04  buffer7.txt -> buffer4.txt
+18495457 lrwxrwxrwx 1 ninadhegde ninadhegde       11 Feb 22 10:04  buffer8.txt -> buffer7.txt
+18495442 -rwxrwxrwx 1 ninadhegde ninadhegde       44 Feb 22 10:01  buffer.txt
+18614896 drwxrwxr-x 5 ninadhegde ninadhegde     4096 Feb 28 17:38  Company
+18512087 -rw-rw-r-- 1 ninadhegde ninadhegde  1082128 Feb 28 18:10 'Git Cheat Sheet – 50 Git Commands You Should Know.pdf'
+18495849 -rw-rw-r-- 1 ninadhegde ninadhegde   100194 Feb 28 18:08  git-cheat-sheet-education.pdf
+18512144 -rw-rw-r-- 1 ninadhegde ninadhegde 18870791 Feb 28 18:15  progit.pdf
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ 
+
+
