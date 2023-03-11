@@ -1,3 +1,4 @@
+..............................................................................................................
 step 0: Install Git with apt on Ubuntu
 		sudo apt update
 		sudo apt install git
@@ -65,12 +66,36 @@ step 3: push to origin
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 
 
 
+
+References:
 
 
 
