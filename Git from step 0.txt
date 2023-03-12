@@ -26,7 +26,11 @@ step 3: Add SSH key to your github account
 		
 		
 		
-step 4: Add remote URL for your Git repository(Origin):
+step 4: Initialize the local directory as a Git repository. And Specipy the working branch
+
+		$git init -b main
+
+step 5: Add remote URL for your Git repository(Origin):
 		An SSH URL, like : git@github.com:user/repo.git
 		copy it.
 		
@@ -34,10 +38,6 @@ step 4: Add remote URL for your Git repository(Origin):
 		$git remote add origin <REMOTE_SSH>
 		where remote ssh is the URL you have copied
 		
-step 5: Initialize the local directory as a Git repository. And Specipy the working branch
-
-		$git init -b main
-
 step 6: Add the files in your new local repository. 
 
 		$ git add .
