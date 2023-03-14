@@ -1,0 +1,1495 @@
+quotes
+variables
+namespace
+special variables
+
+
+
+
+
+
+
+
+
+
+
+$0 =currennt program name
+$* 
+$#
+$@
+
+
+
+
+
+
+
+
+
+
+==========
+arithmetic
+
+logical
+relational
+-expr
+-led 
+-bc
+-test
+
+
+why??    ---(($a+$b))
+not-----($a+$b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ ls -a
+.  ..  file1.txt  file2.txt  first.txt  .git  lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git$ cd 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ mkdir shell_scripting_codes_git
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd shell_scripting_codes_git/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/ninadhegde/shell_scripting_codes_git/.git/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ git clone https://github.com/techarkit/shell-scripting-tutorial.git
+Cloning into 'shell-scripting-tutorial'...
+remote: Enumerating objects: 267, done.
+remote: Counting objects: 100% (49/49), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 267 (delta 12), reused 45 (delta 11), pack-reused 218
+Receiving objects: 100% (267/267), 91.00 KiB | 2.53 MiB/s, done.
+Resolving deltas: 100% (90/90), done.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ ls -l
+total 4
+drwxrwxr-x 4 ninadhegde ninadhegde 4096 Mar 14 12:10 shell-scripting-tutorial
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ cd cd shell-scripting-tutorial/
+bash: cd: too many arguments
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ ls
+shell-scripting-tutorial
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ cd shell-scripting-tutorial/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ls
+1forloop.sh               array.sh                 convert_and_update_mysql.sh  eval.sh                      hi.sh                 memusage.sh        questions.sh        spacialvariables.sh  variables.sh
+1function.sh              Arthemetic-Operators.sh  countargs.sh                 for-loop.sh                  if-elif-if.sh         morethanxdays.sh   quotes.sh           systemload.sh        webserver_ubuntu.sh
+add.sh                    AutomateLoginSSH.sh      cpualert.sh                  functions.sh                 if-else-statement.sh  multiplication.sh  README.md           uadd.sh              while-loop.sh
+agtb.sh                   AWS                      CpuMemDisk.sh                generate_win_host_config.sh  ifs.sh                myfirstscript.sh   relationaloper.sh   ud.sh
+answers.sh                casestatement.sh         details.sh                   getopts.sh                   if-statement.sh       nestedif.sh        remoteload.sh       untiloop.sh
+arithmetic.sh             collectroothistory.sh    diskspace.sh                 helloworld.sh                info.sh               or-operator.sh     setbashfeature.sh   useradd.sh
+arkit.co.in-nested-if.sh  continue.sh              echo.sh                      heredoc.sh                   Logical-operators.sh  oroper.sh          shiftparameters.sh  userexists.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ls -l
+total 244
+-rw-rw-r-- 1 ninadhegde ninadhegde  201 Mar 14 12:10 1forloop.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  564 Mar 14 12:10 1function.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  406 Mar 14 12:10 add.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  389 Mar 14 12:10 agtb.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  201 Mar 14 12:10 answers.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  543 Mar 14 12:10 arithmetic.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  857 Mar 14 12:10 arkit.co.in-nested-if.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  408 Mar 14 12:10 array.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  626 Mar 14 12:10 Arthemetic-Operators.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  374 Mar 14 12:10 AutomateLoginSSH.sh
+drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar 14 12:10 AWS
+-rw-rw-r-- 1 ninadhegde ninadhegde  717 Mar 14 12:10 casestatement.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  694 Mar 14 12:10 collectroothistory.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  578 Mar 14 12:10 continue.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde 1793 Mar 14 12:10 convert_and_update_mysql.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  443 Mar 14 12:10 countargs.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde 1159 Mar 14 12:10 cpualert.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde 1171 Mar 14 12:10 CpuMemDisk.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  346 Mar 14 12:10 details.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  632 Mar 14 12:10 diskspace.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  282 Mar 14 12:10 echo.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  252 Mar 14 12:10 eval.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  355 Mar 14 12:10 for-loop.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  459 Mar 14 12:10 functions.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  896 Mar 14 12:10 generate_win_host_config.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  449 Mar 14 12:10 getopts.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  201 Mar 14 12:10 helloworld.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  346 Mar 14 12:10 heredoc.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  540 Mar 14 12:10 hi.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  553 Mar 14 12:10 if-elif-if.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  365 Mar 14 12:10 if-else-statement.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  397 Mar 14 12:10 ifs.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  351 Mar 14 12:10 if-statement.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  412 Mar 14 12:10 info.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  540 Mar 14 12:10 Logical-operators.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  572 Mar 14 12:10 memusage.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  541 Mar 14 12:10 morethanxdays.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  302 Mar 14 12:10 multiplication.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  306 Mar 14 12:10 myfirstscript.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  857 Mar 14 12:10 nestedif.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  367 Mar 14 12:10 or-operator.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  140 Mar 14 12:10 oroper.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  118 Mar 14 12:10 questions.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  376 Mar 14 12:10 quotes.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde 8723 Mar 14 12:10 README.md
+-rw-rw-r-- 1 ninadhegde ninadhegde  457 Mar 14 12:10 relationaloper.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  514 Mar 14 12:10 remoteload.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  359 Mar 14 12:10 setbashfeature.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  293 Mar 14 12:10 shiftparameters.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  437 Mar 14 12:10 spacialvariables.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  685 Mar 14 12:10 systemload.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  276 Mar 14 12:10 uadd.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  390 Mar 14 12:10 ud.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  373 Mar 14 12:10 untiloop.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  517 Mar 14 12:10 useradd.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  366 Mar 14 12:10 userexists.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  601 Mar 14 12:10 variables.sh
+-rwxrwxr-x 1 ninadhegde ninadhegde 3807 Mar 14 12:10 webserver_ubuntu.sh
+-rw-rw-r-- 1 ninadhegde ninadhegde  343 Mar 14 12:10 while-loop.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano quotes.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano quotes.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./quotes.sh 
+bash: ./quotes.sh: Permission denied
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano quotes.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo `hostname`
+ninadhegde-ROG-Strix-G731GU-G731GU
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ chmod -R 764 shell-scripting-tutorial/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git$ cd shell-scripting-tutorial/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ls -l
+total 244
+-rwxrw-r-- 1 ninadhegde ninadhegde  201 Mar 14 12:10 1forloop.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  564 Mar 14 12:10 1function.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  406 Mar 14 12:10 add.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  389 Mar 14 12:10 agtb.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  201 Mar 14 12:10 answers.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  543 Mar 14 12:10 arithmetic.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  857 Mar 14 12:10 arkit.co.in-nested-if.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  408 Mar 14 12:10 array.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  626 Mar 14 12:10 Arthemetic-Operators.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  374 Mar 14 12:10 AutomateLoginSSH.sh
+drwxrw-r-- 2 ninadhegde ninadhegde 4096 Mar 14 12:10 AWS
+-rwxrw-r-- 1 ninadhegde ninadhegde  717 Mar 14 12:10 casestatement.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  694 Mar 14 12:10 collectroothistory.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  578 Mar 14 12:10 continue.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde 1793 Mar 14 12:10 convert_and_update_mysql.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  443 Mar 14 12:10 countargs.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde 1159 Mar 14 12:10 cpualert.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde 1171 Mar 14 12:10 CpuMemDisk.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  346 Mar 14 12:10 details.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  632 Mar 14 12:10 diskspace.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  282 Mar 14 12:10 echo.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  252 Mar 14 12:10 eval.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  355 Mar 14 12:10 for-loop.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  459 Mar 14 12:10 functions.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  896 Mar 14 12:10 generate_win_host_config.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  449 Mar 14 12:10 getopts.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  201 Mar 14 12:10 helloworld.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  346 Mar 14 12:10 heredoc.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  540 Mar 14 12:10 hi.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  553 Mar 14 12:10 if-elif-if.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  365 Mar 14 12:10 if-else-statement.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  397 Mar 14 12:10 ifs.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  351 Mar 14 12:10 if-statement.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  412 Mar 14 12:10 info.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  540 Mar 14 12:10 Logical-operators.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  572 Mar 14 12:10 memusage.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  541 Mar 14 12:10 morethanxdays.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  302 Mar 14 12:10 multiplication.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  306 Mar 14 12:10 myfirstscript.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  857 Mar 14 12:10 nestedif.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  367 Mar 14 12:10 or-operator.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  140 Mar 14 12:10 oroper.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  118 Mar 14 12:10 questions.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  376 Mar 14 12:10 quotes.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde 8723 Mar 14 12:10 README.md
+-rwxrw-r-- 1 ninadhegde ninadhegde  457 Mar 14 12:10 relationaloper.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  514 Mar 14 12:10 remoteload.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  359 Mar 14 12:10 setbashfeature.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  293 Mar 14 12:10 shiftparameters.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  437 Mar 14 12:10 spacialvariables.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  685 Mar 14 12:10 systemload.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  276 Mar 14 12:10 uadd.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  390 Mar 14 12:10 ud.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  373 Mar 14 12:10 untiloop.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  517 Mar 14 12:10 useradd.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  366 Mar 14 12:10 userexists.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  601 Mar 14 12:10 variables.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde 3807 Mar 14 12:10 webserver_ubuntu.sh
+-rwxrw-r-- 1 ninadhegde ninadhegde  343 Mar 14 12:10 while-loop.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./quotes.sh 
+Execute double quotes 123456 TechArkit
+Excute Single Quotes $VAR1 $TEST
+This Hostname is:      March 2023       
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30 31     
+                      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano quotes.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./quotes.sh 
+Execute double quotes 123456 TechArkit
+Excute Single Quotes "$VAR1" $TEST
+This Hostname is:      March 2023       
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30 31     
+                      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano quotes.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./quotes.sh 
+Execute double quotes 1456 Ninad
+Excute Single Quotes "$VAR1" $TEST
+This Hostname is:      March 2023       
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30 31     
+                      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=False: command not found
+./variables.sh: line 19: 2try=321: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:26:49 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+2try
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=False: command not found
+./variables.sh: line 19: 2try=321: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:27:47 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+2try
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=False: command not found
+./variables.sh: line 19: 2try=321: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:28:36 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+try
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=False: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:29:17 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+321
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=False: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:33:07 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+321
+_try
+4
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:33:39 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+321
+_try
+4
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:34:25 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+321
+_try
+4
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:34:55 PM +0530
+Wrong Variable 1value value
+False @ Variable Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+321
+_try
+4
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:36:22 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 123
+321
+_try
+4
+4
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:36:50 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace try_1
+321
+_try
+4
+try_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:37:09 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace /n try_1
+321
+_try
+4
+try_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:39:10 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace \n try_1
+321
+_try
+4
+try_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:41:38 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+_try
+4
+try_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ $0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:42:54 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+_try
+4
+try_1
+./variables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$0"
+bash
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$*"
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$?"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$#"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$1"
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$="
+$=
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 15: 1value=333: command not found
+./variables.sh: line 16: False@Var=True: command not found
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:45:36 PM +0530
+Wrong Variable 1value value
+False @ Variable @Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+_try
+4
+try_1
+./variables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$?"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+./variables.sh: line 20: 3_try=3: command not found
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:46:19 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+_try
+4
+try_1
+./variables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:46:41 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$?"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$?"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "Hello"
+Hello
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$?"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $?
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $?
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "Hello"
+Hello
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $?
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $$
+8935
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $$
+8935
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $$
+8935
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano variables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo $$
+8935
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9004 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:11 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9006
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9009 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:33 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9013
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:35 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9016
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:36 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9019
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:38 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9022
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:38 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9025
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:40 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9028
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:41 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9031
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./variables.sh 
+Variable A Value: 10
+Variable Ba Vaule: 23
+Variable BA Vaule: 45
+Variable HOST value: ninadhegde-ROG-Strix-G731GU-G731GU
+Variable DATE value: Tuesday 14 March 2023 12:48:41 PM +0530
+Wrong Variable 1value #value
+False @ Variable #@Var
+hyphen-a Variable Value: WrongValue
+Trying namespace 
+ try_1
+321
+4
+try_1
+./variables.sh
+9034
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9037 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9038 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9039 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9040 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps
+    PID TTY          TIME CMD
+   7427 pts/0    00:00:00 bash
+   8935 pts/0    00:00:00 bash
+   9041 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ man ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:03 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_kthread
+     12 ?        00:00:00 rcu_tasks_rude_kthread
+     13 ?        00:00:00 rcu_tasks_trace_kthread
+     14 ?        00:00:00 ksoftirqd/0
+     15 ?        00:00:02 rcu_preempt
+     16 ?        00:00:00 migration/0
+     17 ?        00:00:00 idle_inject/0
+     19 ?        00:00:00 cpuhp/0
+     20 ?        00:00:00 cpuhp/1
+     21 ?        00:00:00 idle_inject/1
+     22 ?        00:00:00 migration/1
+     23 ?        00:00:00 ksoftirqd/1
+     25 ?        00:00:00 kworker/1:0H-events_highpri
+     26 ?        00:00:00 cpuhp/2
+     27 ?        00:00:00 idle_inject/2
+     28 ?        00:00:00 migration/2
+     29 ?        00:00:00 ksoftirqd/2
+     30 ?        00:00:00 kworker/2:0-events
+     31 ?        00:00:00 kworker/2:0H-events_highpri
+     32 ?        00:00:00 cpuhp/3
+     33 ?        00:00:00 idle_inject/3
+     34 ?        00:00:00 migration/3
+     35 ?        00:00:10 ksoftirqd/3
+     37 ?        00:00:00 kworker/3:0H-events_highpri
+     38 ?        00:00:00 cpuhp/4
+     39 ?        00:00:00 idle_inject/4
+     40 ?        00:00:00 migration/4
+     41 ?        00:00:00 ksoftirqd/4
+     43 ?        00:00:00 kworker/4:0H-kblockd
+     44 ?        00:00:00 cpuhp/5
+     45 ?        00:00:00 idle_inject/5
+     46 ?        00:00:00 migration/5
+     47 ?        00:00:00 ksoftirqd/5
+     49 ?        00:00:00 kworker/5:0H-events_highpri
+     50 ?        00:00:00 cpuhp/6
+     51 ?        00:00:00 idle_inject/6
+     52 ?        00:00:00 migration/6
+     53 ?        00:00:00 ksoftirqd/6
+     55 ?        00:00:00 kworker/6:0H-kblockd
+     56 ?        00:00:00 cpuhp/7
+     57 ?        00:00:00 idle_inject/7
+     58 ?        00:00:00 migration/7
+     59 ?        00:00:00 ksoftirqd/7
+     61 ?        00:00:00 kworker/7:0H-events_highpri
+     62 ?        00:00:00 cpuhp/8
+     63 ?        00:00:00 idle_inject/8
+     64 ?        00:00:00 migration/8
+     65 ?        00:00:00 ksoftirqd/8
+     67 ?        00:00:00 kworker/8:0H-events_highpri
+     68 ?        00:00:00 cpuhp/9
+     69 ?        00:00:00 idle_inject/9
+     70 ?        00:00:00 migration/9
+     71 ?        00:00:00 ksoftirqd/9
+     73 ?        00:00:00 kworker/9:0H-events_highpri
+     74 ?        00:00:00 cpuhp/10
+     75 ?        00:00:00 idle_inject/10
+     76 ?        00:00:00 migration/10
+     77 ?        00:00:00 ksoftirqd/10
+     79 ?        00:00:00 kworker/10:0H-events_highpri
+     80 ?        00:00:00 cpuhp/11
+     81 ?        00:00:00 idle_inject/11
+     82 ?        00:00:00 migration/11
+     83 ?        00:00:00 ksoftirqd/11
+     85 ?        00:00:00 kworker/11:0H-events_highpri
+     86 ?        00:00:00 kdevtmpfs
+     87 ?        00:00:00 inet_frag_wq
+     88 ?        00:00:00 kauditd
+     89 ?        00:00:00 khungtaskd
+     91 ?        00:00:00 oom_reaper
+     93 ?        00:00:00 writeback
+     94 ?        00:00:00 kcompactd0
+     95 ?        00:00:00 ksmd
+     96 ?        00:00:00 khugepaged
+     97 ?        00:00:00 kintegrityd
+     98 ?        00:00:00 kblockd
+     99 ?        00:00:00 blkcg_punt_bio
+    103 ?        00:00:00 tpm_dev_wq
+    104 ?        00:00:00 ata_sff
+    105 ?        00:00:00 md
+    106 ?        00:00:00 edac-poller
+    107 ?        00:00:00 devfreq_wq
+    108 ?        00:00:00 watchdogd
+    109 ?        00:00:02 kworker/4:1-mm_percpu_wq
+    110 ?        00:00:00 kworker/2:1H-kblockd
+    111 ?        00:00:00 kswapd0
+    112 ?        00:00:00 ecryptfs-kthread
+    116 ?        00:00:00 kworker/6:1-events
+    125 ?        00:00:00 kthrotld
+    131 ?        00:00:00 irq/124-aerdrv
+    132 ?        00:00:00 irq/124-pcie-dpc
+    133 ?        00:00:00 acpi_thermal_pm
+    134 ?        00:00:00 xenbus_probe
+    135 ?        00:00:00 vfio-irqfd-clea
+    136 ?        00:00:00 mld
+    137 ?        00:00:00 kworker/1:1H-kblockd
+    138 ?        00:00:00 ipv6_addrconf
+    143 ?        00:00:00 kstrp
+    149 ?        00:00:00 zswap-shrink
+    198 ?        00:00:00 charger_manager
+    220 ?        00:00:00 kworker/10:1H-kblockd
+    264 ?        00:00:00 kworker/8:1H-kblockd
+    266 ?        00:00:00 kworker/9:1H-kblockd
+    270 ?        00:00:00 scsi_eh_0
+    271 ?        00:00:00 scsi_tmf_0
+    272 ?        00:00:00 scsi_eh_1
+    273 ?        00:00:00 scsi_tmf_1
+    276 ?        00:00:05 irq/95-ELAN1203:00
+    284 ?        00:00:00 kworker/4:1H-kblockd
+    287 ?        00:00:00 kworker/5:1H-events_highpri
+    288 ?        00:00:00 kworker/3:1H-kblockd
+    289 ?        00:00:00 kworker/7:1H-kblockd
+    290 ?        00:00:00 kworker/11:1H-kblockd
+    311 ?        00:00:00 jbd2/sda7-8
+    312 ?        00:00:00 ext4-rsv-conver
+    352 ?        00:00:01 systemd-journal
+    372 ?        00:00:00 kworker/6:1H-kblockd
+    375 ?        00:00:00 kworker/0:1H-kblockd
+    397 ?        00:00:00 ipmi-msghandler
+    422 ?        00:00:01 systemd-udevd
+    468 ?        00:00:00 asus_wireless_w
+    480 ?        00:00:00 cryptd
+    483 ?        00:00:00 led_workqueue
+    503 ?        00:00:00 cfg80211
+    555 ?        00:00:01 irq/131-iwlwifi:default_queue
+    556 ?        00:00:01 irq/132-iwlwifi:queue_1
+    557 ?        00:00:00 irq/133-iwlwifi:queue_2
+    558 ?        00:00:00 irq/134-iwlwifi:queue_3
+    559 ?        00:00:00 irq/135-iwlwifi:queue_4
+    560 ?        00:00:00 irq/136-iwlwifi:exception
+    764 ?        00:00:00 card0-crtc0
+    765 ?        00:00:00 card0-crtc1
+    766 ?        00:00:00 card0-crtc2
+    802 ?        00:00:00 nvkm-disp
+    831 ?        00:00:00 card1-crtc0
+    832 ?        00:00:00 card1-crtc1
+    833 ?        00:00:00 card1-crtc2
+    834 ?        00:00:00 card1-crtc3
+   1033 ?        00:00:07 systemd-oomd
+   1034 ?        00:00:00 systemd-resolve
+   1035 ?        00:00:00 systemd-timesyn
+   1039 ?        00:00:00 accounts-daemon
+   1040 ?        00:00:00 acpid
+   1042 ?        00:00:00 avahi-daemon
+   1043 ?        00:00:00 bluetoothd
+   1046 ?        00:00:00 cron
+   1047 ?        00:00:03 dbus-daemon
+   1048 ?        00:00:03 NetworkManager
+   1072 ?        00:00:00 irqbalance
+   1073 ?        00:00:00 networkd-dispat
+   1074 ?        00:00:03 polkitd
+   1075 ?        00:00:00 power-profiles-
+   1076 ?        00:00:00 rsyslogd
+   1078 ?        00:00:13 snapd
+   1079 ?        00:00:00 switcheroo-cont
+   1080 ?        00:00:00 systemd-logind
+   1081 ?        00:00:01 thermald
+   1082 ?        00:00:04 touchegg
+   1102 ?        00:00:00 udisksd
+   1103 ?        00:00:00 wpa_supplicant
+   1126 ?        00:00:00 avahi-daemon
+   1164 ?        00:00:00 cupsd
+   1167 ?        00:00:00 unattended-upgr
+   1188 ?        00:00:00 ModemManager
+   1203 ?        00:00:00 upowerd
+   1271 ?        00:00:00 gdm3
+   1348 ?        00:00:00 rtkit-daemon
+   1365 ?        00:00:00 cups-browsed
+   1374 ?        00:00:00 kerneloops
+   1377 ?        00:00:00 kerneloops
+   1612 ?        00:00:05 packagekitd
+   1802 ?        00:00:00 gdm-session-wor
+   1816 ?        00:00:00 colord
+   1845 ?        00:00:00 systemd
+   1846 ?        00:00:00 (sd-pam)
+   1855 ?        00:00:00 pipewire
+   1856 ?        00:00:00 pipewire-media-
+   1857 ?        00:00:02 pulseaudio
+   1858 ?        00:00:01 snapd-desktop-i
+   1870 ?        00:00:01 dbus-daemon
+   1892 ?        00:00:00 gvfsd
+   1897 ?        00:00:00 gvfsd-fuse
+   1905 ?        00:00:00 xdg-document-po
+   1908 ?        00:00:00 xdg-permission-
+   1914 ?        00:00:00 fusermount3
+   1926 ?        00:00:00 gnome-keyring-d
+   1931 ?        00:00:00 tracker-miner-f
+   1938 tty2     00:00:00 gdm-wayland-ses
+   1941 tty2     00:00:00 gnome-session-b
+   1963 ?        00:00:00 krfcommd
+   1991 ?        00:00:00 gnome-session-c
+   2003 ?        00:00:00 gnome-session-b
+   2017 ?        00:00:00 at-spi-bus-laun
+   2021 ?        00:02:54 gnome-shell
+   2028 ?        00:00:00 dbus-daemon
+   2075 ?        00:00:00 gnome-shell-cal
+   2077 ?        00:00:00 dconf-service
+   2078 ?        00:00:00 gvfs-udisks2-vo
+   2083 ?        00:00:00 gvfs-afc-volume
+   2088 ?        00:00:00 gvfs-goa-volume
+   2092 ?        00:00:02 goa-daemon
+   2099 ?        00:00:00 goa-identity-se
+   2110 ?        00:00:00 gvfs-gphoto2-vo
+   2114 ?        00:00:00 gvfs-mtp-volume
+   2129 ?        00:00:00 evolution-sourc
+   2137 ?        00:00:00 gvfsd-trash
+   2164 ?        00:00:00 gjs
+   2166 ?        00:00:00 at-spi2-registr
+   2181 ?        00:00:00 sh
+   2182 ?        00:00:00 gsd-a11y-settin
+   2184 ?        00:00:14 ibus-daemon
+   2185 ?        00:00:00 gsd-color
+   2187 ?        00:00:00 gsd-datetime
+   2189 ?        00:00:00 gsd-housekeepin
+   2192 ?        00:00:00 gsd-keyboard
+   2196 ?        00:00:00 gsd-media-keys
+   2197 ?        00:00:00 gsd-power
+   2200 ?        00:00:00 gsd-print-notif
+   2203 ?        00:00:00 gsd-rfkill
+   2204 ?        00:00:00 gsd-screensaver
+   2205 ?        00:00:00 gsd-sharing
+   2206 ?        00:00:00 gsd-smartcard
+   2208 ?        00:00:00 gsd-sound
+   2210 ?        00:00:00 gsd-wacom
+   2232 ?        00:00:00 gsd-disk-utilit
+   2239 ?        00:00:00 evolution-alarm
+   2283 ?        00:00:22 Xwayland
+   2287 ?        00:00:00 gsd-printer
+   2314 ?        00:00:00 ibus-memconf
+   2315 ?        00:00:02 ibus-extension-
+   2327 ?        00:00:00 ibus-portal
+   2365 ?        00:00:00 gjs
+   2380 ?        00:00:04 ibus-engine-sim
+   2410 ?        00:00:16 snap-store
+   2480 ?        00:00:00 gsd-xsettings
+   2512 ?        00:00:00 xdg-desktop-por
+   2556 ?        00:00:00 xdg-desktop-por
+   2564 ?        00:00:00 gvfsd-metadata
+   2582 ?        00:00:01 evolution-calen
+   2605 ?        00:00:00 xdg-desktop-por
+   2625 ?        00:00:00 ibus-x11
+   2636 ?        00:00:00 evolution-addre
+   2763 ?        00:00:00 snapd-desktop-i
+   2829 ?        00:00:01 fwupd
+   2876 ?        00:00:26 gnome-terminal-
+   3237 ?        00:00:04 nautilus
+   3377 ?        00:00:00 update-notifier
+   4292 ?        00:00:00 snap
+   5087 ?        00:00:06 kworker/3:0-events
+   5173 ?        00:00:00 kworker/1:2-events
+   5192 ?        00:00:00 kworker/5:2-mm_percpu_wq
+   5277 ?        00:00:00 irq/130-mei_me
+   5340 ?        00:00:00 kworker/6:0-events
+   5465 ?        00:00:02 gjs
+   5751 ?        00:00:00 dbus
+   5794 ?        00:00:00 kworker/8:1-mm_percpu_wq
+   6696 ?        00:00:00 kworker/7:1-events
+   6772 ?        00:00:00 brave-browser
+   6851 ?        00:00:00 cat
+   6852 ?        00:00:00 cat
+   6853 ?        00:02:44 brave
+   6855 ?        00:00:00 chrome_crashpad
+   6857 ?        00:00:00 chrome_crashpad
+   6863 ?        00:00:00 brave
+   6864 ?        00:00:00 brave
+   6866 ?        00:00:00 brave
+   6900 ?        00:01:31 brave
+   6901 ?        00:00:09 brave
+   6903 ?        00:00:00 brave
+   6922 ?        00:00:01 brave
+   6926 ?        00:00:00 brave
+   6975 ?        00:00:00 brave
+   7183 ?        00:00:00 brave
+   7184 ?        00:00:09 brave
+   7191 ?        00:00:01 brave
+   7237 ?        00:00:00 brave
+   7250 ?        00:00:00 brave
+   7277 ?        00:00:00 brave
+   7291 ?        00:00:00 brave
+   7390 ?        00:00:00 brave
+   7427 pts/0    00:00:00 bash
+   7455 ?        00:00:00 kworker/5:1
+   7608 ?        00:00:00 kworker/2:1-events
+   7660 ?        00:00:00 kworker/9:1-mm_percpu_wq
+   7668 ?        00:00:00 kworker/1:0-events
+   7788 ?        00:00:00 gvfsd-network
+   7803 ?        00:00:00 gvfsd-dnssd
+   7905 ?        00:00:01 kworker/u25:1+i915_flip
+   7960 ?        00:00:11 brave
+   7977 ?        00:00:01 brave
+   7993 ?        00:00:00 kworker/10:0
+   8032 ?        00:00:00 brave
+   8058 ?        00:00:01 brave
+   8124 ?        00:01:35 brave
+   8156 ?        00:00:12 brave
+   8195 ?        00:00:00 brave
+   8396 ?        00:00:00 kworker/u25:2-rb_allocator
+   8522 ?        00:00:00 kworker/u24:0-events_unbound
+   8575 ?        00:00:00 kworker/11:0-events
+   8607 ?        00:00:00 kworker/0:1-events
+   8622 ?        00:00:00 kworker/u24:2-events_unbound
+   8629 ?        00:00:05 gedit
+   8678 ?        00:00:00 kworker/3:2
+   8719 ?        00:00:00 kworker/8:2-events
+   8776 ?        00:00:00 kworker/u24:1-events_power_efficient
+   8778 ?        00:00:01 brave
+   8805 ?        00:00:00 brave
+   8902 ?        00:00:00 kworker/7:0-mm_percpu_wq
+   8914 ?        00:00:00 kworker/11:1-events
+   8920 ?        00:00:00 kworker/u24:3-events_power_efficient
+   8935 pts/0    00:00:00 bash
+   8946 ?        00:00:00 kworker/4:2-mm_percpu_wq
+   8948 ?        00:00:00 kworker/10:2-events
+   8964 ?        00:00:00 kworker/0:2-mm_percpu_wq
+   8972 ?        00:00:00 kworker/9:2-mm_percpu_wq
+   8975 ?        00:00:00 kworker/11:2-events
+   8994 ?        00:00:00 kworker/6:2-events
+   9059 ?        00:00:00 kworker/8:0-mm_percpu_wq
+   9062 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano spacialvariables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh "arg1"
+'arg1' output is arg1
+'1' output is 1
+'arg1 & ' output arg1 and 
+'arg1' output of arg1
+'0' output is 0
+'9076' output is 9076
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano spacialvariables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh
+'' output is 
+'0' output is 0
+' & ' output  and 
+'' output of 
+'0' output is 0
+'9081' output is 9081
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh quotes.sh
+'quotes.sh' output is quotes.sh
+'1' output is 1
+'quotes.sh & ' output quotes.sh and 
+'quotes.sh' output of quotes.sh
+'0' output is 0
+'9083' output is 9083
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$?"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$0"
+bash
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$1"
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$#"
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ echo "$@"
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3 4 5
+'1 2 3 4 5' output is 1 2 3 4 5
+'5' output is 5
+'1 & 2' output 1 and 2
+'1 2 3 4 5' output of 1 2 3 4 5
+'0' output is 0
+'9320' output is 9320
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ files
+Command 'files' not found, did you mean:
+  command 'file2' from deb file-kanji (1.1-20)
+  command 'file' from deb file (1:5.41-3)
+Try: sudo apt install <deb name>
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3 4 5
+'1 2 3 4 5' output is 1 2 3 4 5
+'5' output is 5
+'1 & 2' output 1 and 2
+'1 2 3 4 5' output of 1 2 3 4 5
+'0' output is 0
+'9871' output is 9871
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3
+'1 2 3' output is 1 2 3
+'3' output is 3
+'1 & 2' output 1 and 2
+'1 2 3' output of 1 2 3
+'0' output is 0
+'9872' output is 9872
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano spacialvariables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3
+'*' output is 1 2 3
+'#' output is 3
+'1 & 2' output 1 and 2
+'1 2 3' output of 1 2 3
+'0' output is 0
+'9924' output is 9924
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3
+'*' output is 1 2 3
+'#' output is 3
+'1 & 2' output 1 and 2
+'1 2 3' output of 1 2 3
+'0' output is 0
+'9925' output is 9925
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano spacialvariables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3
+'9931*' output is 1 2 3
+'#' output is 3
+'1 & 2' output 1 and 2
+'1 2 3' output of 1 2 3
+'0' output is 0
+'9931' output is 9931
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./spacialvariables.sh 1 2 3
+'9934*' output is 1 2 3
+'#' output is 3
+'1 & 2' output 1 and 2
+'1 2 3' output of 1 2 3
+'0' output is 0
+'9934' output is 9934
+'' output is 
+'./spacialvariables.sh' your current program name is ./spacialvariables.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano spacialvariables.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano co
+collectroothistory.sh        continue.sh                  convert_and_update_mysql.sh  countargs.sh                 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano countargs.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 
+Your current given parameters are 0
+Program Usage is './scriptname.sh' options
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 1 
+Your current given parameters are 1
+Program executed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 1 2 3
+Your current given parameters are 3
+Program executed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 
+Your current given parameters are 0
+Program Usage is './scriptname.sh' options
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano scriptname.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./scriptname.sh
+bash: ./scriptname.sh: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 
+Your current given parameters are 0
+Program Usage is './scriptname.sh' options
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 1 2 m
+Your current given parameters are 3
+Program executed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./countargs.sh 102m
+Your current given parameters are 1
+Program executed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ 
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano countargs.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ sudo sh countargs.sh *
+[sudo] password for ninadhegde: 
+Your current given parameters are 59
+Program executed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano countargs.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ sudo sh countargs.sh *
+Your current given parameters are 59
+Program executed successfully
+1forloop.sh 1function.sh add.sh agtb.sh answers.sh arithmetic.sh arkit.co.in-nested-if.sh array.sh Arthemetic-Operators.sh AutomateLoginSSH.sh AWS casestatement.sh collectroothistory.sh continue.sh convert_and_update_mysql.sh countargs.sh cpualert.sh CpuMemDisk.sh details.sh diskspace.sh echo.sh eval.sh for-loop.sh functions.sh generate_win_host_config.sh getopts.sh helloworld.sh heredoc.sh hi.sh if-elif-if.sh if-else-statement.sh ifs.sh if-statement.sh info.sh Logical-operators.sh memusage.sh morethanxdays.sh multiplication.sh myfirstscript.sh nestedif.sh or-operator.sh oroper.sh questions.sh quotes.sh README.md relationaloper.sh remoteload.sh setbashfeature.sh shiftparameters.sh spacialvariables.sh systemload.sh uadd.sh ud.sh untiloop.sh useradd.sh userexists.sh variables.sh webserver_ubuntu.sh while-loop.sh
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano countargs.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano countargs.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano arithmetic.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./arithmetic.sh 
+Enter value: 2 6
+Enter value: 2
+expr: syntax error: unexpected argument ‘6’
+addition values 
+expr: syntax error: unexpected argument ‘6’
+minus values 
+expr: syntax error: unexpected argument ‘6’
+multiplied by values 
+expr: syntax error: unexpected argument ‘6’
+devided by values 
+expr: syntax error: unexpected argument ‘6’
+remainder values 
+expr: syntax error: unexpected argument ‘6’
+addition values 
+Completed Sucessfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./arithmetic.sh 
+Enter value: 2
+Enter value: 4
+addition values 6
+minus values -2
+multiplied by values 8
+devided by values 0
+remainder values 2
+addition values 6
+Completed Sucessfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano arithmetic.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./arithmetic.sh 
+Enter value: 12
+Enter value: 3
+addition values 15
+minus values 9
+expr: syntax error: unexpected argument ‘1forloop.sh’
+multiplied by values 
+devided by values 4
+remainder values 0
+addition values 15
+Completed Sucessfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano arithmetic.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./arithmetic.sh 
+Enter value: 4 
+Enter value: 6
+addition values 10
+minus values -2
+multiplied by values 24
+devided by values 0
+remainder values 4
+addition values 10
+Completed Sucessfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano relationaloper.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 8
+Please provide one number: 25
+0
+0
+1
+1
+1
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano arithmetic.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano Arthemetic-Operators.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Arthemetic-Operators.sh 
+Please enter some value: 1
+Please enter another value: 5
+./Arthemetic-Operators.sh: line 14: 1+5: command not found
+a+b value is 
+a-b value is -4
+axb value is 5
+a/b value is 0
+a%b value is 1
+Completed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano Arthemetic-Operators.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Arthemetic-Operators.sh 
+Please enter some value: 5
+Please enter another value: 6
+a+b value is 11
+a-b value is -1
+axb value is 30
+a/b value is 0
+a%b value is 5
+Completed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Arthemetic-Operators.sh 
+Please enter some value: 1
+Please enter another value: 3
+a+b value is 4
+a-b value is -2
+axb value is 3
+a/b value is 0
+a%b value is 1
+Completed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano Arthemetic-Operators.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano Arthemetic-Operators.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Arthemetic-Operators.sh 
+Please enter some value: 5
+Please enter another value: 6
+./Arthemetic-Operators.sh: line 14: 5+6: command not found
+a+b value is 
+a-b value is -1
+axb value is 30
+a/b value is 0
+a%b value is 5
+Completed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano Arthemetic-Operators.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ nano oroper.sh 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./oroper.sh 
+./oroper.sh: line 3: [: missing `]'
+Statement is True
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./oroper.sh 
+Statment is False
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./oroper.sh 62 3
+Statement is True
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Arthemetic-Operators.sh 
+Please enter some value: 5
+Please enter another value: 6
+a+b value is 11
+a-b value is -1
+axb value is 30
+a/b value is 0
+a%b value is 5
+Completed successfully
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 8
+Please provide one number: 5
+1
+1
+0
+0
+1
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 1
+Please provide one number: 1
+1
+0
+1
+0
+0
+1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh 
+Enter Your Maths Subject Marks: 4
+Enter Your Physics Subject Marks: 5
+Enter Your Chemistry Subject Marks: 5
+./Logical-operators.sh: line 15: syntax error in conditional expression
+./Logical-operators.sh: line 15: syntax error near `-a'
+./Logical-operators.sh: line 15: `if [[ $m -ge 35 -a $p -ge 35 -a $c -ge 35]]'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh 
+Enter Your Maths Subject Marks: 46
+Enter Your Physics Subject Marks: 4
+Enter Your Chemistry Subject Marks: 5
+./Logical-operators.sh: line 15: [: missing `]'
+Sorry You not upto mark in one of the subject
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh 
+Enter Your Maths Subject Marks: 85
+Enter Your Physics Subject Marks: 69
+Enter Your Chemistry Subject Marks: 36
+Congratulations, You have passed in all subjects
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh 
+Enter Your Maths Subject Marks: 85
+Enter Your Physics Subject Marks: 69
+Enter Your Chemistry Subject Marks: 36
+./Logical-operators.sh: line 15: syntax error in conditional expression
+./Logical-operators.sh: line 15: syntax error near `-a'
+./Logical-operators.sh: line 15: `if ! [[ $m -ge 35 -a $p -ge 35 -a $c -ge 35 ]]'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ man test
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh 
+Enter Your Maths Subject Marks: 54
+Enter Your Physics Subject Marks: 4
+Enter Your Chemistry Subject Marks: 458
+Sorry You not upto mark in one of the subject
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh 
+Enter Your Maths Subject Marks: 8
+Enter Your Physics Subject Marks: 8
+Enter Your Chemistry Subject Marks: 5
+Sorry You not upto mark in one of the subject
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./Logical-operators.sh
+Enter Your Maths Subject Marks: 85
+Enter Your Physics Subject Marks: 58
+Enter Your Chemistry Subject Marks: 58
+Congratulations, You have passed in all subjects
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 5
+Please provide one number: 8
+0
+0
+1
+1
+1
+./relationaloper.sh: line 19: [: missing `]'
+2
+./relationaloper.sh: line 19: ]: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 56
+Please provide one number: 5
+1
+1
+0
+0
+1
+./relationaloper.sh: line 19: syntax error in conditional expression: unexpected token `;'
+./relationaloper.sh: line 19: syntax error near `;e'
+./relationaloper.sh: line 19: `[[ $h -ne $g;echo "$?"; ]]'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 5
+Please provide one number: 6
+0
+0
+1
+1
+1
+./relationaloper.sh: line 19: expr[[ 5 -ne 6;echo 0; ]]: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ ./relationaloper.sh 
+Please provide one number: 4
+Please provide one number: 5
+0
+0
+1
+1
+1
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/shell_scripting_codes_git/shell-scripting-tutorial$ 
+
+
