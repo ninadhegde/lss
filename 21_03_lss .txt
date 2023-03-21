@@ -1,0 +1,463 @@
+comparision between differemt shells
+boot process
+vulnarabilities of gui apps
+
+roles and responsibilities of shell
+
+meta charecters
+? *
+
+charecter class
+[i j k] mathes a singe either charecter i or j or k
+[!i j k] mathes a singe charecter not i or j or k
+
+[d-k] matches a singe charecter i ascii range
+[d-k] matches a singe charecter i ascii not in the range
+
+list all the files with extension with .lst
+
+move all file to bin directiory of parent directory
+
+compress all files beginning with . followed by one or more charecter then a second dot(.) followed by one charecter
+
+
+copy file whos 
+copy all 6 char names to procs directories
+
+compare chap1 & chap2 using cmp
+
+remove files in range 3-7 assuming 0to 10 files
+
+print all files except  .txt , cobject file
+
+cmd shld copy to parent dir those files having extensions with atleast 1char before dot(.) but not having 1,2,8
+
+_________________________________________
+mkdir,| rmdir,| cp,| rm || std i/p |std o/p
+-----------------------------------------
+ls , pwd ,who		||    ?    |   X   |
+lp , lpr		||    X    |  ok   |
+cat , bc , wc		||    ok   |   X   |
+-----------------------------------------
+
+
+
+
+null device
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===============================================================================================================================
+===============================================================================================================================
+
+
+
+
+
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ mkdir 21_practice
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd 21_practice
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap2.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap3.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap4.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls- -ail
+Command 'ls-' not found, did you mean:
+  command 'lsd' from snap lsd (0.16.0)
+  command 'lsw' from deb suckless-tools (46-1)
+  command 'lsm' from deb lsm (1.0.4-2)
+  command 'lsc' from deb livescript (1.6.1+dfsg-2)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+  command 'lsh' from deb lsh-client (2.1-13)
+See 'snap info <snapname>' for additional versions.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -ail
+total 8
+18763149 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar 21 09:12 .
+18615247 drwxrwxr-x 8 ninadhegde ninadhegde 4096 Mar 21 09:12 ..
+18763238 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12 chap1.txt
+18766492 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12 chap2.txt
+18766495 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12 chap3.txt
+18768437 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12 chap4.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ man touch
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $shell
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $SHELL
+/bin/bash
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ env
+SHELL=/bin/bash
+SESSION_MANAGER=local/ninadhegde-ROG-Strix-G731GU-G731GU:@/tmp/.ICE-unix/1995,unix/ninadhegde-ROG-Strix-G731GU-G731GU:/tmp/.ICE-unix/1995
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+CONDA_EXE=/home/ninadhegde/anaconda3/bin/conda
+_CE_M=
+LANGUAGE=en_IN:en
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+DBUS_STARTER_BUS_TYPE=session
+PWD=/home/ninadhegde/git/lss/21_practice
+LOGNAME=ninadhegde
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_TYPE=wayland
+CONDA_PREFIX=/home/ninadhegde/anaconda3
+SYSTEMD_EXEC_PID=1995
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.53NY11
+HOME=/home/ninadhegde
+USERNAME=ninadhegde
+IM_CONFIG_PHASE=1
+LANG=en_IN
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+WAYLAND_DISPLAY=wayland-0
+CONDA_PROMPT_MODIFIER=(base) 
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/3c6a7072_da46_49f5_90d1_c1ea0017fefa
+GNOME_SETUP_DISPLAY=:1
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+_CE_CONDA=
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=ninadhegde
+GNOME_TERMINAL_SERVICE=:1.128
+CONDA_SHLVL=1
+DISPLAY=:0
+SHLVL=1
+QT_IM_MODULE=ibus
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=10a92293e1a031c27368876f6419257a
+CONDA_PYTHON_EXE=/home/ninadhegde/anaconda3/bin/python
+XDG_RUNTIME_DIR=/run/user/1000
+CONDA_DEFAULT_ENV=base
+XDG_DATA_DIRS=/usr/share/ubuntu:/home/ninadhegde/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+PATH=/home/ninadhegde/anaconda3/bin:/home/ninadhegde/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=10a92293e1a031c27368876f6419257a
+_=/usr/bin/env
+OLDPWD=/home/ninadhegde/git/lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ pid
+Command 'pid' not found, but there are 20 similar ones.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ $$
+3827: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $$
+3827
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ps
+    PID TTY          TIME CMD
+   3827 pts/0    00:00:00 bash
+   6045 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $$
+3827
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo *
+chap1.txt chap2.txt chap3.txt chap4.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo ?
+?
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $?
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $? 1 2 3 
+0 1 2 3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $? 1 2 3 65
+0 1 2 3 65
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $* 1 2 3 65
+1 2 3 65
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo * 1 2 3 65
+chap1.txt chap2.txt chap3.txt chap4.txt 1 2 3 65
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapx.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapy.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+chap1.txt  chap2.txt  chap3.txt  chap4.txt  chapx.txt  chapy.txt  chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c chap*
+chapz.txt  chapy.txt  chapx.txt  chap4.txt  chap3.txt  chap2.txt  chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapz_1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c chap*
+chapz_1.txt  chapz.txt  chapy.txt  chapx.txt  chap4.txt  chap3.txt  chap2.txt  chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c chapz*
+chapz_1.txt  chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ man *
+No manual entry for chap1.txt
+No manual entry for chap2.txt
+No manual entry for chap3.txt
+No manual entry for chap4.txt
+No manual entry for chapx.txt
+No manual entry for chapy.txt
+No manual entry for chapz_1.txt
+No manual entry for chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c phap*
+ls: cannot access 'phap*': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c ph*
+ls: cannot access 'ph*': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c ha*
+ls: cannot access 'ha*': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c *ha*
+chapz_1.txt  chapz.txt  chapy.txt  chapx.txt  chap4.txt  chap3.txt  chap2.txt  chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c *hap*
+chapz_1.txt  chapz.txt  chapy.txt  chapx.txt  chap4.txt  chap3.txt  chap2.txt  chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c *
+chapz_1.txt  chapz.txt  chapy.txt  chapx.txt  chap4.txt  chap3.txt  chap2.txt  chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap?z.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -c *hap*
+'chap?z.txt'   chapz_1.txt   chapz.txt   chapy.txt   chapx.txt   chap4.txt   chap3.txt   chap2.txt   chap1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -ail
+total 8
+18763149 drwxrwxr-x 2 ninadhegde ninadhegde 4096 Mar 21 09:39  .
+18615247 drwxrwxr-x 8 ninadhegde ninadhegde 4096 Mar 21 09:26  ..
+18763238 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12  chap1.txt
+18766492 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12  chap2.txt
+18766495 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12  chap3.txt
+18768437 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:12  chap4.txt
+18761740 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:33  chapx.txt
+18763745 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:33  chapy.txt
+18761750 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:35  chapz_1.txt
+18763732 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:39 'chap?z.txt'
+18763746 -rw-rw-r-- 1 ninadhegde ninadhegde    0 Mar 21 09:33  chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -s ?
+ls: cannot access '?': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ?
+ls: cannot access '?': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapx
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapy
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ?
+ls: cannot access '?': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?
+chapx  chapy
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?
+chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap01
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap02
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?
+chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?
+chap1  chap2  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+ chap01   chap02   chap1   chap1.txt   chap2   chap2.txt   chap3.txt   chap4.txt   chapx   chapx.txt   chapy   chapy.txt   chapz   chapz_1.txt  'chap?z.txt'   chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ rm chap1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ rm chap2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?
+chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ rm *.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+chap01  chap02  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap03
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap04
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+chap01  chap02  chap03  chap04  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?/
+ls: cannot access 'chap?/': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap??
+chap01  chap02  chap03  chap04
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x chap?
+chap3  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ??ap*
+chap01  chap02  chap03  chap04  chap3  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ??ap
+ls: cannot access '??ap': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ??ap?
+chap3  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ??ap0?
+chap01  chap02  chap03  chap04
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x *ap?
+chap3  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ?hap?
+chap3  chapx  chapy  chapz  xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo *
+chap01 chap02 chap03 chap04 chap3 chapx chapy chapz xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $*
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $#
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $?
+0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $# * 
+0 chap01 chap02 chap03 chap04 chap3 chapx chapy chapz xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $? * 
+0 chap01 chap02 chap03 chap04 chap3 chapx chapy chapz xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $$ * 
+3827 chap01 chap02 chap03 chap04 chap3 chapx chapy chapz xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo $~ * 
+$~ chap01 chap02 chap03 chap04 chap3 chapx chapy chapz xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo ?????
+chap3 chapx chapy chapz xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo [c h]
+[c h]
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch list.lst
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch list2.lst
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x *.lst
+list2.lst  list.lst
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+chap01  chap02  chap03  chap04  chap3  chapx  chapy  chapz  list2.lst  list.lst  xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [c x]
+ls: cannot access '[c': No such file or directory
+ls: cannot access 'x]': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [c,x]
+ls: cannot access '[c,x]': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [c*,*x]
+ls: cannot access '[c*,*x]': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x '[c* *x]'
+ls: cannot access '[c* *x]': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x '[c,x]'
+ls: cannot access '[c,x]': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [c-x]
+ls: cannot access '[c-x]': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch a
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch b
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch c
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch c
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch d
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch e
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ?
+a  b  c  d  e
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [a-c]
+a  b  c
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [a,c]
+a  c
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [a,c*]
+a  c
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x c*
+c  chap01  chap02  chap03  chap04  chap3  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x ![a,c]
+bash: ![a,c]: event not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [!a-c]
+d  e
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch bhap01
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch bhap02
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch dhap02
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -x [a-c]*
+a  b  bhap01  bhap02  c  chap01  chap02  chap03  chap04  chap3  chapx  chapy  chapz
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir procs
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cp ?????? procs
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cd procs/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice/procs$ ls
+bhap01  bhap02  chap01  chap02  chap03  chap04  dhap02
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice/procs$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 4
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 5
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 6
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 7
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 8
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 9
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 10
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 0
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ rm [3-8]
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+0  1  10  2  9  a  b  bhap01  bhap02  c  chap01  chap02  chap03  chap04  chap3  chapx  chapy  chapz  d  dhap02  e  list2.lst  list.lst  procs  xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapy.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapx.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch chapz.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "1" >> chap01
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "2" >> chap02
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "3" >> chap03
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "hoo" >> chap04
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cat !*.txt
+cat "hoo" >> chap04.txt
+cat: hoo: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cat *![.txt]
+bash: ![.txt]: event not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cat *
+1
+2
+3
+hoo
+cat: procs: Is a directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "this is txt file" >> chapx.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "this is txt file" >> chapy.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cat *
+1
+2
+3
+hoo
+this is txt file
+this is txt file
+cat: procs: Is a directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 1.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 2.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 3.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 4.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 5.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ touch 8.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cmp chap1 chap2
+cmp: chap1: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cmp chap01 chap02
+chap01 chap02 differ: byte 1, line 1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "2hoolallal" >> chap02
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ echo "1hoo" >> chap01
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cmp chap01 chap02
+chap01 chap02 differ: byte 1, line 1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir dump_1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cp * dump_1
+cp: -r not specified; omitting directory 'dump_1'
+cp: -r not specified; omitting directory 'procs'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ cp -R * dump_1
+cp: cannot copy a directory, 'dump_1', into itself, 'dump_1/dump_1'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .dump_try
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .dump_try2
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .dump_try23
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .dump_try2.dfsd
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .dump_t.dfsd
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .dum.dfsd
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .d.dfsd
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ mkdir .d.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ compress .?*>?*
+bash: ?*: ambiguous redirect
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ compress .?*.?*
+Command 'compress' not found, but can be installed with:
+sudo apt install ncompress
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ sudo apt install ncompress
+[sudo] password for ninadhegde: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  ncompress
+0 upgraded, 1 newly installed, 0 to remove and 214 not upgraded.
+Need to get 22.0 kB of archives.
+After this operation, 58.4 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 ncompress amd64 4.2.4.6-5 [22.0 kB]
+Fetched 22.0 kB in 6s (3,814 B/s)    
+Selecting previously unselected package ncompress.
+(Reading database ... 219138 files and directories currently installed.)
+Preparing to unpack .../ncompress_4.2.4.6-5_amd64.deb ...
+Unpacking ncompress (4.2.4.6-5) ...
+Setting up ncompress (4.2.4.6-5) ...
+Processing triggers for man-db (2.10.2-1) ...
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ compress .?*.?*
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ LS
+LS: command not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls
+0  10     2      3.txt  5.txt  9  b       bhap02  chap01  chap03  chap04.txt  chapx      chapy      chapz      d       dump_1  list2.lst  procs
+1  1.txt  2.txt  4.txt  8.txt  a  bhap01  c       chap02  chap04  chap3       chapx.txt  chapy.txt  chapz.txt  dhap02  e       list.lst   xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls -a
+.   0  10     2      3.txt  5.txt  9  b       bhap02  chap01  chap03  chap04.txt  chapx      chapy      chapz      .d.  .d.dfsd  .dum.dfsd  .dump_t.dfsd  .dump_try2   .dump_try2.dfsd  list2.lst  procs
+..  1  1.txt  2.txt  4.txt  8.txt  a  bhap01  c       chap02  chap04  chap3       chapx.txt  chapy.txt  chapz.txt  d    dhap02   dump_1     .dump_try     .dump_try23  e                list.lst   xhap3
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ ls *.![txt]
+bash: ![txt]: event not found
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ man lpr
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/21_practice$ 
+
+
