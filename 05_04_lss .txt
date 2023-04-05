@@ -1,0 +1,1407 @@
+Regular Expression
+dev/tty
+
+0 std input
+1 std output
+2 std error 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd database/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat lstemp.lst 
+ID  |Name             |Designation|Department |DOB     |salary
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+8212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2 3 lstemp.lst 
+cut: 3: No such file or directory
+Name             
+a.k. shukla      
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+n.k. gupta       
+chanchal singhvi 
+
+karuna ganguly   
+s.n. dasgupta    
+
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+karuna ganguly   
+s.n. dasgupta    
+shyam saksena    
+
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+
+karuna ganguly   
+s.n. dasgupta    
+
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+
+karuna ganguly   
+s.n. dasgupta    
+
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 lstemp.lst 
+Name             |Designation
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+barun sengupta   |director   
+n.k. gupta       |chairman   
+chanchal singhvi |director   
+
+karuna ganguly   |g.m.       
+s.n. dasgupta    |manager    
+
+jayant Choudhury |executive  
+anil aggarwal    |manager    
+lalit chowdury   |director   
+shyam saksena    |d.g.m.     
+
+sudhir Agarwal   |executive  
+j.b. saxena      |g.m.       
+v.k agrawal      |g.m.       
+karuna ganguly   |g.m.       
+s.n. dasgupta    |manager    
+shyam saksena    |d.g.m.     
+
+sudhir Agarwal   |executive  
+j.b. saxena      |g.m.       
+v.k agrawal      |g.m.       
+
+karuna ganguly   |g.m.       
+s.n. dasgupta    |manager    
+
+jayant Choudhury |executive  
+anil aggarwal    |manager    
+lalit chowdury   |director   
+shyam saksena    |d.g.m.     
+
+sudhir Agarwal   |executive  
+j.b. saxena      |g.m.       
+v.k agrawal      |g.m.       
+
+karuna ganguly   |g.m.       
+s.n. dasgupta    |manager    
+
+jayant Choudhury |executive  
+anil aggarwal    |manager    
+lalit chowdury   |director   
+shyam saksena    |d.g.m.     
+
+sudhir Agarwal   |executive  
+j.b. saxena      |g.m.       
+v.k agrawal      |g.m.       
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 lstemp.lst | grep "manager"
+s.n. dasgupta    |manager    
+anil aggarwal    |manager    
+s.n. dasgupta    |manager    
+s.n. dasgupta    |manager    
+anil aggarwal    |manager    
+s.n. dasgupta    |manager    
+anil aggarwal    |manager    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 lstemp.lst | grep "*ager"
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 lstemp.lst | grep ^ager
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 lstemp.lst | grep ager
+s.n. dasgupta    |manager    
+anil aggarwal    |manager    
+s.n. dasgupta    |manager    
+s.n. dasgupta    |manager    
+anil aggarwal    |manager    
+s.n. dasgupta    |manager    
+anil aggarwal    |manager    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 emp1.lst | grep ager
+anil aggarwal    |manager    
+s.n. dasgupta    |manager    
+S.n. dasgupta    |nanager    
+S.n. dasgupta    |damager    
+anil aggarwal    |manager    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 emp1.lst | grep $ager
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 emp1.lst | grep ager$
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 emp1.lst | grep ager
+anil aggarwal    |manager    
+s.n. dasgupta    |manager    
+S.n. dasgupta    |nanager    
+S.n. dasgupta    |damager    
+anil aggarwal    |manager    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 2,3 emp1.lst | grep r$
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep r$
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep r
+director   
+director   
+cirector   
+manager    
+director   
+director   
+chairman   
+director   
+manager    
+nanager    
+damager    
+manager    
+director   
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep r$
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep -E "r$"
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep -E "r"
+director   
+director   
+cirector   
+manager    
+director   
+director   
+chairman   
+director   
+manager    
+nanager    
+damager    
+manager    
+director   
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep -E "or"
+director   
+director   
+cirector   
+director   
+director   
+director   
+director   
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cut -d "|" -f 3 emp1.lst | grep -E "er"
+manager    
+manager    
+nanager    
+damager    
+manager    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man
+What manual page do you want?
+For example, try 'man man'.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man grep
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep sudo ..garbage.txt
+grep: ..garbage.txt: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cd ..
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ls
+'01_03_lss .txt'      14_02_lss.txt                     21_02_lss.txt    '28_02_lss  .txt'   garbage.txt            README.md         script0.txt                Topics.txt
+'04_04_lss .txt'     '14_03_lss  Shell script.txt'     '21_03_lss .txt'   29_03_lss.txt     'Git from step 0.txt'   remote_file.txt   script_test
+ 07_03_lss.txt        15_02_lss.txt                     21_practice       assignment.txt     hello.py               script01.sh       shell-scripting-tutorial
+ 14_02_lss_long.txt  '15_03_lss  Shell scripting.txt'  '22_02_lss .txt'   database           lss                    script02.sh       test_shell_script
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep sudo garbage.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo -i
+  command 'sudo' from deb sudo (1.9.9-1ubuntu2.3)
+  command 'sudo' from deb sudo-ldap (1.9.9-1ubuntu2.3)
+Try: sudo apt install <deb name>
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo
+[sudo] password for ninadhegde: 
+ cvtsudoers                           grub-mknetdir                  md5sum.textutils                   pnmpad                      shuf                           xkbwatch
+ dpkg-query                           hostid                         nice                               ppmpat                      sudo                           zenity
+ dpkg-realpath                        hostname                       nisdomainname                      ppmquant                    sudoedit                       zff2gff3.pl
+ dpkg-split                           hostnamectl                    nl                                 ppmquantall                 sudoreplay                     zfgrep
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep sudo$ garbage.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep lss$ garbage.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ mkdir prepare_exam_lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep lss garbage.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ mkdir prepare_exam_lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cd prepare_exam_lss/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ echo "This is demo file" >> file.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ cat file.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo -i
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep (base) garbage.txt
+bash: syntax error near unexpected token `('
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep \(base\) garbage.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ mkdir prepare_exam_lss
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff$ cd prepare_exam_lss/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ echo "This is demo file" >> file.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ cat file.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo -i
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ grep \(base\) garbage.txt | grep sudo garbage.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo -i
+  command 'sudo' from deb sudo (1.9.9-1ubuntu2.3)
+  command 'sudo' from deb sudo-ldap (1.9.9-1ubuntu2.3)
+Try: sudo apt install <deb name>
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo
+[sudo] password for ninadhegde: 
+ cvtsudoers                           grub-mknetdir                  md5sum.textutils                   pnmpad                      shuf                           xkbwatch
+ dpkg-query                           hostid                         nice                               ppmpat                      sudo                           zenity
+ dpkg-realpath                        hostname                       nisdomainname                      ppmquant                    sudoedit                       zff2gff3.pl
+ dpkg-split                           hostnamectl                    nl                                 ppmquantall                 sudoreplay                     zfgrep
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cut -d "|" -f 2 database/emp.lst 
+charles harris   
+bill johnson     
+robert dylan     
+john woodcock    
+barry wood       
+gordon 1ightfoot 
+michael lennon   
+p.j. woodhouse   
+nei1 o'bryan     
+jackie wodehouse 
+derryk o'brien   
+bi11 wilcocks    
+ronie trueman    
+james wilcox     
+julie truman     
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cut -d "|" -f 2 database/emp1.lst 
+
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+chanchal singhvi 
+karuna ganguly   
+jayant Choudhury 
+anil aggarwal    
+shyam saksena    
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+a.k. shukla      
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+n.k. gupta       
+chanchal singhvi 
+karuna ganguly   
+s.n. dasgupta    
+S.n. dasgupta    
+S.n. dasgupta    
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cut -d "|" -f 2 -c 3 database/emp1.lst 
+cut: only one type of list may be specified
+Try 'cut --help' for more information.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cut -c 3 database/emp1.lst 
+
+7
+7
+6
+0
+1
+9
+7
+1
+6
+1
+1
+1
+7
+7
+6
+1
+0
+1
+1
+1
+1
+9
+7
+2
+1
+6
+4
+1
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cut -c 7 database/emp1.lst 
+
+a
+u
+a
+h
+a
+a
+n
+h
+u
+.
+.
+.
+a
+u
+a
+.
+h
+a
+.
+.
+.
+a
+n
+a
+h
+u
+.
+.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd database/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ ls
+cutlist  cutlist1  cutlist2  emp1.lst  emp.lst  empx.lst  lsiemp.lst  lstemp.lst  ourbase.txt  shortlist  shortlistemp
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat o
+cat: o: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat ourbase.txt 
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" -k +2 ourbase.txt 
+
+
+
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" -k +3 ourbase.txt 
+
+
+
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" -k +4 ourbase.txt 
+
+
+
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -k +4 ourbase.txt 
+
+
+
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -k +2 ourbase.txt 
+
+
+
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -k +2 emp1.lst 
+
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -k +3 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -k 3,3 -k 2,2 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -k 3,3 -k 4,4 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| -2 emp1.lst 
+sort: invalid option -- '2'
+Try 'sort --help' for more information.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +2 +1 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +2 +4 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +2 +5 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +2 +3 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +2  emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +2 -5 emp1.lst 
+
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +2.1 +2.4 emp1.lst 
+
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +1.1 +1.4 emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +1.1 +1.2 emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +1.3 +1.5 emp1.lst 
+
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +1.1 +1.5 emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep shuk
+shuk
+shuk
+^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep shuk emp1.lst 
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep ales emp1.lst 
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep ager emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep r$ emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep er$ emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep $er emp1.lst 
+^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep ^man emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "^man" emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "man" emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "ag" emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep  ^.c bargage.txt | tail -n 3
+grep: bargage.txt: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "ag" emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [1-4] emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [4] emp1.lst 
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [111] emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep 111 emp1.lst 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep 11 emp1.lst 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA] emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[ar][ar]wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[gar][ar]wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[r][ar]wal emp1.lst 
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA][g][ar][ar]wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA][gar][ar][ar]wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA][g][ar][ar]wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[g][ar][ar]wal emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[gar][ar][ar]wal emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[gar][ar]wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[gar][ar]* emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA].[gar][ar]* emp1.lst 
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[gar].walemp1.lst 
+^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep [aA]g[gar].wal emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep 11..$ emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep 11.. emp1.lst 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep 11..7 emp1.lst 
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +1.1 -1.5 emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t "|" +1.1 -1.3 emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t \| +1.1 -1.3 emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep MCA$ ourbase.txt 
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep BCA$ ourbase.txt 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep BSC$ ourbase.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep BSC$ ourbase.txt 
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "BSC$" ourbase.txt 
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man grep
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "BCA$" ourbase.txt 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "BCA$" ourbase.txt 
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "MCA$" ourbase.txt 
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "^bh" ourbase.txt 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ grep "^.ha" ourbase.txt 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ 
+
+

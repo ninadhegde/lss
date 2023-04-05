@@ -3,12 +3,12 @@
 (base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ echo "This is demo file" >> file.txt
 (base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ cat file.txt 
 This is demo file
-(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudi -i
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo -i
 Command 'sudi' not found, did you mean:
   command 'sudo' from deb sudo (1.9.9-1ubuntu2.3)
   command 'sudo' from deb sudo-ldap (1.9.9-1ubuntu2.3)
 Try: sudo apt install <deb name>
-(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo -i
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/Downloads/buffer_stuff/prepare_exam_lss$ sudo
 [sudo] password for ninadhegde: 
 root@ninadhegde-ROG-Strix-G731GU-G731GU:~# cd /bin
 root@ninadhegde-ROG-Strix-G731GU-G731GU:/bin# ls
