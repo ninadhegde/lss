@@ -8,21 +8,10 @@ special variables
 
 
 
-
-
-
-
-
 $0 =currennt program name
 $* 
 $#
 $@
-
-
-
-
-
-
 
 
 

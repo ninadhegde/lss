@@ -1,0 +1,913 @@
+sed
+ed 
+diff
+
+sed option 'address action ' file
+-- address 
+	1) line by line
+	2) specifying a patern ( /abcd/ )
+    -- 3 , (3,5)
+supports multiple patterns
+context addressing
+
+justify sed does context addressing 
+reg ex
+
+proove sed supports reg excommand
+
+TEXT EDITING I A C D
+text manipulation
+substitution
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================
+================================================================================================================================
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man dif
+No manual entry for dif
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man ded
+No manual entry for ded
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man ed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man diff
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd git/lss/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ls
+'01_03_lss .txt'   14_02_lss_long.txt            '15_03_lss  Shell scripting.txt'   21_practice        add3num.sh       garbage.txt            README.md         script0.txt                test_shell_script
+'04_04_lss .txt'   14_02_lss.txt                 '18_04_lss .txt'                  '22_02_lss .txt'    assignment.txt  'Git from step 0.txt'   remote_file.txt   script_test                Topics.txt
+'05_04_lss .txt'  '14_03_lss  Shell script.txt'   21_02_lss.txt                    '28_02_lss  .txt'   bargage.txt      hello.py               script01.sh       shell-scripting-tutorial
+ 07_03_lss.txt     15_02_lss.txt                 '21_03_lss .txt'                   29_03_lss.txt      database         lss                    script02.sh       temp
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '3d' s
+script01.sh               script02.sh               script0.txt               script_test/              shell-scripting-tutorial/ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '3d' database/emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '3q' database/emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5q' database/emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ man swd
+No manual entry for swd
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '-5q' database/emp1.lst 
+sed: invalid option -- '5'
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5q' database/emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,$p' database/emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,$p' database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,$p' -n database/emp.lst 
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '15,$p' -n database/emp.lst 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '13,$p' -n database/emp.lst 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '3p' -n database/emp.lst 
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5p' -n database/emp.lst 
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5p'  database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '5p'  database/emp.lst 
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '1p'  database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '1p,10p'  database/emp.lst 
+sed: -e expression #1, char 3: extra characters after command
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '1,10'  database/emp.lst 
+sed: -e expression #1, char 4: missing command
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '10p'  database/emp.lst 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '10q'  database/emp.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '10q'  database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5p'  database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '1,3p
+> 7,9p
+> ' database/emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '1,3p
+7,9p
+'-n database/emp.lst
+sed: -e expression #1, char 11: unknown command: `-'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '1,3p
+7,9p
+' -n database/emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '1,3!p
+7,9!p
+' -n database/emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5p'  database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5p' -n database/emp.lst 
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5!p' -n database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,14!p' -n database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,14$!p' -n database/emp.lst 
+sed: -e expression #1, char 5: unknown command: `$'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,14!$p' -n database/emp.lst 
+sed: -e expression #1, char 6: unknown command: `$'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,!$p' -n database/emp.lst 
+sed: -e expression #1, char 3: unexpected `,'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,$!p' -n database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '2,$!p' -n database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '5,9p' -e '2,$!p' -n database/emp.lst 
+sed: can't read 5,9p: No such file or directory
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -e '5,9p' -e '2,$!p' -n database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '$p' -n database/emp.lst 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '1,$!p' -n database/emp.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat > instruct1
+1,2p
+7,10p
+$p
+^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n -f instruct1 database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/sales/p' -n database/emp.lst 
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/director/p' -n database/emp.lst 
+9876|bill johnson     |director   |production |03/12/50|130000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/director/p' -n database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/damager/p' -n database/emp1.lst 
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/damager/,/sales/p' -n database/emp1.lst 
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat database/emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/manager/,/sales/p' -n database/emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '/manager/,/accounts/p' -n database/emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '10,/accounts/p' -n database/emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed '10,/admin/p' -n database/emp1.lst 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '[saxena]' database/emp1.lst 
+sed: -e expression #1, char 1: unknown command: `['
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[saxena]/' database/emp1.lst 
+sed: -e expression #1, char 10: missing command
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]*wal/' database/emp1.lst 
+sed: -e expression #1, char 10: missing command
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]*wal/p' database/emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[saxena]p/' database/emp1.lst 
+sed: -e expression #1, char 11: missing command
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[saxena]/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/saxena/p' database/emp1.lst 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]g?a*wal/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]g?*wal/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]?a*wal/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]?*wal/p' database/emp1.lst 
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]*wal/p' database/emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[aA]gg*wal/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/\/50/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/??\/??\/50/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/??\/??\/50/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/\/50/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/??\/50/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/[??]\/50/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/.\/50/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/.\/\/50/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/\/50/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/??\/[5][0]/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/\/[5][0]/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/.\/50?????/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/.\/50?????*/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/.\/50*/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/.\/50|/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/??.\/50|/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/??\/50|/p' database/emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/\/50|/p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/\/50|....../p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ sed -n '/|..\/..\/50|....../p' database/emp1.lst 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd database/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed -n '/manager/w mlist' emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat mlist 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed -n '/executive/w mlist' emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat mlist 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed -n '/manager/w mlist' emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed -n '/executive/w exlist' emp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat exlist 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t 6 emp1.lst 
+
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t 6 emp1.lst | uniq
+
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -t 6 -n emp1.lst | uniq | 
+> C^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man sort
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -t 6  emp1.lst | uniq | 
+> 
+> ^C
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -t 6  emp1.lst | uniq 
+
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -k 6  emp1.lst | uniq 
+
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man sort
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -t "|" -k 6  emp1.lst | uniq 
+
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -t "|" -k 6  emp1.lst | uniq | sed '/sales/p'
+
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -t "|" -k 6  emp1.lst | uniq | sed '10,20p'
+
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sort -n -t "|" -k 6  emp1.lst | uniq | sed '10,20p' -n
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+
