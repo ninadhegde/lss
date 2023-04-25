@@ -1,0 +1,2212 @@
+
+sed
+[address] s /expression1/expression2/ flag
+
+g-> global
+
+anchoring symbols
+^ $
+
+
+
+remembered patterns using sed
+BRE
+IRE
+TRE
+
+
+
+
+self tututorial
+
+process management
+
+
+awk
+
+assosiative arrays
+
+
+
+
+awk operates at field level
+
+
+
+
+
+extended reg ex
+
+
+
+
+
+
+
+
+
+
+sed 's/^/Hoo-/g' sedemp1.lst     -->> replacing pattern -->> append at beggining
+
+sed 's/[aA]gg*[ar][ar]wal/AGARWAL/g' sedemp1.lst -->> replacing pattern -->> The Agarwals replacement
+
+
+
+
+
+awk -F '|' '/damager/{print $4 $2}' emp1.lst -->> awk print field based on search pattern
+
+
+
+===========================================================================================================================
+===========================================================================================================================
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd git/lss/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd database/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cp emp1.lst sedemp1.lst
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/:/' sedemp1.lst 
+
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1006:chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+3212:shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111:a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1111:n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006:chanchal singhvi |director   |sales      |09/03/38|120000
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111:s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111:S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111:S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+6521:lalit chowdury   |director   |marketing  |09/26/45|125000
+3212:shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/:/' sedemp1.lst 
+
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1006:chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+3212:shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111:a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1111:n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006:chanchal singhvi |director   |sales      |09/03/38|120000
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111:s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111:S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111:S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+6521:lalit chowdury   |director   |marketing  |09/26/45|125000
+3212:shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/:/g' sedemp1.lst 
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213:karuna ganguly   :g.m.       :accounts   :06/05/62:105000 
+4290:jayant Choudhury :executive  :production :09/07/50: 65000 
+2476:anil aggarwal    :manager    :sales      :05/01/59:110000
+3212:shyam saksena    :d.g.m      :accounts   :12/12/55: 85000
+3564:sudhir Agarwal   :executive  :personnel  :07/06/47: 75000
+1111:j.b. saxena      :g.m.       :marketing  :03/12/45:110000
+1111:v.k agrawal      :g.m.       :marketing  :12/31/40: 95000
+1111:a.k. shukla      :g.m.       :ales       :12/12/52: 90000
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 75000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1111:n.k. gupta       :chairman   :admin      :08/30/56:160000
+1006:chanchal singhvi :director   :sales      :09/03/38:120000
+6213:karuna ganguly   :g.m.       :accounts   :06/05/62:105000 
+1111:s.n. dasgupta    :manager    :sales      :09/12/63:90000
+1111:S.n. dasgupta    :nanager    :sales      :09/12/63:50000
+1111:S.n. dasgupta    :damager    :sales      :09/12/63:85000
+4290:jayant Choudhury :executive  :production :09/07/50: 65000 
+2476:anil aggarwal    :manager    :sales      :05/01/59:110000
+6521:lalit chowdury   :director   :marketing  :09/26/45:125000
+3212:shyam saksena    :d.g.m      :accounts   :12/12/55: 85000
+3564:sudhir Agarwal   :executive  :personnel  :07/06/47: 75000
+2345:j.b. saxena      :g.m.       :marketing  :03/12/45:110000
+1111:v.k agrawal      :g.m.       :marketing  :12/31/40: 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1 s/|/:/g' sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/:/|/g' sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/:/' sedemp1.lst 
+
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1006:chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+3212:shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111:a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1111:n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006:chanchal singhvi |director   |sales      |09/03/38|120000
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111:s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111:S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111:S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+6521:lalit chowdury   |director   |marketing  |09/26/45|125000
+3212:shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/:/g' sedemp1.lst 
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213:karuna ganguly   :g.m.       :accounts   :06/05/62:105000 
+4290:jayant Choudhury :executive  :production :09/07/50: 65000 
+2476:anil aggarwal    :manager    :sales      :05/01/59:110000
+3212:shyam saksena    :d.g.m      :accounts   :12/12/55: 85000
+3564:sudhir Agarwal   :executive  :personnel  :07/06/47: 75000
+1111:j.b. saxena      :g.m.       :marketing  :03/12/45:110000
+1111:v.k agrawal      :g.m.       :marketing  :12/31/40: 95000
+1111:a.k. shukla      :g.m.       :ales       :12/12/52: 90000
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 75000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1111:n.k. gupta       :chairman   :admin      :08/30/56:160000
+1006:chanchal singhvi :director   :sales      :09/03/38:120000
+6213:karuna ganguly   :g.m.       :accounts   :06/05/62:105000 
+1111:s.n. dasgupta    :manager    :sales      :09/12/63: 90000
+1111:S.n. dasgupta    :nanager    :sales      :09/12/63: 50000
+1111:S.n. dasgupta    :damager    :sales      :09/12/63: 85000
+4290:jayant Choudhury :executive  :production :09/07/50: 65000 
+2476:anil aggarwal    :manager    :sales      :05/01/59:110000
+6521:lalit chowdury   :director   :marketing  :09/26/45:125000
+3212:shyam saksena    :d.g.m      :accounts   :12/12/55: 85000
+3564:sudhir Agarwal   :executive  :personnel  :07/06/47: 75000
+2345:j.b. saxena      :g.m.       :marketing  :03/12/45:110000
+1111:v.k agrawal      :g.m.       :marketing  :12/31/40: 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/:/|/g' sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1 s/|/$/' sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1 s/|/:/' sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/' sedemp1.lst 
+
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+1006:chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst 
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/:/?/g' sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/?/g' sedemp1.lst 
+
+9876?jai sharma       ?director   ?production ?03/12/50?130000
+5678?sumit chakrobarty?d.g.m      ?marketing  ?04/19/43? 95000
+2365?barun sengupta   ?director   ?personnel  ?05/11/47?120000
+1006?chanchal singhvi ?cirector   ?sales      ?09/03/38?140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst 
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/?/g' sedemp1.lst 
+
+9876?jai sharma       ?director   ?production ?03/12/50?130000
+5678?sumit chakrobarty?d.g.m      ?marketing  ?04/19/43? 95000
+2365?barun sengupta   ?director   ?personnel  ?05/11/47?120000
+1006?chanchal singhvi ?cirector   ?sales      ?09/03/38?140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/?/g' sedemp1.lst | tee sedemp1.lst 
+
+9876?jai sharma       ?director   ?production ?03/12/50?130000
+5678?sumit chakrobarty?d.g.m      ?marketing  ?04/19/43? 95000
+2365?barun sengupta   ?director   ?personnel  ?05/11/47?120000
+1006?chanchal singhvi ?cirector   ?sales      ?09/03/38?140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/?/>/g' sedemp1.lst | tee sedemp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/?/:/g' sedemp1.lst | tee sedemp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat sedemp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cp emp1.lst sedemp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst | tee sedemp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cp emp1.lst sedemp1.lst 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst|tee newbuffer.txt
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/|/:/g' sedemp1.lst|tee newbuffer.txt
+
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 95000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+1006:chanchal singhvi :cirector   :sales      :09/03/38:140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s//:/g' sedemp1.lst|tee newbuffer.txt
+sed: -e expression #1, char 0: no previous regular expression
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat newbuffer.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s//:/g' sedemp1.lst|tee newbuffer.txt 2>
+bash: syntax error near unexpected token `newline'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s//:/g' sedemp1.lst 2> newbuffer.txt|tee newbuffer.txt 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat newbuffer.txt 
+sed: -e expression #1, char 0: no previous regular expression
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s//:/g' sedemp1.lst|tee newbuffer.txt
+sed: -e expression #1, char 0: no previous regular expression
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed '1,5 s/manager/damager/g' sedemp1.lst|tee newbuffer.txt
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/manager/damager/g' sedemp1.lst|tee newbuffer.txt
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |damager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |damager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |damager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/damager/manager/g' sedemp1.lst|tee newbuffer.txt
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |manager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/nanager/manager/g' sedemp1.lst|tee newbuffer.txt
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |manager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/manager/damager/' sedemp1.lst|tee newbuffer.txt
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |damager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |damager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |damager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/damager/manager/g' sedemp1.lst|tee newbuffer.txt
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |manager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/sales/whales/g' sedemp1.lst
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |whales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |whales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |whales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |whales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |whales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |whales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |whales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat sedemp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/[aA]g*[ar][ar]wal/whales/g' sedemp1.lst
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil whales    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir whales   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k whales      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil whales    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir whales   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k whales      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/[aA]g*[ar][ar]wal/AGARWAL/g' sedemp1.lst
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil AGARWAL    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir AGARWAL   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k AGARWAL      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil AGARWAL    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir AGARWAL   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k AGARWAL      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/[aA]gg*[ar][ar]wal/AGARWAL/g' sedemp1.lst
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil AGARWAL    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir AGARWAL   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k AGARWAL      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil AGARWAL    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir AGARWAL   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k AGARWAL      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/^/6/g' sedemp1.lst
+6
+69876|jai sharma       |director   |production |03/12/50|130000
+65678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+62365|barun sengupta   |director   |personnel  |05/11/47|120000
+61006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+66213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+64290|jayant Choudhury |executive  |production |09/07/50| 65000 
+62476|anil aggarwal    |manager    |sales      |05/01/59|110000
+63212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+63564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+61111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+61111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+61111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+69876|jai sharma       |director   |production |03/12/50|130000
+65678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+62365|barun sengupta   |director   |personnel  |05/11/47|120000
+61111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+61006|chanchal singhvi |director   |sales      |09/03/38|120000
+66213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+61111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+61111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+61111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+64290|jayant Choudhury |executive  |production |09/07/50| 65000 
+62476|anil aggarwal    |manager    |sales      |05/01/59|110000
+66521|lalit chowdury   |director   |marketing  |09/26/45|125000
+63212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+63564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+62345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+61111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/^/2069/g' sedemp1.lst
+2069
+20699876|jai sharma       |director   |production |03/12/50|130000
+20695678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+20692365|barun sengupta   |director   |personnel  |05/11/47|120000
+20691006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+20696213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+20694290|jayant Choudhury |executive  |production |09/07/50| 65000 
+20692476|anil aggarwal    |manager    |sales      |05/01/59|110000
+20693212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+20693564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+20691111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+20691111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+20691111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+20699876|jai sharma       |director   |production |03/12/50|130000
+20695678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+20692365|barun sengupta   |director   |personnel  |05/11/47|120000
+20691111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+20691006|chanchal singhvi |director   |sales      |09/03/38|120000
+20696213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+20691111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+20691111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+20691111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+20694290|jayant Choudhury |executive  |production |09/07/50| 65000 
+20692476|anil aggarwal    |manager    |sales      |05/01/59|110000
+20696521|lalit chowdury   |director   |marketing  |09/26/45|125000
+20693212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+20693564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+20692345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+20691111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/^/Hoo-/g' sedemp1.lst
+Hoo-
+Hoo-9876|jai sharma       |director   |production |03/12/50|130000
+Hoo-5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+Hoo-2365|barun sengupta   |director   |personnel  |05/11/47|120000
+Hoo-1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+Hoo-6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+Hoo-4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+Hoo-2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+Hoo-3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+Hoo-3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+Hoo-1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+Hoo-1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+Hoo-1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+Hoo-9876|jai sharma       |director   |production |03/12/50|130000
+Hoo-5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+Hoo-2365|barun sengupta   |director   |personnel  |05/11/47|120000
+Hoo-1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+Hoo-1006|chanchal singhvi |director   |sales      |09/03/38|120000
+Hoo-6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+Hoo-1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+Hoo-1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+Hoo-1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+Hoo-4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+Hoo-2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+Hoo-6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+Hoo-3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+Hoo-3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+Hoo-2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+Hoo-1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man sed
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/ //g' sedemp1.lst
+
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|95000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1006|chanchalsinghvi|cirector|sales|09/03/38|140000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+1111|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+1111|a.k.shukla|g.m.|ales|12/12/52|90000
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|75000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1111|n.k.gupta|chairman|admin|08/30/56|160000
+1006|chanchalsinghvi|director|sales|09/03/38|120000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+1111|s.n.dasgupta|manager|sales|09/12/63|90000
+1111|S.n.dasgupta|nanager|sales|09/12/63|50000
+1111|S.n.dasgupta|damager|sales|09/12/63|85000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+6521|lalitchowdury|director|marketing|09/26/45|125000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+2345|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/ * |//g' sedemp1.lst
+
+9876|jai sharmadirectorproduction03/12/50|130000
+5678|sumit chakrobarty|d.g.mmarketing04/19/43| 95000
+2365|barun senguptadirectorpersonnel05/11/47|120000
+1006|chanchal singhvicirectorsales09/03/38|140000
+6213|karuna gangulyg.m.accounts06/05/62|105000 
+4290|jayant Choudhuryexecutiveproduction09/07/50| 65000 
+2476|anil aggarwalmanagersales05/01/59|110000
+3212|shyam saksenad.g.maccounts12/12/55| 85000
+3564|sudhir Agarwalexecutivepersonnel07/06/47| 75000
+1111|j.b. saxenag.m.marketing03/12/45|110000
+1111|v.k agrawalg.m.marketing12/31/40| 95000
+1111|a.k. shuklag.m.ales12/12/52| 90000
+9876|jai sharmadirectorproduction03/12/50|130000
+5678|sumit chakrobarty|d.g.mmarketing04/19/43| 75000
+2365|barun senguptadirectorpersonnel05/11/47|120000
+1111|n.k. guptachairmanadmin08/30/56|160000
+1006|chanchal singhvidirectorsales09/03/38|120000
+6213|karuna gangulyg.m.accounts06/05/62|105000 
+1111|s.n. dasguptamanagersales09/12/63| 90000
+1111|S.n. dasguptananagersales09/12/63| 50000
+1111|S.n. dasguptadamagersales09/12/63| 85000
+4290|jayant Choudhuryexecutiveproduction09/07/50| 65000 
+2476|anil aggarwalmanagersales05/01/59|110000
+6521|lalit chowdurydirectormarketing09/26/45|125000
+3212|shyam saksenad.g.maccounts12/12/55| 85000
+3564|sudhir Agarwalexecutivepersonnel07/06/47| 75000
+2345|j.b. saxenag.m.marketing03/12/45|110000
+1111|v.k agrawalg.m.marketing12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/ * |/|/g' sedemp1.lst
+
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 95000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1006|chanchal singhvi|cirector|sales|09/03/38|140000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+1111|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+1111|a.k. shukla|g.m.|ales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 75000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1111|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi|director|sales|09/03/38|120000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1111|s.n. dasgupta|manager|sales|09/12/63| 90000
+1111|S.n. dasgupta|nanager|sales|09/12/63| 50000
+1111|S.n. dasgupta|damager|sales|09/12/63| 85000
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/ * //g' sedemp1.lst
+
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|95000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1006|chanchalsinghvi|cirector|sales|09/03/38|140000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+1111|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+1111|a.k.shukla|g.m.|ales|12/12/52|90000
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|75000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1111|n.k.gupta|chairman|admin|08/30/56|160000
+1006|chanchalsinghvi|director|sales|09/03/38|120000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+1111|s.n.dasgupta|manager|sales|09/12/63|90000
+1111|S.n.dasgupta|nanager|sales|09/12/63|50000
+1111|S.n.dasgupta|damager|sales|09/12/63|85000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+6521|lalitchowdury|director|marketing|09/26/45|125000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+2345|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/  * //g' sedemp1.lst
+
+9876|jai sharma|director|production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 95000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1006|chanchal singhvi |cirector|sales|09/03/38|140000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+4290|jayant Choudhury |executive|production |09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+1111|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+1111|a.k. shukla|g.m.|ales|12/12/52| 90000
+9876|jai sharma|director|production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 75000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1111|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi |director|sales|09/03/38|120000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1111|s.n. dasgupta|manager|sales|09/12/63| 90000
+1111|S.n. dasgupta|nanager|sales|09/12/63| 50000
+1111|S.n. dasgupta|damager|sales|09/12/63| 85000
+4290|jayant Choudhury |executive|production |09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/   //g' sedemp1.lst
+
+9876|jai sharma |director|production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing  |04/19/43| 95000
+2365|barun sengupta|director|personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector|sales|09/03/38|140000
+6213|karuna ganguly|g.m. |accounts|06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal |manager |sales|05/01/59|110000
+3212|shyam saksena |d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena|g.m. |marketing  |03/12/45|110000
+1111|v.k agrawal|g.m. |marketing  |12/31/40| 95000
+1111|a.k. shukla|g.m. |ales |12/12/52| 90000
+9876|jai sharma |director|production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing  |04/19/43| 75000
+2365|barun sengupta|director|personnel  |05/11/47|120000
+1111|n.k. gupta |chairman|admin|08/30/56|160000
+1006|chanchal singhvi |director|sales|09/03/38|120000
+6213|karuna ganguly|g.m. |accounts|06/05/62|105000 
+1111|s.n. dasgupta |manager |sales|09/12/63| 90000
+1111|S.n. dasgupta |nanager |sales|09/12/63| 50000
+1111|S.n. dasgupta |damager |sales|09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal |manager |sales|05/01/59|110000
+6521|lalit chowdury|director|marketing  |09/26/45|125000
+3212|shyam saksena |d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena|g.m. |marketing  |03/12/45|110000
+1111|v.k agrawal|g.m. |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/  *//g' sedemp1.lst
+
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|95000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1006|chanchalsinghvi|cirector|sales|09/03/38|140000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+1111|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+1111|a.k.shukla|g.m.|ales|12/12/52|90000
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|75000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1111|n.k.gupta|chairman|admin|08/30/56|160000
+1006|chanchalsinghvi|director|sales|09/03/38|120000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+1111|s.n.dasgupta|manager|sales|09/12/63|90000
+1111|S.n.dasgupta|nanager|sales|09/12/63|50000
+1111|S.n.dasgupta|damager|sales|09/12/63|85000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+6521|lalitchowdury|director|marketing|09/26/45|125000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+2345|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/ * //g' sedemp1.lst
+
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|95000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1006|chanchalsinghvi|cirector|sales|09/03/38|140000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+1111|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+1111|a.k.shukla|g.m.|ales|12/12/52|90000
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|75000
+2365|barunsengupta|director|personnel|05/11/47|120000
+1111|n.k.gupta|chairman|admin|08/30/56|160000
+1006|chanchalsinghvi|director|sales|09/03/38|120000
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+1111|s.n.dasgupta|manager|sales|09/12/63|90000
+1111|S.n.dasgupta|nanager|sales|09/12/63|50000
+1111|S.n.dasgupta|damager|sales|09/12/63|85000
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+6521|lalitchowdury|director|marketing|09/26/45|125000
+3212|shyamsaksena|d.g.m|accounts|12/12/55|85000
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+2345|j.b.saxena|g.m.|marketing|03/12/45|110000
+1111|v.kagrawal|g.m.|marketing|12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/  * //g' sedemp1.lst
+
+9876|jai sharma|director|production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 95000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1006|chanchal singhvi |cirector|sales|09/03/38|140000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+4290|jayant Choudhury |executive|production |09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+1111|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+1111|a.k. shukla|g.m.|ales|12/12/52| 90000
+9876|jai sharma|director|production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 75000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1111|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi |director|sales|09/03/38|120000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1111|s.n. dasgupta|manager|sales|09/12/63| 90000
+1111|S.n. dasgupta|nanager|sales|09/12/63| 50000
+1111|S.n. dasgupta|damager|sales|09/12/63| 85000
+4290|jayant Choudhury |executive|production |09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/  *|//g' sedemp1.lst
+
+9876|jai sharmadirectorproduction03/12/50|130000
+5678|sumit chakrobarty|d.g.mmarketing04/19/43| 95000
+2365|barun senguptadirectorpersonnel05/11/47|120000
+1006|chanchal singhvicirectorsales09/03/38|140000
+6213|karuna gangulyg.m.accounts06/05/62|105000 
+4290|jayant Choudhuryexecutiveproduction09/07/50| 65000 
+2476|anil aggarwalmanagersales05/01/59|110000
+3212|shyam saksenad.g.maccounts12/12/55| 85000
+3564|sudhir Agarwalexecutivepersonnel07/06/47| 75000
+1111|j.b. saxenag.m.marketing03/12/45|110000
+1111|v.k agrawalg.m.marketing12/31/40| 95000
+1111|a.k. shuklag.m.ales12/12/52| 90000
+9876|jai sharmadirectorproduction03/12/50|130000
+5678|sumit chakrobarty|d.g.mmarketing04/19/43| 75000
+2365|barun senguptadirectorpersonnel05/11/47|120000
+1111|n.k. guptachairmanadmin08/30/56|160000
+1006|chanchal singhvidirectorsales09/03/38|120000
+6213|karuna gangulyg.m.accounts06/05/62|105000 
+1111|s.n. dasguptamanagersales09/12/63| 90000
+1111|S.n. dasguptananagersales09/12/63| 50000
+1111|S.n. dasguptadamagersales09/12/63| 85000
+4290|jayant Choudhuryexecutiveproduction09/07/50| 65000 
+2476|anil aggarwalmanagersales05/01/59|110000
+6521|lalit chowdurydirectormarketing09/26/45|125000
+3212|shyam saksenad.g.maccounts12/12/55| 85000
+3564|sudhir Agarwalexecutivepersonnel07/06/47| 75000
+2345|j.b. saxenag.m.marketing03/12/45|110000
+1111|v.k agrawalg.m.marketing12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/  *|/|/g' sedemp1.lst
+
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 95000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1006|chanchal singhvi|cirector|sales|09/03/38|140000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+1111|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+1111|a.k. shukla|g.m.|ales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 75000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1111|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi|director|sales|09/03/38|120000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1111|s.n. dasgupta|manager|sales|09/12/63| 90000
+1111|S.n. dasgupta|nanager|sales|09/12/63| 50000
+1111|S.n. dasgupta|damager|sales|09/12/63| 85000
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/| /|/g' sedemp1.lst
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43|95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50|65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55|85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47|75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40|95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52|90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43|75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50|65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55|85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47|75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|* /|/g' sedemp1.lst
+
+9876|jai|sharma||||||||director||||production||03/12/50|130000
+5678|sumit|chakrobarty|d.g.m|||||||marketing|||04/19/43|95000
+2365|barun|sengupta||||director||||personnel|||05/11/47|120000
+1006|chanchal|singhvi||cirector||||sales|||||||09/03/38|140000
+6213|karuna|ganguly||||g.m.||||||||accounts||||06/05/62|105000|
+4290|jayant|Choudhury||executive|||production||09/07/50|65000|
+2476|anil|aggarwal|||||manager|||||sales|||||||05/01/59|110000
+3212|shyam|saksena|||||d.g.m|||||||accounts||||12/12/55|85000
+3564|sudhir|Agarwal||||executive|||personnel|||07/06/47|75000
+1111|j.b.|saxena|||||||g.m.||||||||marketing|||03/12/45|110000
+1111|v.k|agrawal|||||||g.m.||||||||marketing|||12/31/40|95000
+1111|a.k.|shukla|||||||g.m.||||||||ales||||||||12/12/52|90000
+9876|jai|sharma||||||||director||||production||03/12/50|130000
+5678|sumit|chakrobarty|d.g.m|||||||marketing|||04/19/43|75000
+2365|barun|sengupta||||director||||personnel|||05/11/47|120000
+1111|n.k.|gupta||||||||chairman||||admin|||||||08/30/56|160000
+1006|chanchal|singhvi||director||||sales|||||||09/03/38|120000
+6213|karuna|ganguly||||g.m.||||||||accounts||||06/05/62|105000|
+1111|s.n.|dasgupta|||||manager|||||sales|||||||09/12/63|90000
+1111|S.n.|dasgupta|||||nanager|||||sales|||||||09/12/63|50000
+1111|S.n.|dasgupta|||||damager|||||sales|||||||09/12/63|85000
+4290|jayant|Choudhury||executive|||production||09/07/50|65000|
+2476|anil|aggarwal|||||manager|||||sales|||||||05/01/59|110000
+6521|lalit|chowdury||||director||||marketing|||09/26/45|125000
+3212|shyam|saksena|||||d.g.m|||||||accounts||||12/12/55|85000
+3564|sudhir|Agarwal||||executive|||personnel|||07/06/47|75000
+2345|j.b.|saxena|||||||g.m.||||||||marketing|||03/12/45|110000
+1111|v.k|agrawal|||||||g.m.||||||||marketing|||12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/| /|/g' sedemp1.lst
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43|95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50|65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55|85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47|75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40|95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52|90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43|75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63|90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63|50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63|85000
+4290|jayant Choudhury |executive  |production |09/07/50|65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55|85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47|75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|* /|/g' sedemp1.lst
+
+9876|jai|sharma||||||||director||||production||03/12/50|130000
+5678|sumit|chakrobarty|d.g.m|||||||marketing|||04/19/43|95000
+2365|barun|sengupta||||director||||personnel|||05/11/47|120000
+1006|chanchal|singhvi||cirector||||sales|||||||09/03/38|140000
+6213|karuna|ganguly||||g.m.||||||||accounts||||06/05/62|105000|
+4290|jayant|Choudhury||executive|||production||09/07/50|65000|
+2476|anil|aggarwal|||||manager|||||sales|||||||05/01/59|110000
+3212|shyam|saksena|||||d.g.m|||||||accounts||||12/12/55|85000
+3564|sudhir|Agarwal||||executive|||personnel|||07/06/47|75000
+1111|j.b.|saxena|||||||g.m.||||||||marketing|||03/12/45|110000
+1111|v.k|agrawal|||||||g.m.||||||||marketing|||12/31/40|95000
+1111|a.k.|shukla|||||||g.m.||||||||ales||||||||12/12/52|90000
+9876|jai|sharma||||||||director||||production||03/12/50|130000
+5678|sumit|chakrobarty|d.g.m|||||||marketing|||04/19/43|75000
+2365|barun|sengupta||||director||||personnel|||05/11/47|120000
+1111|n.k.|gupta||||||||chairman||||admin|||||||08/30/56|160000
+1006|chanchal|singhvi||director||||sales|||||||09/03/38|120000
+6213|karuna|ganguly||||g.m.||||||||accounts||||06/05/62|105000|
+1111|s.n.|dasgupta|||||manager|||||sales|||||||09/12/63|90000
+1111|S.n.|dasgupta|||||nanager|||||sales|||||||09/12/63|50000
+1111|S.n.|dasgupta|||||damager|||||sales|||||||09/12/63|85000
+4290|jayant|Choudhury||executive|||production||09/07/50|65000|
+2476|anil|aggarwal|||||manager|||||sales|||||||05/01/59|110000
+6521|lalit|chowdury||||director||||marketing|||09/26/45|125000
+3212|shyam|saksena|||||d.g.m|||||||accounts||||12/12/55|85000
+3564|sudhir|Agarwal||||executive|||personnel|||07/06/47|75000
+2345|j.b.|saxena|||||||g.m.||||||||marketing|||03/12/45|110000
+1111|v.k|agrawal|||||||g.m.||||||||marketing|||12/31/40|95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/  *|/|/g' sedemp1.lst
+
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 95000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1006|chanchal singhvi|cirector|sales|09/03/38|140000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+1111|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+1111|a.k. shukla|g.m.|ales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 75000
+2365|barun sengupta|director|personnel|05/11/47|120000
+1111|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi|director|sales|09/03/38|120000
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1111|s.n. dasgupta|manager|sales|09/12/63| 90000
+1111|S.n. dasgupta|nanager|sales|09/12/63| 50000
+1111|S.n. dasgupta|damager|sales|09/12/63| 85000
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m|accounts|12/12/55| 85000
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+1111|v.k agrawal|g.m.|marketing|12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/{{}}/g' sedemp1.lst
+
+9876{{}}jai sharma       {{}}director   {{}}production {{}}03/12/50{{}}130000
+5678{{}}sumit chakrobarty{{}}d.g.m      {{}}marketing  {{}}04/19/43{{}} 95000
+2365{{}}barun sengupta   {{}}director   {{}}personnel  {{}}05/11/47{{}}120000
+1006{{}}chanchal singhvi {{}}cirector   {{}}sales      {{}}09/03/38{{}}140000
+6213{{}}karuna ganguly   {{}}g.m.       {{}}accounts   {{}}06/05/62{{}}105000 
+4290{{}}jayant Choudhury {{}}executive  {{}}production {{}}09/07/50{{}} 65000 
+2476{{}}anil aggarwal    {{}}manager    {{}}sales      {{}}05/01/59{{}}110000
+3212{{}}shyam saksena    {{}}d.g.m      {{}}accounts   {{}}12/12/55{{}} 85000
+3564{{}}sudhir Agarwal   {{}}executive  {{}}personnel  {{}}07/06/47{{}} 75000
+1111{{}}j.b. saxena      {{}}g.m.       {{}}marketing  {{}}03/12/45{{}}110000
+1111{{}}v.k agrawal      {{}}g.m.       {{}}marketing  {{}}12/31/40{{}} 95000
+1111{{}}a.k. shukla      {{}}g.m.       {{}}ales       {{}}12/12/52{{}} 90000
+9876{{}}jai sharma       {{}}director   {{}}production {{}}03/12/50{{}}130000
+5678{{}}sumit chakrobarty{{}}d.g.m      {{}}marketing  {{}}04/19/43{{}} 75000
+2365{{}}barun sengupta   {{}}director   {{}}personnel  {{}}05/11/47{{}}120000
+1111{{}}n.k. gupta       {{}}chairman   {{}}admin      {{}}08/30/56{{}}160000
+1006{{}}chanchal singhvi {{}}director   {{}}sales      {{}}09/03/38{{}}120000
+6213{{}}karuna ganguly   {{}}g.m.       {{}}accounts   {{}}06/05/62{{}}105000 
+1111{{}}s.n. dasgupta    {{}}manager    {{}}sales      {{}}09/12/63{{}} 90000
+1111{{}}S.n. dasgupta    {{}}nanager    {{}}sales      {{}}09/12/63{{}} 50000
+1111{{}}S.n. dasgupta    {{}}damager    {{}}sales      {{}}09/12/63{{}} 85000
+4290{{}}jayant Choudhury {{}}executive  {{}}production {{}}09/07/50{{}} 65000 
+2476{{}}anil aggarwal    {{}}manager    {{}}sales      {{}}05/01/59{{}}110000
+6521{{}}lalit chowdury   {{}}director   {{}}marketing  {{}}09/26/45{{}}125000
+3212{{}}shyam saksena    {{}}d.g.m      {{}}accounts   {{}}12/12/55{{}} 85000
+3564{{}}sudhir Agarwal   {{}}executive  {{}}personnel  {{}}07/06/47{{}} 75000
+2345{{}}j.b. saxena      {{}}g.m.       {{}}marketing  {{}}03/12/45{{}}110000
+1111{{}}v.k agrawal      {{}}g.m.       {{}}marketing  {{}}12/31/40{{}} 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sed 's/|/|#@@~{)(}/g' sedemp1.lst
+
+9876|#@@~{)(}jai sharma       |#@@~{)(}director   |#@@~{)(}production |#@@~{)(}03/12/50|#@@~{)(}130000
+5678|#@@~{)(}sumit chakrobarty|#@@~{)(}d.g.m      |#@@~{)(}marketing  |#@@~{)(}04/19/43|#@@~{)(} 95000
+2365|#@@~{)(}barun sengupta   |#@@~{)(}director   |#@@~{)(}personnel  |#@@~{)(}05/11/47|#@@~{)(}120000
+1006|#@@~{)(}chanchal singhvi |#@@~{)(}cirector   |#@@~{)(}sales      |#@@~{)(}09/03/38|#@@~{)(}140000
+6213|#@@~{)(}karuna ganguly   |#@@~{)(}g.m.       |#@@~{)(}accounts   |#@@~{)(}06/05/62|#@@~{)(}105000 
+4290|#@@~{)(}jayant Choudhury |#@@~{)(}executive  |#@@~{)(}production |#@@~{)(}09/07/50|#@@~{)(} 65000 
+2476|#@@~{)(}anil aggarwal    |#@@~{)(}manager    |#@@~{)(}sales      |#@@~{)(}05/01/59|#@@~{)(}110000
+3212|#@@~{)(}shyam saksena    |#@@~{)(}d.g.m      |#@@~{)(}accounts   |#@@~{)(}12/12/55|#@@~{)(} 85000
+3564|#@@~{)(}sudhir Agarwal   |#@@~{)(}executive  |#@@~{)(}personnel  |#@@~{)(}07/06/47|#@@~{)(} 75000
+1111|#@@~{)(}j.b. saxena      |#@@~{)(}g.m.       |#@@~{)(}marketing  |#@@~{)(}03/12/45|#@@~{)(}110000
+1111|#@@~{)(}v.k agrawal      |#@@~{)(}g.m.       |#@@~{)(}marketing  |#@@~{)(}12/31/40|#@@~{)(} 95000
+1111|#@@~{)(}a.k. shukla      |#@@~{)(}g.m.       |#@@~{)(}ales       |#@@~{)(}12/12/52|#@@~{)(} 90000
+9876|#@@~{)(}jai sharma       |#@@~{)(}director   |#@@~{)(}production |#@@~{)(}03/12/50|#@@~{)(}130000
+5678|#@@~{)(}sumit chakrobarty|#@@~{)(}d.g.m      |#@@~{)(}marketing  |#@@~{)(}04/19/43|#@@~{)(} 75000
+2365|#@@~{)(}barun sengupta   |#@@~{)(}director   |#@@~{)(}personnel  |#@@~{)(}05/11/47|#@@~{)(}120000
+1111|#@@~{)(}n.k. gupta       |#@@~{)(}chairman   |#@@~{)(}admin      |#@@~{)(}08/30/56|#@@~{)(}160000
+1006|#@@~{)(}chanchal singhvi |#@@~{)(}director   |#@@~{)(}sales      |#@@~{)(}09/03/38|#@@~{)(}120000
+6213|#@@~{)(}karuna ganguly   |#@@~{)(}g.m.       |#@@~{)(}accounts   |#@@~{)(}06/05/62|#@@~{)(}105000 
+1111|#@@~{)(}s.n. dasgupta    |#@@~{)(}manager    |#@@~{)(}sales      |#@@~{)(}09/12/63|#@@~{)(} 90000
+1111|#@@~{)(}S.n. dasgupta    |#@@~{)(}nanager    |#@@~{)(}sales      |#@@~{)(}09/12/63|#@@~{)(} 50000
+1111|#@@~{)(}S.n. dasgupta    |#@@~{)(}damager    |#@@~{)(}sales      |#@@~{)(}09/12/63|#@@~{)(} 85000
+4290|#@@~{)(}jayant Choudhury |#@@~{)(}executive  |#@@~{)(}production |#@@~{)(}09/07/50|#@@~{)(} 65000 
+2476|#@@~{)(}anil aggarwal    |#@@~{)(}manager    |#@@~{)(}sales      |#@@~{)(}05/01/59|#@@~{)(}110000
+6521|#@@~{)(}lalit chowdury   |#@@~{)(}director   |#@@~{)(}marketing  |#@@~{)(}09/26/45|#@@~{)(}125000
+3212|#@@~{)(}shyam saksena    |#@@~{)(}d.g.m      |#@@~{)(}accounts   |#@@~{)(}12/12/55|#@@~{)(} 85000
+3564|#@@~{)(}sudhir Agarwal   |#@@~{)(}executive  |#@@~{)(}personnel  |#@@~{)(}07/06/47|#@@~{)(} 75000
+2345|#@@~{)(}j.b. saxena      |#@@~{)(}g.m.       |#@@~{)(}marketing  |#@@~{)(}03/12/45|#@@~{)(}110000
+1111|#@@~{)(}v.k agrawal      |#@@~{)(}g.m.       |#@@~{)(}marketing  |#@@~{)(}12/31/40|#@@~{)(} 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk '/manager/ {print}' emp1.lst 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk '/nanager/ {print}' emp1.lst 
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ pwd
+/home/ninadhegde/git/lss/database
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk '/home/ninadhegde/git/lss/database {print}' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk '/home/ninadhegde/git/lss/database {print} $1' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk '/home/ninadhegde/git/lss/database {print} $1,$5' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk '/home/ninadhegde/git/lss/database {print} $1,$2' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ man awk
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F "|" '/home/ninadhegde/git/lss/database {print} $1,$2' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F "|" '/home/ninadhegde/git/lss/database /sales/ {print} $1,$2' emp1.lst 
+awk: line 1: syntax error at or near {
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ gawk '/home/ninadhegde/git/lss/database /sales/ {print} $1,$2' emp1.lst 
+Command 'gawk' not found, but can be installed with:
+sudo apt install gawk
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ sudo apt-get install gawk
+[sudo] password for ninadhegde: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libsigsegv2
+Suggested packages:
+  gawk-doc
+The following NEW packages will be installed:
+  gawk libsigsegv2
+0 upgraded, 2 newly installed, 0 to remove and 211 not upgraded.
+Need to get 461 kB of archives.
+After this operation, 1,770 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Ign:1 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3
+Ign:2 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 gawk amd64 1:5.1.0-1build3
+Ign:1 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3
+Ign:2 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 gawk amd64 1:5.1.0-1build3
+Ign:1 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3
+Ign:2 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 gawk amd64 1:5.1.0-1build3
+Err:1 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3
+  Temporary failure resolving 'in.archive.ubuntu.com'
+Err:2 http://in.archive.ubuntu.com/ubuntu jammy/main amd64 gawk amd64 1:5.1.0-1build3
+  Temporary failure resolving 'in.archive.ubuntu.com'
+E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/pool/main/libs/libsigsegv/libsigsegv2_2.13-1ubuntu3_amd64.deb  Temporary failure resolving 'in.archive.ubuntu.com'
+E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/pool/main/g/gawk/gawk_5.1.0-1build3_amd64.deb  Temporary failure resolving 'in.archive.ubuntu.com'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F fs=| '/home/ninadhegde/git/lss/database /sales/ {print} $1,$2' emp1.lst 
+bash: /home/ninadhegde/git/lss/database /sales/ {print} $1,$2: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F fs=| '/home/ninadhegde/git/lss/database {print} $1,$2' emp1.lst 
+bash: /home/ninadhegde/git/lss/database {print} $1,$2: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F fs=| '/home/ninadhegde/git/lss/database{print}' emp1.lst 
+bash: /home/ninadhegde/git/lss/database{print}: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '/home/ninadhegde/git/lss/database{print}' emp1.lst 
+awk: 1: unexpected character '.'
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/home/ninadhegde/git/lss/database{print}' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/home/ninadhegde/git/lss/database{print} $2' emp1.lst 
+
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 95000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+1006|chanchal singhvi |cirector   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+1111|a.k. shukla      |g.m.       |ales       |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 75000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1111|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|120000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |nanager    |sales      |09/12/63| 50000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+1111|S.n. dasgupta    |damager    |sales      |09/12/63| 85000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3212|shyam saksena    |d.g.m      |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1111|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/home/ninadhegde/git/lss/database{print $2}' emp1.lst 
+
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+chanchal singhvi 
+karuna ganguly   
+jayant Choudhury 
+anil aggarwal    
+shyam saksena    
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+a.k. shukla      
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+n.k. gupta       
+chanchal singhvi 
+karuna ganguly   
+s.n. dasgupta    
+S.n. dasgupta    
+S.n. dasgupta    
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '{print $2}' emp1.lst 
+
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+chanchal singhvi 
+karuna ganguly   
+jayant Choudhury 
+anil aggarwal    
+shyam saksena    
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+a.k. shukla      
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+n.k. gupta       
+chanchal singhvi 
+karuna ganguly   
+s.n. dasgupta    
+S.n. dasgupta    
+S.n. dasgupta    
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/manager/{print $2}' emp1.lst 
+anil aggarwal    
+s.n. dasgupta    
+anil aggarwal    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/damager/{print $2}' emp1.lst 
+S.n. dasgupta    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/damager/{print $5 $2}' emp1.lst 
+09/12/63S.n. dasgupta    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/damager/{print $4 $2}' emp1.lst 
+sales      S.n. dasgupta    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ awk -F '|' '/damager/{print NR $4 $2}' emp1.lst 
+22sales      S.n. dasgupta    
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ 
+
+

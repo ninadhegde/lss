@@ -20,6 +20,8 @@ text manipulation
 substitution
 
 
+line editing
+
 
 
 
