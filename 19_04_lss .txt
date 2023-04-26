@@ -10,8 +10,8 @@ anchoring symbols
 
 
 remembered patterns using sed
-BRE
-IRE
+BRE- basic reg ex
+IRE- interval reg ex
 TRE
 
 
