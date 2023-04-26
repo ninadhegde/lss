@@ -1,12 +1,692 @@
 process
 
 what is process?
-
-
 instance of program in executing --->> process
 
+pid --> processID --> unique number assigned to program in execution
+
+ppid --> parent pid
+
+
+
+init-->first program/process-->invokes another program(os)>>get tty>>login>>sell program
+pid-->1
+
+
+
+
+
+
+
+process states
+
+
+
+
+
+zombee states
+
+
+
+
+
+
+
+
+Quoting
+
+nice command(not in syllybus)
+
+killing processes with signals
+non background process--><ctrl+c>
+kill command - pid
+kill 1566
+kill 14 5668 6588 8469
+kill -9 pid
+
+
+proocess scheduling
+at command
+at 15:34 Friday
+at> lp /user/magu/reports/*
+at> echo "Report generated"
+
+
 
 ===========================================================================================================================
 ===========================================================================================================================
+
+
+
+
+
+
+
+
+
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~$ cd git/lss/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git add .
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   19_04_lss .txt
+	new file:   26_04_lss  .txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   lss (modified content)
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git commit -m "Test commit"
+[main 6580382] Test commit
+ 2 files changed, 14 insertions(+), 2 deletions(-)
+ create mode 100644 26_04_lss  .txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 445 bytes | 445.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:ninadhegde/lss.git
+   81d46e8..6580382  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ echo "Hello" >> /sys/class/tty/tty1
+bash: /sys/class/tty/tty1: Is a directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ps
+    PID TTY          TIME CMD
+   4842 pts/0    00:00:00 bash
+   5928 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+ninadhe+    4842    4815  0 09:09 pts/0    00:00:00 bash
+ninadhe+    5986    4842  0 09:26 pts/0    00:00:00 ps -f
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+ninadhe+    4842    4815  0 09:09 pts/0    00:00:00 bash
+ninadhe+    6441    4842  0 10:44 pts/0    00:00:00 ps -f
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:03 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      7 ?        00:00:00 kworker/0:0-events_freezable
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_kthread
+     12 ?        00:00:00 rcu_tasks_rude_kthread
+     13 ?        00:00:00 rcu_tasks_trace_kthread
+     14 ?        00:00:00 ksoftirqd/0
+     15 ?        00:00:01 rcu_preempt
+     16 ?        00:00:00 migration/0
+     17 ?        00:00:00 idle_inject/0
+     19 ?        00:00:00 cpuhp/0
+     20 ?        00:00:00 cpuhp/1
+     21 ?        00:00:00 idle_inject/1
+     22 ?        00:00:00 migration/1
+     23 ?        00:00:00 ksoftirqd/1
+     25 ?        00:00:00 kworker/1:0H-events_highpri
+     26 ?        00:00:00 cpuhp/2
+     27 ?        00:00:00 idle_inject/2
+     28 ?        00:00:00 migration/2
+     29 ?        00:00:00 ksoftirqd/2
+     31 ?        00:00:00 kworker/2:0H-events_highpri
+     32 ?        00:00:00 cpuhp/3
+     33 ?        00:00:00 idle_inject/3
+     34 ?        00:00:00 migration/3
+     35 ?        00:00:03 ksoftirqd/3
+     37 ?        00:00:00 kworker/3:0H-kblockd
+     38 ?        00:00:00 cpuhp/4
+     39 ?        00:00:00 idle_inject/4
+     40 ?        00:00:00 migration/4
+     41 ?        00:00:00 ksoftirqd/4
+     43 ?        00:00:00 kworker/4:0H-events_highpri
+     44 ?        00:00:00 cpuhp/5
+     45 ?        00:00:00 idle_inject/5
+     46 ?        00:00:00 migration/5
+     47 ?        00:00:00 ksoftirqd/5
+     49 ?        00:00:00 kworker/5:0H-events_highpri
+     50 ?        00:00:00 cpuhp/6
+     51 ?        00:00:00 idle_inject/6
+     52 ?        00:00:00 migration/6
+     53 ?        00:00:00 ksoftirqd/6
+     55 ?        00:00:00 kworker/6:0H-kblockd
+     56 ?        00:00:00 cpuhp/7
+     57 ?        00:00:00 idle_inject/7
+     58 ?        00:00:00 migration/7
+     59 ?        00:00:00 ksoftirqd/7
+     61 ?        00:00:00 kworker/7:0H
+     62 ?        00:00:00 cpuhp/8
+     63 ?        00:00:00 idle_inject/8
+     64 ?        00:00:00 migration/8
+     65 ?        00:00:00 ksoftirqd/8
+     67 ?        00:00:00 kworker/8:0H-events_highpri
+     68 ?        00:00:00 cpuhp/9
+     69 ?        00:00:00 idle_inject/9
+     70 ?        00:00:00 migration/9
+     71 ?        00:00:00 ksoftirqd/9
+     73 ?        00:00:00 kworker/9:0H-kblockd
+     74 ?        00:00:00 cpuhp/10
+     75 ?        00:00:00 idle_inject/10
+     76 ?        00:00:00 migration/10
+     77 ?        00:00:00 ksoftirqd/10
+     79 ?        00:00:00 kworker/10:0H-events_highpri
+     80 ?        00:00:00 cpuhp/11
+     81 ?        00:00:00 idle_inject/11
+     82 ?        00:00:00 migration/11
+     83 ?        00:00:00 ksoftirqd/11
+     85 ?        00:00:00 kworker/11:0H-events_highpri
+     86 ?        00:00:00 kdevtmpfs
+     87 ?        00:00:00 inet_frag_wq
+     88 ?        00:00:00 kauditd
+     89 ?        00:00:00 khungtaskd
+     91 ?        00:00:00 oom_reaper
+     93 ?        00:00:00 writeback
+     94 ?        00:00:00 kcompactd0
+     95 ?        00:00:00 ksmd
+     96 ?        00:00:00 khugepaged
+     97 ?        00:00:00 kintegrityd
+     98 ?        00:00:00 kblockd
+     99 ?        00:00:00 blkcg_punt_bio
+    100 ?        00:00:00 kworker/2:1-events
+    102 ?        00:00:00 tpm_dev_wq
+    103 ?        00:00:00 ata_sff
+    104 ?        00:00:00 md
+    105 ?        00:00:00 edac-poller
+    106 ?        00:00:00 devfreq_wq
+    107 ?        00:00:00 watchdogd
+    109 ?        00:00:00 kworker/8:1H-kblockd
+    110 ?        00:00:00 kswapd0
+    111 ?        00:00:00 ecryptfs-kthread
+    113 ?        00:00:00 kworker/5:1-cgroup_destroy
+    114 ?        00:00:00 kworker/4:1-events
+    115 ?        00:00:01 kworker/1:1-events
+    116 ?        00:00:00 kworker/6:1-events
+    125 ?        00:00:00 kthrotld
+    131 ?        00:00:00 irq/124-aerdrv
+    132 ?        00:00:00 irq/124-pcie-dpc
+    133 ?        00:00:00 acpi_thermal_pm
+    134 ?        00:00:00 xenbus_probe
+    135 ?        00:00:00 vfio-irqfd-clea
+    136 ?        00:00:00 mld
+    137 ?        00:00:00 ipv6_addrconf
+    142 ?        00:00:00 kstrp
+    148 ?        00:00:00 zswap-shrink
+    197 ?        00:00:00 charger_manager
+    219 ?        00:00:00 kworker/1:1H-kblockd
+    243 ?        00:00:00 kworker/4:1H-kblockd
+    265 ?        00:00:00 kworker/11:1H-kblockd
+    268 ?        00:00:00 scsi_eh_0
+    269 ?        00:00:00 scsi_tmf_0
+    270 ?        00:00:00 scsi_eh_1
+    271 ?        00:00:00 scsi_tmf_1
+    274 ?        00:00:03 irq/95-ELAN1203:00
+    276 ?        00:00:00 kworker/1:2-events
+    279 ?        00:00:00 kworker/9:1H-kblockd
+    280 ?        00:00:00 kworker/5:2-events
+    283 ?        00:00:00 kworker/5:1H-events_highpri
+    284 ?        00:00:00 kworker/0:1H-kblockd
+    285 ?        00:00:00 kworker/10:1H-kblockd
+    286 ?        00:00:00 kworker/6:1H-events_highpri
+    287 ?        00:00:00 kworker/2:1H-kblockd
+    307 ?        00:00:00 jbd2/sda7-8
+    308 ?        00:00:00 ext4-rsv-conver
+    320 ?        00:00:00 kworker/9:2-cgroup_destroy
+    349 ?        00:00:00 systemd-journal
+    371 ?        00:00:00 kworker/7:1H-events_highpri
+    382 ?        00:00:00 kworker/3:1H-kblockd
+    383 ?        00:00:00 ipmi-msghandler
+    384 ?        00:00:00 kworker/6:2-events
+    420 ?        00:00:03 systemd-udevd
+    462 ?        00:00:00 asus_wireless_w
+    468 ?        00:00:00 cryptd
+    470 ?        00:00:00 led_workqueue
+    477 ?        00:00:00 cfg80211
+    481 ?        00:00:00 kworker/2:2-events
+    503 ?        00:00:00 kworker/u24:9-events_unbound
+    523 ?        00:00:00 kworker/7:2-events
+    536 ?        00:00:00 kworker/u24:14-events_unbound
+    559 ?        00:00:00 irq/131-iwlwifi:default_queue
+    560 ?        00:00:00 irq/132-iwlwifi:queue_1
+    561 ?        00:00:00 irq/133-iwlwifi:queue_2
+    562 ?        00:00:00 irq/134-iwlwifi:queue_3
+    563 ?        00:00:00 irq/135-iwlwifi:queue_4
+    564 ?        00:00:00 irq/136-iwlwifi:exception
+    754 ?        00:00:00 kworker/u25:2-rb_allocator
+    756 ?        00:00:00 card0-crtc0
+    757 ?        00:00:00 card0-crtc1
+    758 ?        00:00:00 card0-crtc2
+    826 ?        00:00:00 nvkm-disp
+    827 ?        00:00:00 card1-crtc0
+    828 ?        00:00:00 card1-crtc1
+    829 ?        00:00:00 card1-crtc2
+    830 ?        00:00:00 card1-crtc3
+   1020 ?        00:00:02 systemd-oomd
+   1021 ?        00:00:01 systemd-resolve
+   1022 ?        00:00:00 systemd-timesyn
+   1026 ?        00:00:00 accounts-daemon
+   1027 ?        00:00:00 acpid
+   1029 ?        00:00:00 avahi-daemon
+   1030 ?        00:00:00 bluetoothd
+   1031 ?        00:00:00 cron
+   1032 ?        00:00:02 dbus-daemon
+   1033 ?        00:00:01 NetworkManager
+   1054 ?        00:00:00 irqbalance
+   1055 ?        00:00:00 networkd-dispat
+   1056 ?        00:00:03 polkitd
+   1057 ?        00:00:00 power-profiles-
+   1058 ?        00:00:00 rsyslogd
+   1060 ?        00:00:10 snapd
+   1065 ?        00:00:00 switcheroo-cont
+   1066 ?        00:00:00 systemd-logind
+   1067 ?        00:00:00 thermald
+   1068 ?        00:00:02 touchegg
+   1069 ?        00:00:00 udisksd
+   1070 ?        00:00:00 wpa_supplicant
+   1073 ?        00:00:00 avahi-daemon
+   1151 ?        00:00:00 cupsd
+   1163 ?        00:00:00 unattended-upgr
+   1173 ?        00:00:00 ModemManager
+   1189 ?        00:00:00 upowerd
+   1206 ?        00:00:00 sshd
+   1317 ?        00:00:00 cups-browsed
+   1321 ?        00:00:00 kerneloops
+   1323 ?        00:00:00 kerneloops
+   1324 ?        00:00:00 gdm3
+   1388 ?        00:00:00 rtkit-daemon
+   1559 ?        00:00:02 packagekitd
+   1751 ?        00:00:00 colord
+   1789 ?        00:00:00 gdm-session-wor
+   1815 ?        00:00:00 systemd
+   1816 ?        00:00:00 (sd-pam)
+   1823 ?        00:00:00 pipewire
+   1824 ?        00:00:00 pipewire-media-
+   1825 ?        00:00:00 pulseaudio
+   1836 ?        00:00:00 dbus-daemon
+   1855 ?        00:00:00 gvfsd
+   1860 ?        00:00:00 gvfsd-fuse
+   1868 ?        00:00:00 xdg-document-po
+   1874 ?        00:00:00 xdg-permission-
+   1880 ?        00:00:00 fusermount3
+   1892 ?        00:00:00 gnome-keyring-d
+   1896 ?        00:00:00 tracker-miner-f
+   1907 tty2     00:00:00 gdm-wayland-ses
+   1910 tty2     00:00:00 gnome-session-b
+   1965 ?        00:00:00 gnome-session-c
+   1989 ?        00:00:00 krfcommd
+   1991 ?        00:00:00 gnome-session-b
+   2007 ?        00:00:00 at-spi-bus-laun
+   2011 ?        00:01:12 gnome-shell
+   2018 ?        00:00:00 dbus-daemon
+   2072 ?        00:00:00 gnome-shell-cal
+   2074 ?        00:00:00 dconf-service
+   2077 ?        00:00:00 gvfs-udisks2-vo
+   2085 ?        00:00:00 gvfs-afc-volume
+   2090 ?        00:00:00 gvfs-goa-volume
+   2094 ?        00:00:00 goa-daemon
+   2103 ?        00:00:00 goa-identity-se
+   2104 ?        00:00:00 evolution-sourc
+   2113 ?        00:00:00 gvfs-gphoto2-vo
+   2117 ?        00:00:00 gvfs-mtp-volume
+   2123 ?        00:00:00 gvfsd-trash
+   2137 ?        00:00:00 gvfsd-metadata
+   2146 ?        00:00:00 evolution-calen
+   2153 ?        00:00:00 gjs
+   2155 ?        00:00:00 at-spi2-registr
+   2170 ?        00:00:00 sh
+   2171 ?        00:00:00 gsd-a11y-settin
+   2173 ?        00:00:04 ibus-daemon
+   2174 ?        00:00:00 gsd-color
+   2177 ?        00:00:00 gsd-datetime
+   2179 ?        00:00:00 gsd-housekeepin
+   2182 ?        00:00:00 gsd-keyboard
+   2184 ?        00:00:00 gsd-media-keys
+   2186 ?        00:00:00 gsd-power
+   2190 ?        00:00:00 gsd-print-notif
+   2192 ?        00:00:00 gsd-rfkill
+   2193 ?        00:00:00 gsd-screensaver
+   2194 ?        00:00:00 gsd-sharing
+   2196 ?        00:00:00 gsd-smartcard
+   2200 ?        00:00:00 gsd-sound
+   2202 ?        00:00:00 gsd-wacom
+   2243 ?        00:00:00 gsd-disk-utilit
+   2244 ?        00:00:00 evolution-alarm
+   2292 ?        00:00:05 Xwayland
+   2299 ?        00:00:00 gsd-printer
+   2342 ?        00:00:00 snapd-desktop-i
+   2424 ?        00:00:00 snapd-desktop-i
+   2431 ?        00:00:00 ibus-memconf
+   2432 ?        00:00:01 ibus-extension-
+   2435 ?        00:00:00 xdg-desktop-por
+   2438 ?        00:00:00 ibus-portal
+   2467 ?        00:00:00 evolution-addre
+   2505 ?        00:00:06 snap-store
+   2531 ?        00:00:00 gjs
+   2552 ?        00:00:01 ibus-engine-sim
+   2603 ?        00:00:00 xdg-desktop-por
+   2611 ?        00:00:00 gsd-xsettings
+   2656 ?        00:00:00 xdg-desktop-por
+   2687 ?        00:00:00 ibus-x11
+   2845 ?        00:00:00 fwupd
+   2923 ?        00:00:00 update-notifier
+   3298 ?        00:00:00 brave-browser
+   3389 ?        00:00:00 cat
+   3390 ?        00:00:00 cat
+   3391 ?        00:00:47 brave
+   3393 ?        00:00:00 chrome_crashpad
+   3395 ?        00:00:00 chrome_crashpad
+   3401 ?        00:00:00 brave
+   3402 ?        00:00:00 brave
+   3404 ?        00:00:00 brave
+   3439 ?        00:00:19 brave
+   3442 ?        00:00:15 brave
+   3452 ?        00:00:00 brave
+   3455 ?        00:00:03 nautilus
+   3524 ?        00:00:00 snap
+   3689 ?        00:00:00 brave
+   3698 ?        00:00:01 brave
+   3721 ?        00:00:03 brave
+   3799 ?        00:00:04 brave
+   3846 ?        00:00:04 brave
+   3866 ?        00:00:01 brave
+   3867 ?        00:00:01 brave
+   3868 ?        00:00:00 brave
+   3918 ?        00:00:03 brave
+   3958 ?        00:00:38 brave
+   3998 ?        00:00:04 brave
+   4015 ?        00:00:02 brave
+   4056 ?        00:00:03 brave
+   4101 ?        00:00:00 brave
+   4133 ?        00:00:19 gedit
+   4167 ?        00:00:14 brave
+   4190 ?        00:00:03 brave
+   4201 ?        00:00:00 brave
+   4265 ?        00:00:15 brave
+   4282 ?        00:00:13 brave
+   4298 ?        00:00:06 brave
+   4337 ?        00:00:03 brave
+   4411 ?        00:00:01 brave
+   4447 ?        00:00:00 kworker/8:0-rcu_gp
+   4547 ?        00:00:00 kworker/10:0
+   4553 ?        00:00:00 kworker/0:1-rcu_gp
+   4696 ?        00:00:00 kworker/u24:2-events_unbound
+   4792 ?        00:00:00 gnome-terminal
+   4805 ?        00:00:00 gnome-terminal.
+   4815 ?        00:00:02 gnome-terminal-
+   4842 pts/0    00:00:00 bash
+   4843 ?        00:00:00 kworker/4:0
+   4914 ?        00:00:14 brave
+   4936 ?        00:00:01 brave
+   4961 ?        00:00:00 kworker/11:0-rcu_gp
+   5000 ?        00:00:11 brave
+   5025 ?        00:00:01 brave
+   5038 ?        00:00:01 brave
+   5064 ?        00:00:01 brave
+   5244 ?        00:00:00 ssh-agent
+   5281 ?        00:00:00 kworker/9:1-mm_percpu_wq
+   5286 ?        00:00:00 kworker/10:2-mm_percpu_wq
+   5317 ?        00:00:00 kworker/3:2-events
+   5364 ?        00:00:00 kworker/7:1-events
+   5472 ?        00:00:00 kworker/11:2-events
+   5473 ?        00:00:00 kworker/u25:0-i915_flip
+   5474 ?        00:00:00 kworker/8:1-mm_percpu_wq
+   5513 ?        00:00:00 kworker/3:0-cgroup_destroy
+   5546 ?        00:00:02 brave
+   5573 ?        00:00:02 brave
+   5721 ?        00:00:02 brave
+   5754 ?        00:00:00 kworker/7:0-events
+   5774 ?        00:00:00 brave
+   5829 ?        00:00:00 kworker/5:0-mm_percpu_wq
+   5847 ?        00:00:00 gnome-terminal
+   5850 ?        00:00:00 gnome-terminal.
+   5855 pts/1    00:00:00 bash
+   5985 ?        00:00:00 kworker/u25:1
+   6020 ?        00:00:00 kworker/8:2
+   6047 ?        00:00:00 kworker/0:2-cgroup_destroy
+   6060 ?        00:00:00 kworker/u24:0-events_unbound
+   6061 ?        00:00:00 kworker/u24:1-events_unbound
+   6062 ?        00:00:00 kworker/u24:3-events_unbound
+   6063 ?        00:00:00 kworker/u24:4-events_unbound
+   6064 ?        00:00:00 kworker/5:3
+   6097 ?        00:00:00 kworker/u24:5-events_unbound
+   6098 ?        00:00:00 kworker/u24:6-events_unbound
+   6099 ?        00:00:00 kworker/u24:7-events_unbound
+   6100 ?        00:00:00 kworker/u24:8-events_unbound
+   6101 ?        00:00:00 kworker/u24:10-events_unbound
+   6102 ?        00:00:00 kworker/u24:11-events_unbound
+   6103 ?        00:00:00 kworker/u24:12-events_unbound
+   6104 ?        00:00:00 kworker/u24:13-events_unbound
+   6105 ?        00:00:00 kworker/u24:15-events_unbound
+   6106 ?        00:00:00 kworker/u24:16-events_unbound
+   6107 ?        00:00:00 kworker/u24:17-flush-8:0
+   6108 ?        00:00:00 kworker/u24:18-events_unbound
+   6109 ?        00:00:00 kworker/u24:19-events_power_efficient
+   6110 ?        00:00:00 kworker/u24:20-events_unbound
+   6111 ?        00:00:00 kworker/u24:21-events_unbound
+   6112 ?        00:00:00 kworker/u24:22-events_unbound
+   6113 ?        00:00:00 kworker/u24:23-events_unbound
+   6114 ?        00:00:00 kworker/u24:24-events_unbound
+   6115 ?        00:00:00 kworker/u24:25-events_unbound
+   6116 ?        00:00:00 kworker/2:0
+   6117 ?        00:00:00 kworker/11:1
+   6118 ?        00:00:00 kworker/u24:26-i915-dp
+   6119 ?        00:00:00 kworker/u24:27-events_unbound
+   6120 ?        00:00:00 kworker/u24:28-events_unbound
+   6121 ?        00:00:00 kworker/u24:29-events_unbound
+   6122 ?        00:00:00 kworker/u24:30-events_unbound
+   6123 ?        00:00:00 kworker/u24:31-events_unbound
+   6124 ?        00:00:00 kworker/u24:32-events_unbound
+   6125 ?        00:00:00 kworker/u24:33-events_unbound
+   6126 ?        00:00:00 kworker/u24:34-events_unbound
+   6127 ?        00:00:00 kworker/u24:35-events_unbound
+   6128 ?        00:00:00 kworker/u24:36-flush-8:0
+   6129 ?        00:00:00 kworker/u24:37-events_unbound
+   6130 ?        00:00:00 kworker/u24:38-events_unbound
+   6131 ?        00:00:00 kworker/u24:39-events_unbound
+   6132 ?        00:00:00 kworker/u24:40-events_unbound
+   6133 ?        00:00:00 kworker/u24:41-events_unbound
+   6134 ?        00:00:00 kworker/u24:42-events_unbound
+   6135 ?        00:00:00 kworker/u24:43-events_unbound
+   6136 ?        00:00:00 kworker/u24:44-events_unbound
+   6137 ?        00:00:00 kworker/u24:45-events_unbound
+   6138 ?        00:00:00 kworker/u24:46-events_unbound
+   6139 ?        00:00:00 kworker/u24:47-nvkm-disp
+   6140 ?        00:00:00 kworker/u24:48-events_unbound
+   6141 ?        00:00:00 kworker/u24:49-events_unbound
+   6142 ?        00:00:00 kworker/u24:50-events_unbound
+   6143 ?        00:00:00 kworker/u24:51-events_unbound
+   6144 ?        00:00:00 kworker/u24:52-events_unbound
+   6145 ?        00:00:00 kworker/u24:53-events_unbound
+   6146 ?        00:00:00 kworker/u24:54-events_unbound
+   6147 ?        00:00:00 kworker/u24:55-events_unbound
+   6148 ?        00:00:00 kworker/u24:56-events_unbound
+   6149 ?        00:00:00 kworker/u24:57-events_unbound
+   6150 ?        00:00:00 kworker/u24:58-events_unbound
+   6151 ?        00:00:00 kworker/u24:59-events_unbound
+   6152 ?        00:00:00 kworker/u24:60-events_unbound
+   6153 ?        00:00:00 kworker/u24:61-events_unbound
+   6154 ?        00:00:00 kworker/u24:62-events_unbound
+   6155 ?        00:00:00 kworker/u24:63-events_unbound
+   6156 ?        00:00:00 kworker/u24:64-events_unbound
+   6157 ?        00:00:00 kworker/u24:65-events_unbound
+   6158 ?        00:00:00 kworker/u24:66-events_unbound
+   6159 ?        00:00:00 kworker/u24:67-events_unbound
+   6160 ?        00:00:00 kworker/u24:68-events_unbound
+   6161 ?        00:00:00 kworker/u24:69-events_unbound
+   6162 ?        00:00:00 kworker/u24:70-events_unbound
+   6163 ?        00:00:00 kworker/u24:71-events_unbound
+   6164 ?        00:00:00 kworker/u24:72-events_unbound
+   6165 ?        00:00:00 kworker/u24:73-events_unbound
+   6166 ?        00:00:00 kworker/u24:74-events_unbound
+   6167 ?        00:00:00 kworker/u24:75-events_unbound
+   6168 ?        00:00:00 kworker/u24:76-events_unbound
+   6169 ?        00:00:00 kworker/u24:77-events_unbound
+   6170 ?        00:00:00 kworker/u24:78-events_unbound
+   6171 ?        00:00:00 kworker/u24:79
+   6172 ?        00:00:00 irq/130-mei_me
+   6173 ?        00:00:00 kworker/1:0-pm
+   6174 ?        00:00:00 kworker/1:3-pm
+   6175 ?        00:00:00 kworker/6:0-pm
+   6176 ?        00:00:00 kworker/1:4-pm
+   6183 ?        00:00:00 kworker/1:5-pm
+   6188 ?        00:00:00 kworker/1:6
+   6226 ?        00:00:00 kworker/3:1
+   6227 ?        00:00:00 kworker/3:3-events
+   6341 ?        00:00:00 fprintd
+   6358 ?        00:00:00 gjs
+   6444 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ man ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ps -a
+    PID TTY          TIME CMD
+   1910 tty2     00:00:00 gnome-session-b
+   6475 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ ps -af
+UID          PID    PPID  C STIME TTY          TIME CMD
+ninadhe+    1910    1907  0 09:03 tty2     00:00:00 /usr/libexec/gnome-session-binary --session=ubuntu
+ninadhe+    6477    4842  0 10:44 pts/0    00:00:00 ps -af
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cat database/ourbase.txt &
+[1] 6499
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ 
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+
+
+
+ninadghegde.gmail.com           |9449136973|N.nad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|BSC 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|BSC 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MSC 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|BCA 
+
+^C
+[1]+  Done                    cat database/ourbase.txt
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss$ cd database/
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ touch err.dat
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ touch log_file_buffer
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat ourbase.txt > log_file_buffer 2>err.dat 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat err.dat 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat log_file_buffer 
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+
+
+
+ninadghegde.gmail.com           |9449136973|N.nad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|BSC 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|BSC 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MSC 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|BCA 
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat ourbase.tt > log_file_buffer 2>err.dat 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat err.dat 
+cat: ourbase.tt: No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ nohup cat ourbase.txt > log_file_buffer 2>err.dat 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat err.dat 
+nohup: ignoring input
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat "" > log_file_buffer 
+cat: '': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat " " > log_file_buffer 
+cat: ' ': No such file or directory
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ echo " " > log_file_buffer 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat log_file_buffer 
+ 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ nohup cat ourbase.txt > log_file_buffer 2>err.dat 
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat log_file_buffer 
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+
+
+
+ninadghegde.gmail.com           |9449136973|N.nad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|BSC 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|BSC 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MSC 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|BCA 
+
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ cat err.dat 
+nohup: ignoring input
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ ps
+    PID TTY          TIME CMD
+   4842 pts/0    00:00:00 bash
+   6787 pts/0    00:00:00 ps
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ kill 6787
+bash: kill: (6787) - No such process
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ kill 6800
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ kill -9 6800
+(base) ninadhegde@ninadhegde-ROG-Strix-G731GU-G731GU:~/git/lss/database$ 
 
 
